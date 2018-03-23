@@ -4,7 +4,7 @@
 <head>
     <title>Šachmatų lenta</title>
     <meta charset="UTF-8">
-    <style>
+    <style type="text/css">
         body {
             background: url(https://www.alldesigncreative.com/wp-content/uploads/2014/08/green-grass-texture.jpg);
             padding: 80px;
@@ -26,16 +26,27 @@
         tr:nth-child(even) td:nth-child(odd) {
             background: url(https://i.pinimg.com/originals/7f/99/a1/7f99a1435feb62dd58a531e8be99ba61.jpg);
         }
-        
+        .black {
+            font-size: 50px;
+            text-align: center;
+            dispay: table-cell;
+            vertical-align: middle;
+        }
+        .white {
+            font-size: 50px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
     </style>
 </head>
 
 <body>
-
+<div class="td">
     <table>
         <tr>
             <td style="background: url(https://i.pinimg.com/originals/7f/99/a1/7f99a1435feb62dd58a531e8be99ba61.jpg);"></td>
-            <td style="border-bottom-style: solid; color:tan;"></td>
+            <td style="border-bottom-style: solid; color:tan;"><div class="white">&#9820;</div></td>
             <td style="border-bottom-style: solid; color:tan; background: url(https://i.pinimg.com/originals/7f/99/a1/7f99a1435feb62dd58a531e8be99ba61.jpg);"></td>
             <td style="border-bottom-style: solid; color:tan;"></td>
             <td style="border-bottom-style: solid; color:tan; background: url(https://i.pinimg.com/originals/7f/99/a1/7f99a1435feb62dd58a531e8be99ba61.jpg);"></td>
@@ -164,7 +175,7 @@
         </tr>
 
     </table>
-
+</div>
 </body>
 
 </html>
