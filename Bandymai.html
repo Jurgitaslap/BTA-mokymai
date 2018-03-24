@@ -3,11 +3,10 @@
 
 <head>
     <title>Šachmatų lenta</title>
-    <meta charset="UTF-8">
+    
     <style type="text/css">
         body {
-            background: linear-gradient(orange
-            , yellow);
+            background: linear-gradient(orange, yellow);
             padding: 80px;
         }
 
@@ -52,10 +51,10 @@
         }
 
         .font {
-          margin-center: 40px;
-          margin-right: 70%;
-          transform: rotate(90deg);
-          font-size: 20px;
+            margin-center: 40px;
+            margin-right: 70%;
+            transform: rotate(90deg);
+            font-size: 20px;
         }
 
         #top {
@@ -69,11 +68,19 @@
             margin-left: 70%;
             transform: rotate(-90deg);
             font-size: 20px;
-    }
-    
+        }
+        .wrapper {overflow: auto;}
+        #leftsidebar {
+    float: none;
+    width: auto;}
+    @media screen and (min-width: 480px) {
+    #leftsidebar {width: 200px; float: left;}
+        
     </style>
 </head>
+
 <body>
+  
     <div class="td">
 
         <table>
@@ -337,5 +344,7 @@
 
         </table>
     </div>
+       </div>
 </body>
+
 </html>
