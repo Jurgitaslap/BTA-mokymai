@@ -4,28 +4,25 @@
 <head>
     <title>Šachmatų lenta</title>
     <meta charset='UTF-8' />
+    <meta name="viewport" content="width=device-width initial-scale=1">
 
     <style type="text/css">
-        .body {
+        body {
+
             background: linear-gradient(orange, yellow, orange);
         }
 
-        #container {
-            padding: 20px;
-            width: 610px;
-            display: block;
-            margin: 0 auto;
-        }
-
         table {
+            width: 30vw;
+            height: 100vh;
             margin: 0 auto;
             border-collapse: collapse;
-            background: url(http://images.meredith.com/wood/images/woodgrains/maple.jpg);
+            background: url(http://www.texturex.com/cache/Wood-Textures/wood%20texture%20grain%20ash%20red%20wooden%20panel%20table%20wallpaper_800.jpg);
         }
 
         td {
-            width: 60px;
-            height: 60px;
+            width: 3vw;
+            height: 10vh;
         }
 
         tr:nth-child(odd) td:nth-child(even),
@@ -34,53 +31,56 @@
         }
 
         .black {
-            display: table-cell;
-            font-size: 40px;
-            vertical-align: middle;
-            padding: 0 auto;
-            padding-left: 25%;
+            text-align: center;
+            font-size: 3vw;
         }
 
         .white {
-            display: table-cell;
-            font-size: 40px;
-            vertical-align: middle;
-            padding: 0 auto;
-            padding-left: 25%;
-        }
-
-        .rotate {
-            transform: rotate(180deg);
-            margin-bottom: 35px;
             text-align: center;
-            font-size: 20px;
+            font-size: 3vw;
+            color: wheat;
         }
 
-        .font {
-            height: 23px;
-            margin-right: 70%;
-            transform: rotate(90deg);
-            font-size: 20px;
-            margin-left: 7px;
+        #bottom {
+            transform: rotate(180deg);
+            text-align: center;
+            width: 5vw;
+            height: 1vh;
+            font-size: 1.5vw;
+            margin-bottom: 1em;
+            padding-bottom: 1em;
         }
 
         #top {
             text-align: center;
-            margin-top: 40px;
-            font-size: 20px;
+            width: 5vw;
+            height: 1vh;
+            font-size: 1.5vw;
+            margin-top: 1em;
+            padding-bottom: 1em;
         }
 
-        #left {
-            height: 25px;
-            margin-left: 70%;
+        .right {
+            transform: rotate(90deg);
+            text-align: center;
+            width: 5vw;
+            height: 1vh;
+            font-size: 1.5vw;
+            padding-top: 1em;
+        }
+
+        .left {
             transform: rotate(-90deg);
-            font-size: 20px;
-            margin-right: 5px;
+            text-align: center;
+            width: 5vw;
+            height: 1vh;
+            font-size: 1.5vw;
+            padding-top: 1em;
         }
     </style>
 </head>
 
-<body id="container" class="body">
+<body>
 
     <table>
 
@@ -115,7 +115,7 @@
 
         <tr>
             <td style="border-right-style: solid; color:tan;">
-                <div id="left">8</div>
+                <div class="left">8</div>
             </td>
             <td>
                 <div class="black"> &#9820;</div>
@@ -142,13 +142,13 @@
                 <div class="black">&#9820;</div>
             </td>
             <td style="border-left-style: solid; color:tan; background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);">
-                <div class="font">8</div>
+                <div class="right">8</div>
             </td>
         </tr>
 
         <tr>
             <td style="border-right-style: solid; color:tan; background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);">
-                <div id="left">7</div>
+                <div class="left">7</div>
             </td>
             <td>
                 <div class="black">&#9823;</div>
@@ -175,13 +175,13 @@
                 <div class="black">&#9823;</div>
             </td>
             <td style="border-left-style: solid; color:tan;">
-                <div class="font">7</div>
+                <div class="right">7</div>
             </td>
         </tr>
 
         <tr>
             <td style="border-right-style: solid; color:tan;">
-                <div id="left">6</div>
+                <div class="left">6</div>
             </td>
             <td></td>
             <td></td>
@@ -192,13 +192,13 @@
             <td></td>
             <td></td>
             <td style="border-left-style: solid; color:tan; background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);">
-                <div class="font">6</div>
+                <div class="right">6</div>
             </td>
         </tr>
 
         <tr>
             <td style="border-right-style: solid; color:tan; background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);">
-                <div id="left">5</div>
+                <div class="left">5</div>
             </td>
             <td></td>
             <td></td>
@@ -209,13 +209,13 @@
             <td></td>
             <td></td>
             <td style="border-left-style: solid; color:tan;">
-                <div class="font">5</div>
+                <div class="right">5</div>
             </td>
         </tr>
 
         <tr>
             <td style="border-right-style: solid; color:tan;">
-                <div id="left">4</div>
+                <div class="left">4</div>
             </td>
             <td></td>
             <td></td>
@@ -226,13 +226,13 @@
             <td></td>
             <td></td>
             <td style="border-left-style: solid; color:tan; background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);">
-                <div class="font">4</div>
+                <div class="right">4</div>
             </td>
         </tr>
 
         <tr>
             <td style="border-right-style: solid; color:tan; background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);">
-                <div id="left">3</div>
+                <div class="left">3</div>
             </td>
             <td></td>
             <td></td>
@@ -243,101 +243,101 @@
             <td></td>
             <td></td>
             <td style="border-left-style: solid; color:tan;">
-                <div class="font">3</div>
+                <div class="right">3</div>
             </td>
         </tr>
 
         <tr>
             <td style="border-right-style: solid; color:tan;">
-                <div id="left">2</div>
+                <div class="left">2</div>
             </td>
             <td>
-                <div class="white">&#9817;</div>
+                <div class="white">&#9823;</div>
             </td>
             <td>
-                <div class="white">&#9817;</div>
+                <div class="white">&#9823;</div>
             </td>
             <td>
-                <div class="white">&#9817;</div>
+                <div class="white">&#9823;</div>
             </td>
             <td>
-                <div class="white">&#9817;</div>
+                <div class="white">&#9823;</div>
             </td>
             <td>
-                <div class="white">&#9817;</div>
+                <div class="white">&#9823;</div>
             </td>
             <td>
-                <div class="white">&#9817;</div>
+                <div class="white">&#9823;</div>
             </td>
             <td>
-                <div class="white">&#9817;</div>
+                <div class="white">&#9823;</div>
             </td>
             <td>
-                <div class="white">&#9817;</div>
+                <div class="white">&#9823;</div>
             </td>
             <td style="border-left-style: solid; color:tan; background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);">
-                <div class="font">2</div>
+                <div class="right">2</div>
             </td>
         </tr>
 
         <tr>
             <td style="border-right-style: solid; color:tan; background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);">
-                <div id="left">1</div>
+                <div class="left">1</div>
             </td>
             <td>
-                <div class="white">&#9814;</div>
+                <div class="white">&#9820;</div>
             </td>
             <td>
-                <div class="white">&#9816;</div>
+                <div class="white">&#9822;</div>
             </td>
             <td>
-                <div class="white">&#9815;</div>
+                <div class="white">&#9821;</div>
             </td>
             <td>
-                <div class="white">&#9813;</div>
+                <div class="white">&#9819;</div>
             </td>
             <td>
-                <div class="white">&#9812;</div>
+                <div class="white">&#9818;</div>
             </td>
             <td>
-                <div class="white">&#9815;</div>
+                <div class="white">&#9821;</div>
             </td>
             <td>
-                <div class="white">&#9816;</div>
+                <div class="white">&#9822;</div>
             </td>
             <td>
-                <div class="white">&#9814;</div>
+                <div class="white">&#9820;</div>
             </td>
             <td style="border-left-style: solid; color:tan;">
-                <div class="font">1</div>
+                <div class="right">1</div>
             </td>
         </tr>
 
         <tr>
             <td></td>
             <td style="border-top-style: solid; color:tan; background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);">
-                <div class="rotate">A</div>
+                <div id="bottom">A</div>
             </td>
             <td style="border-top-style: solid; color:tan;">
-                <div class="rotate">B</div>
+                <div id="bottom">B</div>
             </td>
             <td style="border-top-style: solid; color:tan; background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);">
-                <div class="rotate">C</div>
+                <div id="bottom">C</div>
             </td>
             <td style="border-top-style: solid; color:tan;">
-                <div class="rotate">D</div>
+                <div id="bottom">D</div>
             </td>
             <td style="border-top-style: solid; color:tan; background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);">
-                <div class="rotate">E</div>
+                <div id="bottom">E</div>
             </td>
             <td style="border-top-style: solid; color:tan;">
-                <div class="rotate">F</div>
+                <div id="bottom">F</div>
             </td>
             <td style="border-top-style: solid; color:tan; background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);">
-                <div class="rotate">G</div>
+                <div id="bottom">G</div>
             </td>
             <td style="border-top-style: solid; color:tan; background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);">
-                <div class="rotate">H</div>
+                <div id="bottom">H</div>
             </td>
             <td style="background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);"></td>
         </tr>
