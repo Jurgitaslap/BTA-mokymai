@@ -1,34 +1,81 @@
 <!DOCTYPE html>
 <html>
-    <head>
-                <style>
-            html {
-    height: 100%;
-    width: 100%;
-  }
-  .container {
-    margin: 0;
-    width: 100%;
-    height: 50%;
-    background-color: steelblue;
-    overflow: hidden;}   
-     
-    .block + .block {
-        height: 20%;
-width: 25%;
-color: blue;
-     }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="block"></div>
-            <div class="block"></div>
-        </div>
+
+<head>
+    <style>
+        page {
+            page-break-after: 100vh;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .container {
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: lightskyblue;
+            overflow: hidden;
+            border: white solid 0.2em;
+        }
+
+        .block {
+            width: 25vw;
+            height: 40vh;
+            background-color: blue;
+           
+            display: inline-block;
+        }
+
+        .block+.strocked {
+            margin-top: 0.8em;
+            margin-left: 0.2em;
+            width: 25vw;
+            height: 40vh;
+            background-color: red;
+            display: block;
+            padding-bottom: 0.4em;
+        }
+
+        .block+.rectangle {
+            width: 62.5vw;
+            height: 40vh;
+            background-color: purple;
+            overflow: hidden;
+            margin-bottom: 0.8em;
+        }
+
+        .rectangle+.strocked {
+            width: 62.5vw;
+            height: 20vw;
+            background-color: yellow;
+            display: inline-block;
+
+        }
+       
+        .a:hover {
+            background-color: red;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="block"></div>
+        <br>
+        <div class="block"></div>
+    </div>
+    <div class="block strocked" style="border:solid 0.6em black; width: 16em; heigt: 35em;"; ></div>
+    <div class="rectangle"><style="background-color:purple";>
         <div class="block strocked"></div>
-        <div class="rectangle">
-            <div class="block"></div>
-        </div>
-        <div class="rectangle strocked"></div>
-    </body>
+    </div>
+    <div class="rectangle strocked"></div>
+
+</body>
+
 </html>
