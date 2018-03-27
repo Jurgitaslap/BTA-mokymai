@@ -3,48 +3,34 @@
 
 <head>
     <style>
-        page {
-            page-break-after: 100vh;
-        }
-
+        
         body {
-            width: 100vw;
-            height: 100vh;
+            width: 100vmax;
+            height: 50vmax;
         }
 
-        .container {
+      .container {
             margin: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100vmax;
+            height: 50vmax;
             background-color: lightskyblue;
             overflow: hidden;
-            border: white solid 0.2em;
-            display: inline-block;
-        }
+              display: inline-block;}
 
         .block {
-            width: 25vw;
-            height: 40vh;
+            width: 25%;
+            height: 40%;
             background-color: blue;
             display: inline-block;
-        }
+           
+            }
 
-        .block2 {
-            width: 25vw;
-            height: 40vh;
-            background-color: red;
+        .block strocked {
+            width: 25%;
+            height: 40%;
+            background-color: blue;
             display: inline-block;
-            overflow: hidden;
-        }
-
-        .block2+.strocked {
-            margin-top: 0.8em;
-            margin-left: 0.2em;
-            width: 25vw;
-            height: 40vh;
-            padding-bottom: 0.4em;
-            background-color: red; !important
-            
+                      
         }
 
         .block+.rectangle {
@@ -53,6 +39,7 @@
             background-color: purple;
             overflow: hidden;
             margin-bottom: 0.8em;
+            
 
         }
 
@@ -61,7 +48,7 @@
             height: 20vw;
             background-color: yellow;
             display: block;
-        }
+           
 
     </style>
 </head>
@@ -73,12 +60,11 @@
         <br>
         <div class="block"></div>
     </div>
-    <div class="block strocked" style="border:solid 0.6em black; width: 16em;" ;></div>
-    <div class="rectangle" style="background-color:purple" ;>
-        <div clas="rectangle strocked"></div>
+    <div class="block strocked" border-style="solid 0.6em black" width: 16em></div>
+    <div class="rectangle"; style="background-color:purple">
+        <div class="rectangle strocked"></div>
     </div>
     <div class="rectangle strocked"></div>
-
 </body>
 
 </html>
