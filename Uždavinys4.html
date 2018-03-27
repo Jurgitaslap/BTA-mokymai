@@ -3,68 +3,80 @@
 
 <head>
     <style>
-        
         body {
             width: 100vmax;
-            height: 50vmax;
+            height: 60vmax;
         }
 
-      .container {
+        .container {
             margin: 0;
             width: 100vmax;
-            height: 50vmax;
+            height: 60vmax;
             background-color: lightskyblue;
             overflow: hidden;
-              display: inline-block;}
+            display: inline-block;
+        }
 
         .block {
             width: 25%;
             height: 40%;
             background-color: blue;
             display: inline-block;
-           
-            }
+            border: 0.3em solid blue;
 
-        .block strocked {
+        }
+
+        #block strocked {
+
             width: 25%;
             height: 40%;
             background-color: blue;
             display: inline-block;
-                      
+            margin: 0.5em 0 1em 0;
+            
+    
         }
 
-        .block+.rectangle {
-            width: 62.5vw;
-            height: 40vh;
+        .rectangle {
+            width: 60%;
+            height: 40%;
             background-color: purple;
             overflow: hidden;
-            margin-bottom: 0.8em;
-            
+            margin-bottom: 1em;
+            display: block;
 
         }
 
-        .rectangle+.strocked {
-            width: 62.5vw;
-            height: 20vw;
+        .rectangle strocked {
+            width: 60%;
+            height: 40%;
             background-color: yellow;
             display: block;
-           
+            margin-bottom: 0.2em;
+            overflow: hidden;
+        }
 
+        .box:hover {
+            width: 25%;
+            background-color: orange;
+            border: 0.3em solid purple;
+        }
     </style>
 </head>
 
 <body>
 
     <div class="container">
-        <div class="block"></div>
+       <i></i> <div class="block"></div><i></i>
         <br>
         <div class="block"></div>
     </div>
-    <div class="block strocked" border-style="solid 0.6em black" width: 16em></div>
-    <div class="rectangle"; style="background-color:purple">
-        <div class="rectangle strocked"></div>
+
+    <div class="block strocked box" class="box" border-color="black"></div>
+    <div class="rectangle" ; style="background-color: purple" ;>
+        <div class="block" ; width: 25%; height: 40%; background-color: red !important;></div>
     </div>
-    <div class="rectangle strocked"></div>
+    <div id="rectangle strocked"></div>
 </body>
 
 </html>
