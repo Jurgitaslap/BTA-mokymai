@@ -19,6 +19,7 @@
             background-color: lightskyblue;
             overflow: hidden;
             border: white solid 0.2em;
+            display: inline-block;
         }
 
         .block {
@@ -33,6 +34,7 @@
             height: 40vh;
             background-color: red;
             display: inline-block;
+            overflow: hidden;
         }
 
         .block2+.strocked {
@@ -40,8 +42,9 @@
             margin-left: 0.2em;
             width: 25vw;
             height: 40vh;
-            display: block;
             padding-bottom: 0.4em;
+            background-color: red; !important
+            
         }
 
         .block+.rectangle {
@@ -50,7 +53,7 @@
             background-color: purple;
             overflow: hidden;
             margin-bottom: 0.8em;
-            
+
         }
 
         .rectangle+.strocked {
@@ -59,7 +62,7 @@
             background-color: yellow;
             display: block;
         }
-       
+
     </style>
 </head>
 
@@ -73,7 +76,7 @@
     <div class="block strocked" style="border:solid 0.6em black; width: 16em;" ;></div>
     <div class="rectangle" style="background-color:purple" ;>
         <div clas="rectangle strocked"></div>
-</div>
+    </div>
     <div class="rectangle strocked"></div>
 
 </body>
