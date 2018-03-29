@@ -71,36 +71,64 @@
 
   #c div {
     display: inline-block;
-    height: 100%;
     vertical-align: top;
   }
 
   #n {
     background-color: blue;
-    width: calc(100% - 1px);
     position: relative;
+    padding: 23vw;
+    display: inline-block;
   }
 
   #o {
     background-color: red;
-    width: calc(100% - 1px);
     position: relative;
+    padding: 23.1vw;
+    display: inline-block;
   }
 
   #p {
     background-color: purple;
-    width: calc(100% - 1px);
     position: relative;
-    height: 5em;
+    height: 10vh;
+    padding: 23vw;
+    display: inline-block;
+  }
+
+  #d {
+    hight: calc(100vh - 6px - 2*2em - 8px);
+    position: relative;
+  }
+
+  #r {
+    background-color: green;
+    display: inline-block;
+    widht: 100%;
+    padding: 11.4vw;
+    vertical-align: top;
+    margin-bottom: 0;
+  }
+
+  #s {
+    background-color: purple;
+    display: inline-block;
+    widht: 100%;
+    padding: 11.2vw;
+  }
+
+  #d div {
+    display: inline-block;
+    vertical-align: top;
   }
 </style>
 
 <body>
-  
-<header>
-  <div id="l">A</div>
-  <div id="m">B</div>
-</header>
+
+  <header>
+    <div id="l">A</div>
+    <div id="m">B</div>
+  </header>
   <div id="b">
     <div id="k">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra velit quis magna euismod, et sollicitudin eros malesuada.
       Phasellus at ornare magna. In cursus pharetra ornare. Interdum et malesuada fames ac ante ipsum primis in faucibus.
@@ -129,12 +157,16 @@
       nisl id ipsum tincidunt vestibulum. Sed eget urna ipsum. Vivamus vitae mauris dictum, posuere lectus non, facilisis
       justo. Vivamus eu nulla gravida, pulvinar quam eget, tincidunt neque. Duis congue odio ipsum, id aliquet ipsum aliquet
       a. Fusce tellus enim, mollis in luctus interdum, vestibulum non metus. Curabitur ut tellus vestibulum, finibus neque
-      ac, ornare arcu. Sed bibendum diam turpis, non tempus augue molestie et. Curabitur lobortis magna eu risus mattis tincidunt.
-      Nam tristique a augue at pulvinar. Phasellus varius pharetra suscipit. Ut feugiat nisl sit amet metus accumsan ultricies.
-      Pellentesque ac elit quis magna semper ornare. Nulla facilisi.</div>
-      <div id="c"><div id="n">D</div><div id="o">E</div><div id="p">G</div></div><div id="d">F</div></div>
-      <footer style="background-color: rgb(100, 238, 253)">
+      ac, ornare arcu.</div>
+    <div id="c">
+      <div id="n">D</div>
+      <div id="o">E</div>
+      <div id="p">G</div>
+    </div>
+    <div id="d">
+      <div id="r">F</div>
+      <div id="s">H</div>
+    </div>
+    <footer style="background-color: rgb(100, 238, 253)">
       I
-      </footer>
-      
-      
+    </footer>
