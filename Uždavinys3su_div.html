@@ -5,33 +5,44 @@
     <title>Šachmatai su div</title>
 
     <style>
+        body {width: 100vw;
+        height: 56.25vw;
+        max-height: 100vh;
+        max-width: 177.78vh;}
+
         .chessboard {
-            width: 600px;
-            height: 600px;
-            margin: 20px;
-            border: 25px solid black;
+            width: 100vh;
+            height: 100vw;
+            margin: auto;
+            border: 1.2em solid black;
+            min-width: 200px;
+            min-height: 200px;
         }
 
         .black {
             float: left;
-            width: 60px;
-            height: 60px;
+            width: 60vmin;
+            height: 60vmin;
             background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);
-            font-size: 50px;
+            font-size: 15vmin;
             text-align: center;
             display: table-cell;
             vertical-align: middle;
+            min-width: 60px;
+            min-height: 60px;
         }
 
         .white {
             float: left;
-            width: 60px;
-            height: 60px;
+            width: 60vmin;
+            height: 60vmin;
             background: url(http://www.texturex.com/cache/Wood-Textures/wood%20texture%20grain%20ash%20red%20wooden%20panel%20table%20wallpaper_800.jpg);
-            font-size: 50px;
+            font-size: 15vmin;
             text-align: center;
             display: table-cell;
             vertical-align: middle;
+            min-width: 60px;
+            min-height: 60px;
 
         }
     </style>
