@@ -1,149 +1,155 @@
 <!DOCTYPE html>
 <html>
-<head><title>Šachmatai su div</title>
 
-<style>
-.chessboard {
-    width: 600px;
-    height: 600px;
-    margin: 20px;
-    border: 25px solid black;
-}
-.black {
-    float: left;
-    width: 60px;
-    height: 60px;
-   background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);
-      font-size:50px;
-    text-align:center;
-    display: table-cell;
-    vertical-align:middle;
-}
-.white {
-    float: left;
-    width: 60px;
-    height: 60px;
-        background: url(http://www.texturex.com/cache/Wood-Textures/wood%20texture%20grain%20ash%20red%20wooden%20panel%20table%20wallpaper_800.jpg);
-    font-size:50px;
-    text-align:center;
-    display: table-cell;
-    vertical-align:middle;
-   
-}
-</style>
+<head>
+    <title>Šachmatai su div</title>
+
+    <style>
+        .chessboard {
+            width: 600px;
+            height: 600px;
+            margin: 20px;
+            border: 25px solid black;
+        }
+
+        .black {
+            float: left;
+            width: 60px;
+            height: 60px;
+            background: url(https://cdn.tutsplus.com/psd/uploads/legacy/0538_Seamless_Wood/final.jpg);
+            font-size: 50px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .white {
+            float: left;
+            width: 60px;
+            height: 60px;
+            background: url(http://www.texturex.com/cache/Wood-Textures/wood%20texture%20grain%20ash%20red%20wooden%20panel%20table%20wallpaper_800.jpg);
+            font-size: 50px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+
+        }
+    </style>
 </head>
+
 <body>
-<div class="chessboard">
-<!-- 1st -->
-<div class="white"></div>
-<div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
-<div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
-<div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
-<div class="white"style="height: 59px; border-bottom: 1px wheat solid;"></div>
-<div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
-<div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
-<div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
-<div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
-<div class="white"></div>
-<!-- 2st -->
-<div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
-<div class="white">&#9820;</div>
-<div class="black">&#9822;</div>
-<div class="white">&#9821;</div>
-<div class="black">&#9819;</div>
-<div class="white">&#9818;</div>
-<div class="black">&#9821;</div>
-<div class="white">&#9822;</div>
-<div class="black">&#9820;</div>
-<div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
-<!-- 3nd -->
-<div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
-<div class="black">&#9823;</div>
-<div class="white">&#9823;</div>
-<div class="black">&#9823;</div>
-<div class="white">&#9823;</div>
-<div class="black">&#9823;</div>
-<div class="white">&#9823;</div>
-<div class="black">&#9823;</div>
-<div class="white">&#9823;</div>
-<div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
-<!-- 4th -->
-<div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
-<!-- 5st -->
-<div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
-<!-- 6th -->
-<div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
-<!-- 7th -->
-<div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="black"></div>
-<div class="white"></div>
-<div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
-<!-- 8th -->
-  <div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
-<div class="white" style="color: wheat">&#9823;</div>
-<div class="black" style="color: wheat">&#9823;</div>
-<div class="white" style="color: wheat">&#9823;</div>
-<div class="black" style="color: wheat">&#9823;</div>
-<div class="white" style="color: wheat">&#9823;</div>
-<div class="black" style="color: wheat">&#9823;</div>
-<div class="white" style="color: wheat">&#9823;</div>
-<div class="black" style="color: wheat">&#9823;</div>
-  <div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
-<!-- 9th -->
-  <div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
-<div class="black" style="color: wheat">&#9820;</div>
-<div class="white" style="color: wheat">&#9822;</div>
-<div class="black" style="color: wheat">&#9821;</div>
-<div class="white" style="color: wheat">&#9819;</div>
-<div class="black" style="color: wheat">&#9818;</div>
-<div class="white" style="color: wheat">&#9821;</div>
-<div class="black" style="color: wheat">&#9822;</div>
-<div class="white" style="color: wheat">&#9820;</div>
-  <div class="white" style="color: wheat; width: 59px; border-left: 1px wheat solid;"></div>
-<!-- 10th -->
-<div class="white"></div>
-<div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
-<div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
-<div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
-<div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
-<div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
-<div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
-<div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
-<div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
-<div class="white"></div>
-</div>
+    <div class="chessboard">
+        <!-- 1st -->
+        <div class="white"></div>
+        <div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-bottom: 1px wheat solid;"></div>
+        <div class="white"></div>
+        <!-- 2st -->
+        <div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
+        <div class="white">&#9820;</div>
+        <div class="black">&#9822;</div>
+        <div class="white">&#9821;</div>
+        <div class="black">&#9819;</div>
+        <div class="white">&#9818;</div>
+        <div class="black">&#9821;</div>
+        <div class="white">&#9822;</div>
+        <div class="black">&#9820;</div>
+        <div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
+        <!-- 3nd -->
+        <div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
+        <div class="black">&#9823;</div>
+        <div class="white">&#9823;</div>
+        <div class="black">&#9823;</div>
+        <div class="white">&#9823;</div>
+        <div class="black">&#9823;</div>
+        <div class="white">&#9823;</div>
+        <div class="black">&#9823;</div>
+        <div class="white">&#9823;</div>
+        <div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
+        <!-- 4th -->
+        <div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
+        <!-- 5st -->
+        <div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
+        <!-- 6th -->
+        <div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
+        <!-- 7th -->
+        <div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
+        <!-- 8th -->
+        <div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
+        <div class="white" style="color: wheat">&#9823;</div>
+        <div class="black" style="color: wheat">&#9823;</div>
+        <div class="white" style="color: wheat">&#9823;</div>
+        <div class="black" style="color: wheat">&#9823;</div>
+        <div class="white" style="color: wheat">&#9823;</div>
+        <div class="black" style="color: wheat">&#9823;</div>
+        <div class="white" style="color: wheat">&#9823;</div>
+        <div class="black" style="color: wheat">&#9823;</div>
+        <div class="white" style="width: 59px; border-left: 1px wheat solid;"></div>
+        <!-- 9th -->
+        <div class="white" style="width: 59px; border-right: 1px wheat solid;"></div>
+        <div class="black" style="color: wheat">&#9820;</div>
+        <div class="white" style="color: wheat">&#9822;</div>
+        <div class="black" style="color: wheat">&#9821;</div>
+        <div class="white" style="color: wheat">&#9819;</div>
+        <div class="black" style="color: wheat">&#9818;</div>
+        <div class="white" style="color: wheat">&#9821;</div>
+        <div class="black" style="color: wheat">&#9822;</div>
+        <div class="white" style="color: wheat">&#9820;</div>
+        <div class="white" style="color: wheat; width: 59px; border-left: 1px wheat solid;"></div>
+        <!-- 10th -->
+        <div class="white"></div>
+        <div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
+        <div class="white" style="height: 59px; border-top: 1px wheat solid;"></div>
+        <div class="white"></div>
+    </div>
 </body>
+
 </html>
