@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Uždavinys7</title>
+        <meta charset='UTF-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #container {
+                background-color: lightgray;
+                width: 50vw;
+                height: 50vw;
+                margin: auto;
+                position: relative;
+            }
+            .r, .g, .b {
+                width: 60%;
+                height: 60%;
+                font-size: 3em;
+                color: white;
+                border: 0.25em solid;
+                border-radius: 50%;
+            }
+            .g {
+                background-color: rgb(0, 128, 0, 0.5);
+                border-color: green;
+                position: absolute;
+                left: 0.25em;
+                bottom: 0.25em; 
+            }
+            .b {
+                background-color: rgb(0, 0, 128, 0.5);
+                border-color: blue;
+                position: absolute;
+                right: 0.25em;
+                bottom: 0.25em; 
+            }
+            .r {
+                background-color: rgb(128, 0, 0, 0.5);
+                border-color: red;
+                position: absolute;
+                top: 0.25em;
+                left: 20%;
+            }
+            .t {
+                text-align: center;
+                position: relative;
+                top: calc(50% - 0.5em);
+            }
+            p {font-size: 0.8em;}
+
+           
+
+
+        </style>
+    </head>
+    <body>
+            
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id risus ligula. Sed eu tortor sem. Donec aliquet nibh at augue malesuada luctus. Duis id risus ligula. Donec aliquet nibh at augue malesuada luctus. Duis id risus ligula. In lobortis lobortis risus, sed feugiat nibh eleifend sed. Sed sagittis at quam ut congue. In lobortis lobortis risus, sed feugiat nibh eleifend sed. Sed sagittis at quam ut congue. Donec placerat pharetra arcu eget ultrices. Ut porttitor vestibulum tristique.Cras condimentum, tellus sed ultricies viverra, arcu elit dictum nisl, nec pellentesque mi justo eu nibh. Donec ac placerat quam.</p>
+       <div id="container">
+            <div class="r"><div class="t">R</div></div>
+            <div class="g"><div class="t">G</div></div>
+            <div class="b"><div class="t">B</div></div>
+       </div>
+    </body>
+</html>
