@@ -1,65 +1,230 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Uždavinys7</title>
-        <meta charset='UTF-8' />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            #container {
-                background-color: lightgray;
-                width: 50vw;
-                height: 50vw;
-                margin: auto;
-                position: relative;
-            }
-            .r, .g, .b {
+
+<head>
+    <title>Uždavinys7</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        #container {
+            background-color: lightgray;
+            width: 80vmin;
+            height: 80vmin;
+            margin: auto;
+            position: relative;
+        }
+
+        .r,
+        .g,
+        .b {
+            width: 60%;
+            height: 60%;
+            font-size: 5vmin;
+            color: white;
+            border: 1vmin solid;
+            border-radius: 50%;
+        }
+
+        .g {
+            background-color: rgb(0, 128, 0, 0.5);
+            border-color: green;
+            position: absolute;
+            left: 15vmin;
+            bottom: 15vmin;
+            animation: move1;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            transition: left 1s, right 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+            animation-timing-function: cubic-bezier(.19, .05, .26, .87);
+        }
+
+        .b {
+            background-color: rgb(0, 0, 128, 0.5);
+            border-color: blue;
+            position: absolute;
+            right: 15vmin;
+            bottom: 15vmin;
+            animation: move2;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            transition: bottom 1s, right 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+            animation-timing-function: cubic-bezier(.19, .05, .26, .87);
+        }
+
+        .r {
+            background-color: rgb(128, 0, 0, 0.5);
+            border-color: red;
+            position: absolute;
+            top: 15vmin;
+            left: 15vmin;
+            animation: move3;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            transition: left 1s, top 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+            animation-timing-function: cubic-bezier(.19, .05, .26, .87);
+        }
+
+        .t {
+            text-align: center;
+            position: relative;
+            top: calc(50% - 4vmin);
+        }
+
+        #p {
+            flex: 0 0 1.5em;
+            overflow: auto;
+            font-size: 2vmin;
+            flex-direction: column;
+            display: flex;
+            width: 100vw;
+            height: 7vmin;
+            margin-bottom: 1vmin;
+        }
+
+        @keyframes move1 {
+            0% {}
+            20% {
+                left: 2vmin;
+                bottom: 2vmin;
                 width: 60%;
                 height: 60%;
-                font-size: 3em;
-                color: white;
-                border: 0.25em solid;
-                border-radius: 50%;
             }
-            .g {
-                background-color: rgb(0, 128, 0, 0.5);
-                border-color: green;
-                position: absolute;
-                left: 0.25em;
-                bottom: 0.25em; 
+            40% {
+                left: -8vmin;
+                bottom: -8vmin;
+                width: 80%;
+                height: 80%;
             }
-            .b {
-                background-color: rgb(0, 0, 128, 0.5);
-                border-color: blue;
-                position: absolute;
-                right: 0.25em;
-                bottom: 0.25em; 
+            60% {
+                left: 2vmin;
+                bottom: 2vmin;
+                width: 60%;
+                height: 60%;
             }
-            .r {
-                background-color: rgb(128, 0, 0, 0.5);
-                border-color: red;
-                position: absolute;
-                top: 0.25em;
+            80% {
+                left: -8vmin;
+                bottom: -8vmin;
+                width: 80%;
+                height: 80%;
+            }
+
+            100% {
+                left: 2vmin;
+                bottom: 2vmin;
+                width: 60%;
+                height: 60%;
+            }
+        }
+
+
+        @keyframes move2 {
+            0% {
+                right: 15vmin;
+                bottom: 15vmin;
+            }
+            20% {
+                right: 2vmin;
+                bottom: 2vmin;
+                width: 60%;
+                height: 60%;
+            }
+
+            40% {
+                right: -8vmin;
+                bottom: -8vmin;
+                width: 80%;
+                height: 80%;
+            }
+            60% {
+                right: 2vmin;
+                bottom: 2vmin;
+                width: 60%;
+                height: 60%;
+            }
+            80% {
+                right: -8vmin;
+                bottom: -8vmin;
+                width: 80%;
+                height: 80%;
+            }
+
+
+            100% {
+                right: 2vmin;
+                bottom: 2vmin;
+                width: 60%;
+                height: 60%;
+            }
+        }
+
+        @keyframes move3 {
+            0% {
+                top: 15vmin;
+                left: 15vmin;
+            }
+            20% {
+                top: 2vmin;
                 left: 20%;
+                width: 60%;
+                height: 60%;
             }
-            .t {
-                text-align: center;
-                position: relative;
-                top: calc(50% - 0.5em);
+
+            40% {
+                top: -8vmin;
+                left: 11%;
+                width: 80%;
+                height: 80%;
             }
-            p {font-size: 0.8em;}
+            60% {
+                top: 2vmin;
+                left: 20%;
+                width: 60%;
+                height: 60%;
+            }
+            80% {
+                top: -8vmin;
+                left: 11%;
+                width: 80%;
+                height: 80%;
+            }
 
-           
 
 
-        </style>
-    </head>
-    <body>
-            
-       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id risus ligula. Sed eu tortor sem. Donec aliquet nibh at augue malesuada luctus. Duis id risus ligula. Donec aliquet nibh at augue malesuada luctus. Duis id risus ligula. In lobortis lobortis risus, sed feugiat nibh eleifend sed. Sed sagittis at quam ut congue. In lobortis lobortis risus, sed feugiat nibh eleifend sed. Sed sagittis at quam ut congue. Donec placerat pharetra arcu eget ultrices. Ut porttitor vestibulum tristique.Cras condimentum, tellus sed ultricies viverra, arcu elit dictum nisl, nec pellentesque mi justo eu nibh. Donec ac placerat quam.</p>
-       <div id="container">
-            <div class="r"><div class="t">R</div></div>
-            <div class="g"><div class="t">G</div></div>
-            <div class="b"><div class="t">B</div></div>
-       </div>
-    </body>
+            100% {
+                top: 2vmin;
+                left: 20%;
+                width: 60%;
+                height: 60%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis at quam ut congue. Donec aliquet nibh at augue
+        malesuada luctus. Duis id risus ligula. Donec aliquet nibh at augue malesuada luctus. Duis id risus ligula. In lobortis
+        lobortis risus, sed feugiat nibh eleifend sed. Sed sagittis at quam ut congue. In lobortis lobortis risus, sed feugiat
+        nibh eleifend sed. Sed sagittis at quam ut congue. Donec placerat pharetra arcu eget ultrices. Ut porttitor vestibulum
+        tristique.Cras condimentum, tellus sed ultricies viverra, arcu elit dictum nisl, nec pellentesque mi justo eu nibh.
+        Donec ac placerat quam.</div>
+    <div id="container">
+        <div class="r">
+            <div class="t">R</div>
+        </div>
+        <div class="g">
+            <div class="t">G</div>
+        </div>
+        <div class="b">
+            <div class="t">B</div>
+        </div>
+    </div>
+</body>
+
 </html>
