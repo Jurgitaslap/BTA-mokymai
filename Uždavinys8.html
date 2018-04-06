@@ -5,59 +5,215 @@
     <title>Uždavinys8</title>
     <meta charset="UTF-8">
     <style>
+        body {
+            margin: 0;
+            font-size: 150%;
+        }
 
-body {margin: 0; font-size: 150%;}
+        #c {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            overflow: auto;
+        }
 
-#c {width: 100vw; 
-height: 100vmin; 
-background-color: yellow;
-display: flex;
-flex-direction: column;
-justify-content: center; 
-align-items: stretch; 
-}
-#x { flex: 0 0 10vmin; background-color: green; display: flex; flex-direction: row-reverse; justify-content: center;}
-#x1 {flex: 0 0 76vmin; /*overflow: auto;*/ margin: auto; flex-grow: 3; align-items: stretch;}
-#x2 {flex: 0 0 24vmin; order: -1; /*overflow: auto;*/ flex-grow: 1; align-items: stretch;}
+        #x {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: stretch
+        }
 
-#c/*,#y,#n,*/ div { border: solid 0.5vmin white; /*overflow: auto;*/ margin: 0;}
+        #x1 {
+            flex: 0 0 75%;
+            overflow: hidden;
+            margin: auto;
+            align-items: stretch;
+            background-color: green;
+            height: 10vmin;
+        }
 
-#y {flex-grow: 1; display: flex; justify-content: center; align-items: stretch; height: 77vmin; }
-#l {flex: 0 0 24%; width: 63vmin;}
-#m {flex: 0 0 50.5%; background-color: blue; flex-direction: column; flex-grow: 1; display: flex; justify-content: center; align-items: stretch;}
-#n {flex: 24%; background-color: red; flex-direction: column; flex-grow: 1; display: flex; justify-content: top; align-items: stretch; }
+        #x2 {
+            flex: 0 0 24%;
+            order: -1;
+            overflow: hidden;
+            align-items: stretch;
+            background-color: green;
+            height: 10vmin;
+        }
 
-#o {flex: 0 0 21vmin;}
-#p {flex: 0 0 70vmin;}
+        #c,
+        #y,
+        #n,
+        div {
+            border: solid 0.3vmin white;
+        }
 
-#z { flex: 0 0 10vmin; /*overflow: auto;*/ background-color: green;}
-#r, #s, #o, #p {flex: 0 0 10vmin;}
-#t {flex: 0 0 53vmin;}
+        #y {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            height: 70vh;
+            margin: 0.3vmin 0 0 0;
+        }
 
+        #l {
+            flex: 1 0 24%;
+            overflow: auto;
+            flex-direction: column;
+            flex-grow: 1;
+            display: flex;
+        }
 
+        #l div {
+            flex: 1 0 85vh;
+            flex-direction: column;
+            flex-grow: 1;
+            display: flex;
+            background-color: yellow;
+        }
+
+        #m {
+            flex: 1 0 51%;
+            background-color: blue;
+            flex-direction: column;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            overflow: auto;
+        }
+
+        #n {
+            flex: 1 0 24%;
+            background-color: red;
+            flex-direction: column;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            overflow: auto;
+        }
+
+        #o {
+            flex: 0 0 27%;
+            overflow: hidden;
+        }
+
+        #r,
+        #s {
+            flex: 0 0 13%;
+            overflow: hidden;
+        }
+
+        #t,
+        #p {
+            flex: 0 0 72%;
+            overflow: hidden;
+        }
+
+        #z1 {
+            width: 99.2vw;
+            height: 10vmin;
+            background-color: green;
+        }
     </style>
 </head>
 
 <body>
     <div id="c">
         <div id="x">
-      <div id="x1">A</div>
-      <div id="x2">B</div>
+            <div id="x1">A</div>
+            <div id="x2">B</div>
         </div>
-         <div id="y">
-        <div id="l">C</div>
-        <div id="m">
-            <div id="r">D</div>
-            <div id="s">E</div>
-            <div id="t">G</div>
+        <div id="y">
+            <div id="l">
+                <div id="l1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae condimentum nisl. Vivamus ultricies blandit enim.
+                    Ut eget tortor eget tortor malesuada ultrices sed quis erat. In in lectus a tellus accumsan pulvinar.
+                    Vivamus facilisis ultricies velit vitae aliquam. Nullam sit amet est a sapien luctus dapibus vitae ut
+                    diam. Phasellus ut sapien nec magna lacinia vestibulum nec at nisi. Cras ac consectetur ex. Nunc vitae
+                    faucibus felis. Sed fermentum ligula nibh, aliquam semper nunc rhoncus a. Sed in risus sed dui imperdiet
+                    vestibulum. Donec ultricies ut odio ac luctus. Nam sed sem nisi. Quisque orci urna, gravida quis laoreet
+                    vitae, sodales a sapien. Integer feugiat euismod nisi, id molestie sem pharetra a. Vestibulum non consectetur
+                    risus, id fringilla enim. Vestibulum elementum tempor nibh, at viverra enim tincidunt in. Nullam ut congue
+                    urna. Suspendisse pellentesque quis erat sit amet blandit. Sed sed pellentesque orci. Maecenas dignissim
+                    consequat ante, id gravida lorem eleifend ut. Nam at odio tellus. Duis sem turpis, accumsan quis velit
+                    quis, commodo pretium sapien. Etiam commodo at odio non placerat. Aenean tempus nulla fermentum, mollis
+                    lectus vel, viverra est. Morbi euismod massa sit amet ante ultricies, sed ornare tellus vehicula. Morbi
+                    volutpat massa sit amet lorem volutpat blandit. Fusce euismod eros quis laoreet tincidunt. Nullam fermentum
+                    eleifend iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Nam a tellus metus. Sed dolor lectus, imperdiet eu lorem ut, viverra porttitor nisi. Fusce imperdiet
+                    felis pretium, accumsan turpis nec, vulputate lacus. Maecenas velit metus, auctor quis dignissim eu,
+                    commodo eget augue. Praesent pulvinar mattis interdum. Nulla vulputate tincidunt orci, a rutrum mauris.</div>
+            </div>
+            <div id="m">
+                <div id="r">D</div>
+                <div id="s">E</div>
+                <div id="t">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex felis, placerat eget elit vel, egestas
+                    lacinia ligula. Mauris lobortis elementum nibh, vitae euismod metus rutrum non. Vestibulum ante ipsum
+                    primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer commodo lacus et nunc tincidunt
+                    rhoncus. Aenean purus tortor, fermentum eu faucibus ac, bibendum a risus. Fusce ut tellus eu sem tempus
+                    facilisis eu quis enim. Nam dictum magna in magna ultricies, eget dapibus nisl pulvinar. Mauris dapibus
+                    congue libero non rhoncus. Suspendisse imperdiet sodales condimentum. Vestibulum venenatis elit eget
+                    felis consequat, a porta nisl sagittis. Sed in risus sit amet mi dignissim accumsan. Nullam in elit sed
+                    mauris fringilla mattis non quis lacus. Nulla eget consectetur nisl, sit amet accumsan nunc. Nulla purus
+                    diam, blandit vitae nisi non, tincidunt tristique eros. Quisque fringilla tortor velit, nec cursus velit
+                    gravida et. In congue elementum magna a cursus. Aenean ut ligula est. Aenean dui eros, elementum eu ornare
+                    a, varius eu odio. Donec at nisi placerat, ultricies massa quis, elementum metus. Sed commodo urna et
+                    vestibulum accumsan. Curabitur interdum dui malesuada pulvinar feugiat. Maecenas venenatis lobortis erat
+                    eget dapibus. Sed sagittis, elit a maximus iaculis, tortor neque pellentesque arcu, mollis maximus libero
+                    enim quis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus id augue nec
+                    lorem convallis cursus. Nam ipsum sem, euismod nec efficitur nec, pulvinar vel mi. Suspendisse quis odio
+                    id arcu sollicitudin fringilla. Vestibulum id lobortis velit. Phasellus maximus risus ut dolor luctus,
+                    sed ullamcorper ex sodales. Nam sit amet efficitur massa. Suspendisse augue nunc, tincidunt sit amet
+                    velit varius, cursus hendrerit risus. Nam enim mi, aliquam at nisl non, elementum tincidunt justo. Phasellus
+                    elementum libero non est volutpat pellentesque. Orci varius natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Donec porttitor lectus sed justo euismod malesuada. Nam porta finibus
+                    efficitur. Mauris commodo, eros eu elementum dapibus, leo nibh tincidunt magna, vel luctus libero justo
+                    at neque. Donec eu ex vel lorem varius bibendum sed vitae orci. Quisque dignissim enim non posuere mattis.
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur sit
+                    amet purus nibh. Mauris et aliquet risus. Nulla consectetur id arcu non luctus. Sed mollis ultricies
+                    congue. Quisque vulputate libero ut elementum porta. Etiam non tincidunt mauris. Mauris a nisl dapibus,
+                    tristique sapien ullamcorper, malesuada justo. Etiam efficitur facilisis orci, at rutrum sapien laoreet
+                    ut. Suspendisse facilisis a nibh at iaculis. Integer molestie mi vitae nibh porttitor, pellentesque tincidunt
+                    ante porta. Phasellus varius lorem at velit vestibulum, ac facilisis mi laoreet. Vestibulum ut orci sed
+                    erat volutpat volutpat. Nullam non dapibus eros. Mauris tincidunt hendrerit metus ut semper. Aliquam
+                    eu turpis lacus. Sed imperdiet purus odio, at convallis justo tincidunt commodo. Sed rutrum porta felis.
+                    Morbi sed lacus nec arcu semper luctus. Mauris consectetur enim eget volutpat efficitur. Maecenas faucibus
+                    nisl sed ex ultrices, sit amet placerat magna aliquam. Cras venenatis vestibulum mi, congue sollicitudin
+                    lectus maximus gravida.</div>
+            </div>
+            <div id="n">
+                <div id=o>F</div>
+                <div id=p>Donec a felis quis odio mollis interdum et at nulla. Nullam elementum lectus sit amet dolor posuere ultrices.
+                    In convallis eu metus ut rhoncus. Integer placerat tincidunt bibendum. Aliquam nisi nulla, scelerisque
+                    vel tincidunt quis, commodo eu mi. Curabitur lacus arcu, rhoncus in lacus at, facilisis scelerisque leo.
+                    Cras eleifend urna metus, varius tempor dui ullamcorper non. Sed mattis et odio et convallis. Praesent
+                    pellentesque fermentum quam. Sed at justo at nisl mollis rutrum. Aliquam molestie posuere massa, non
+                    venenatis sem rhoncus sed. Suspendisse elementum, neque vitae volutpat hendrerit, mi libero aliquam enim,
+                    ac sagittis nunc eros eget tortor. Vivamus porta sagittis velit, sed aliquet ligula tincidunt sit amet.
+                    Duis porttitor elementum efficitur. Sed tempor purus sit amet massa congue molestie. Mauris ac velit
+                    vitae massa egestas eleifend. Etiam ac eros semper, volutpat nisl sit amet, consectetur velit. Mauris
+                    felis odio, condimentum et facilisis at, lobortis vestibulum tortor. Sed bibendum convallis enim, et
+                    tempor quam eleifend eget. Etiam dignissim volutpat leo, a pharetra ex mollis eget. Duis in libero non
+                    lacus finibus condimentum. Sed quam lacus, blandit eu dapibus sed, placerat non leo. Duis et urna nec
+                    mi rhoncus efficitur faucibus quis turpis. Aliquam eu mauris neque. Ut eu congue tortor, nec ultricies
+                    dui. Suspendisse potenti. Donec vitae convallis arcu. Mauris viverra iaculis consequat. Morbi ut interdum
+                    est. Aliquam erat volutpat. Pellentesque ac facilisis leo, vel maximus nunc. Vivamus odio tellus, lacinia
+                    nec convallis quis, tempor ut sapien. Quisque nunc nulla, dictum id magna ut, dignissim sollicitudin
+                    sapien. Vivamus laoreet, ante eu mollis feugiat, nibh enim sollicitudin risus, sit amet imperdiet ante
+                    lacus quis eros. Cras neque tellus, varius sit amet fringilla vel, imperdiet non tellus. Nunc non vehicula
+                    lectus, ac finibus massa.</div>
+            </div>
         </div>
-        <div id="n">
-          <div id=o>F</div>
-          <div id=p>H</div>
-           </div>
-           </div>
-        <div id="z">I</div>
-      </div>
+        <div id="z">
+            <div id="z1"></div>
+        </div>
+    </div>
 </body>
 
 </html>
