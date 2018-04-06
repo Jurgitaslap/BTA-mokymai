@@ -5,94 +5,56 @@
     <title>Uždavinys8</title>
     <meta charset="UTF-8">
     <style>
-        body {
-            font: 24px Helvetica;
-            background: #999999;
-        }
 
-        #main {
-            min-height: 800px;
-            margin: 0px;
-            padding: 0px;
-            display: flex;
-            flex-flow: row;
-        }
+body {margin: 0; font-size: 150%;}
 
-        #main>article {
-            margin: 4px;
-            padding: 5px;
-            border: 1px solid #cccc33;
-            border-radius: 7pt;
-            background: #dddd88;
-            flex: 3 1 60%;
-            order: 2;
-        }
+#c {width: 100vw; 
+height: 100vh; 
+background-color: yellow;
+display: flex;
+flex-direction: column;
+justify-content: center; 
+align-items: stretch; 
+}
+#x { flex: 0 0 10vmin; background-color: green; display: flex; flex-direction: row-reverse;}
+#x1 {flex: 0 0 75%; overflow: auto;}
+#x2 {flex: 0 0 24%; order: -1; overflow: auto;}
 
-        #main>nav {
-            margin: 4px;
-            padding: 5px;
-            border: 1px solid #8888bb;
-            border-radius: 7pt;
-            background: #ccccff;
-            flex: 1 6 20%;
-            order: 1;
-        }
+#c,#y,#n, div { border: solid 0.5vmin white; overflow: hide; margin: 0;}
 
-        #main>aside {
-            margin: 4px;
-            padding: 5px;
-            border: 1px solid #8888bb;
-            border-radius: 7pt;
-            background: #ccccff;
-            flex: 1 6 20%;
-            order: 3;
-        }
 
-        header,
-        footer {
-            display: block;
-            margin: 4px;
-            padding: 5px;
-            min-height: 100px;
-            border: 1px solid #eebb55;
-            border-radius: 7pt;
-            background: #ffeebb;
-        }
 
-        /* Too narrow to support three columns */
+#y { flex-grow: 1; display: flex; justify-content: center; align-items: stretch; }
+#l {flex: 0 0 24%;}
+#m {flex: 0 0 50.5%; background-color: blue;}
+#n {flex: 24%; flex-grow: 1; flex-direction: row; justify-content: center; align-items: stretch; background-color: red;}
 
-        @media all and (max-width: 640px) {
-            #main,
-            #page {
-                flex-direction: column;
-            }
+#o {flex: 0 0 22%;}
+#p {flex: 0 0 77%;}
 
-            #main>article,
-            #main>nav,
-            #main>aside {
-                /* Return them to document order */
-                order: 0;
-            }
+#z { flex: 0 0 10vmin; overflow: auto; background-color: green;}
 
-            #main>nav,
-            #main>aside,
-            header,
-            footer {
-                min-height: 50px;
-                max-height: 50px;
-            }
-        }
+
+
     </style>
 </head>
 
 <body>
-    <header>Flexbox</header>
-    <div id="main">
-        <article>article</article>
-        <nav>nav</nav>
-        <aside>aside</aside>
-    </div>
-    <footer>footer</footer>
+    <div id="c">
+        <div id="x">
+      <div id="x1">A</div>
+      <div id="x2">B</div>
+        </div>
+         <div id="y">
+        <div id="l">C</div>
+        <div id="m">G</div>
+        <div id="n">
+          <div id=o></div>
+          <div id=p></div>
+           </div>
+           </div>
+        <div id="z">I</div>
+      </div>
 </body>
 
 </html>
