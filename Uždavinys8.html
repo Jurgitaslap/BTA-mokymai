@@ -20,20 +20,20 @@ align-items: stretch;
 #x1 {flex: 0 0 75%; overflow: auto;}
 #x2 {flex: 0 0 24%; order: -1; overflow: auto;}
 
-#c,#y,#n, div { border: solid 0.5vmin white; overflow: hide; margin: 0;}
-
-
+#c/*,#y,#n,*/ div { border: solid 0.5vmin white; /*overflow: auto;*/ margin: 0;}
 
 #y { flex-grow: 1; display: flex; justify-content: center; align-items: stretch; }
 #l {flex: 0 0 24%;}
-#m {flex: 0 0 50.5%; background-color: blue;}
+#m {flex: 0 0 50.5%; background-color: blue; flex-direction: column; flex-grow: 1; display: flex; justify-content: center; align-items: stretch;}
 #n {flex: 24%; flex-grow: 1; flex-direction: row; justify-content: center; align-items: stretch; background-color: red;}
 
 #o {flex: 0 0 22%;}
 #p {flex: 0 0 77%;}
 
 #z { flex: 0 0 10vmin; overflow: auto; background-color: green;}
-
+#r {flex: 0 0 13%;}
+#s {flex: 0 0 10.5%;}
+#t {flex: 0 0 70%;}
 
 
     </style>
@@ -47,10 +47,14 @@ align-items: stretch;
         </div>
          <div id="y">
         <div id="l">C</div>
-        <div id="m">G</div>
+        <div id="m">
+            <div id="r">D</div>
+            <div id="s">E</div>
+            <div id="t">G</div>
+        </div>
         <div id="n">
-          <div id=o></div>
-          <div id=p></div>
+          <div id=o>F</div>
+          <div id=p>H</div>
            </div>
            </div>
         <div id="z">I</div>
