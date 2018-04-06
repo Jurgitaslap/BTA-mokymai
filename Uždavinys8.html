@@ -9,20 +9,20 @@
 body {margin: 0; font-size: 150%;}
 
 #c {width: 100vw; 
-height: 100vh; 
+height: 100vmin; 
 background-color: yellow;
 display: flex;
 flex-direction: column;
 justify-content: center; 
 align-items: stretch; 
 }
-#x { flex: 0 0 11vmin; background-color: green; display: flex; flex-direction: row-reverse;}
-#x1 {flex: 0 0 75%; /*overflow: auto;*/}
-#x2 {flex: 0 0 24%; order: -1; /*overflow: auto;*/}
+#x { flex: 0 0 10vmin; background-color: green; display: flex; flex-direction: row-reverse; justify-content: center;}
+#x1 {flex: 0 0 76vmin; /*overflow: auto;*/ margin: auto; flex-grow: 3; align-items: stretch;}
+#x2 {flex: 0 0 24vmin; order: -1; /*overflow: auto;*/ flex-grow: 1; align-items: stretch;}
 
 #c/*,#y,#n,*/ div { border: solid 0.5vmin white; /*overflow: auto;*/ margin: 0;}
 
-#y { flex-grow: 1; display: flex; justify-content: center; align-items: stretch; }
+#y {flex-grow: 1; display: flex; justify-content: center; align-items: stretch; height: 77vmin; }
 #l {flex: 0 0 24%; width: 63vmin;}
 #m {flex: 0 0 50.5%; background-color: blue; flex-direction: column; flex-grow: 1; display: flex; justify-content: center; align-items: stretch;}
 #n {flex: 24%; background-color: red; flex-direction: column; flex-grow: 1; display: flex; justify-content: top; align-items: stretch; }
