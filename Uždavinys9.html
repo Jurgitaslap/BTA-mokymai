@@ -1,96 +1,193 @@
 <head>
-    <title>Media Query</title>
-    <meta charset="fe-09-mq.pdf1">
-    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
-    <style>
-      body { margin: 0; background-color: #FCDE8C;}
-a {color: white; text-decoration: none;}
-#c { 
-  display: flex; 
-  flex-direction: column;
-  width: 93vw;
-  font-size: 100%;
-  color: white;
-  font-family: 'PT Sans Narrow', sans-serif;
-}
-/*#m {display: none;}*/
-ul {
-  background-color: DodgerBlue ; 
-  margin: 0;
-   display: flex;
-  padding: 20px;
-  width: 96.5%; 
-  flex: row; 
-  justify-content: space-between;
-    list-style: none;
-}
-.left {justify-content:space-around; display: flex; margin-left: -80px;}
-.right {justify-content:flex-end; display: flex; }
+  <title>Media Query</title>
+  <meta charset="fe-09-mq.pdf1">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #FCDE8C;
+    }
 
-#t {background-color: #4D9B40; margin-top: 10px; padding: 20px;  width: 96.5%; }
+    a {
+      color: white;
+      text-decoration: none;
+    }
 
-#box {
-  display: flex;
-  flex: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 10px 0;
-  float: right;
-  padding-left: 20px;
-}
+    #c {
+      display: flex;
+      flex-direction: column;
+      width: 93vw;
+      font-size: 100%;
+      color: white;
+      font-family: 'PT Sans Narrow', sans-serif;
+    }
 
-.rek {
-  background-color: DarkSlateGrey;
-  width: 200px; height: 100px;
-  flex: 0 0 200px;
-  margin: 5px 0;
-  padding: 10px;
- 
-}
+    /*#m {display: none;}*/
 
-#footer {background-color: RoyalBlue ; text-align: center; padding: 20px; width: 96.5%; }
+    ul {
+      background-color: DodgerBlue;
+      margin: 0;
+      display: flex;
+      padding: 20px;
+      width: 96.5%;
+      flex: row;
+      justify-content: space-between;
+      list-style: none;
+    }
+
+    .left {
+      justify-content: space-around;
+      display: flex;
+      margin-left: -80px;
+    }
+
+    .right {
+      justify-content: flex-end;
+      display: flex;
+    }
+
+    #t {
+      background-color: #4D9B40;
+      margin-top: 10px;
+      padding: 20px;
+      width: 96.5%;
+      flex-direction: column;
+    }
+
+    #box {
+      display: flex;
+      flex: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 10px 0;
+      float: right;
+      padding-left: 20px;
+    
+    }
+
+    .rek {
+      background-color: DarkSlateGrey;
+      width: 200px;
+      height: 100px;
+      flex: 0 0 200px;
+      margin: 5px 0;
+      padding: 10px;
+
+    }
+
+    #footer {
+      background-color: RoyalBlue;
+      text-align: center;
+      padding: 20px;
+      width: 96.5%;
+    }
 
 
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|News+Cycle|PT+Sans+Narrow');
-@media only screen and (max-width: 768px) { #m2 {display: none;} #t {font-size: 60%;}}
-@media only screen and  (min-width: 769px) { #m1 {display: none;} #box {float: right;} #t {clear: right; width: 60vw; margin-left: 20px;} ul {width: 95.65vw; padding: 0px; margin: 20px; } .left {margin-left: 0; justify-content: space-around; }}
+    @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|News+Cycle|PT+Sans+Narrow');
+    @media only screen and (max-width: 768px) {
+      #m2 {
+        display: none;
+      }
+      #t {
+        font-size: 60%;
+      }
+    }
 
-    </style>
+    @media only screen and (min-width: 769px) {
+      #m1 {
+        display: none;
+      }
+      #box {
+        float: end;
+        border: 1px solid;
+        width: 200px;
+        display: inline-flex;
+      }
+      #t {
+        border: 1px solid;
+        clear: right;
+        width: 60vw;
+        margin-left: 20px;
+        flex: column;
+        height: 80vh;
+        
+              }
+      ul {
+        width: 95.65vw;
+        padding: 0px;
+        margin: 20px;
+        
+      }
+      .left {
+        margin-left: 0;
+        justify-content: space-around;
+      }
+      #footer {
+        width: 99.5%;
+        margin: 20px;
+        padding: 20px;
+      }
+      .rek {flex-direction: column; flex-wrap: wrap; 
+          }
+    }
+  </style>
 
 </head>
 
 <body>
-    <div id="c">
-        <div id="m1">
-          <ul>
-            <li><a href>menu</a></li>
-            <li style="margin-right: 5px;"><a href>menu4</a></li>
-           </ul>
-        </div>
-        <div id="m2">
-          <ul>
-           <ul class="left">
-             <li><a href>menu1</a></li>
-             <li><a href>menu2</a></li>
-             <li><a href>menu3</a></li>
-           </ul>
-          <ul class="right">
-             <li><a href>menu4</a></li>
-          </ul>
-          </ul>
-        </div>  
-           <div id="t">Lorem Ipsum is simply dummy text of the printing and typesetting industry. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-        <div id="box">
-          <div class="rek">reklama 1</div>
-          <div class="rek">reklama 2</div>
-          <div class="rek">reklama 3</div>
-          <div class="rek">reklama 4</div>
-        </div>
-        <div id="footer">
-        Kontaktai
-        </div>
-        </div>
-    </body>
+  <div id="c">
+    <div id="m1">
+      <ul>
+        <li>
+          <a href>menu</a>
+        </li>
+        <li>
+          <a href>menu4</a>
+        </li>
+      </ul>
+    </div>
+    <div id="m2">
+      <ul>
+        <ul class="left">
+          <li>
+            <a href>menu1</a>
+          </li>
+          <li>
+            <a href>menu2</a>
+          </li>
+          <li>
+            <a href>menu3</a>
+          </li>
+        </ul>
+        <ul class="right">
+          <li>
+            <a href>menu4</a>
+          </li>
+        </ul>
+      </ul>
+    </div>
+    <div id="t">Lorem Ipsum is simply dummy text of the printing and typesetting industry. There are many variations of passages of Lorem
+      Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which
+      don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+      anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined
+      chunks as necessary, making this the first true generator on the Internet.Contrary to popular belief, Lorem Ipsum is
+      not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years
+      old. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+      of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+      electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+      versions of Lorem Ipsum.</div>
+    <div id="box">
+      <div class="rek">reklama 1</div>
+      <div class="rek">reklama 2</div>
+      <div class="rek">reklama 3</div>
+      <div class="rek">reklama 4</div>
+    </div>
+    <div id="footer">
+      Kontaktai
+    </div>
+  </div>
+</body>
 
 
 </html>
