@@ -4,26 +4,13 @@
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
     <style>
       body { margin: 0; background-color: #FCDE8C;}
-
+a {color: white; text-decoration: none;}
 #c { 
   display: flex; 
   flex-direction: column;
   width: 97vw;
   font-size: 100%;
   color: white;
-}
-.adv {
-  background-color: DarkSlateGrey;
-  width: 200px; height: 100px;
-  flex: 0 0 200px;
-  margin: 10px 0;
-}
-#box {
-  display: flex;
-  flex: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 0 10px;
 }
 
 ul {
@@ -37,14 +24,31 @@ ul {
 }
 li {
   list-style-type: none;
-  
-}
-.fill {
-  flex-grow: 1;
-}
-#footer {background-color: RoyalBlue ; text-align: center; padding: 20px; width: 100%;}
+  }
+
 #t {background-color: #4D9B40; margin-top: 10px;  flex: row; padding: 20px; width: 100%;}
+
+#box {
+  display: flex;
+  flex: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0 10px;
+}
+
+.adv {
+  background-color: DarkSlateGrey;
+  width: 200px; height: 100px;
+  flex: 0 0 200px;
+  margin: 10px 0;
+}
+
+#footer {background-color: RoyalBlue ; text-align: center; padding: 20px; width: 100%;}
+
+
+
 /*@media only screen and (max-width: 768px){}*/
+
     </style>
 
 </head>
@@ -53,19 +57,19 @@ li {
     <div id="c">
         <div id="m1">
           <ul>
-            <li>menu</li>
-            <li>menu4</li>
+            <li><a href>menu</a></li>
+            <li><a href>menu4</a></li>
           </ul>
         </div>
         <div id="m2">
           <ul>
            <ul class="left">
-             <li>menu1</li>
-             <li>menu2</li>
-             <li>menu3</li>
+             <li><a href>menu1</a></li>
+             <li><a href>menu2</a></li>
+             <li><a href>menu3</a></li>
            </ul>
           <ul class="right">
-             <li>menu4</li>
+             <li><a href>menu4</a></li>
           </ul>
           </ul>
         </div>  
