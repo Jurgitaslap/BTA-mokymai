@@ -1,0 +1,86 @@
+<head>
+    <title>Media Query</title>
+    <meta charset="fe-09-mq.pdf1">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+    <style>
+      body { margin: 0; background-color: #FCDE8C;}
+
+#c { 
+  display: flex; 
+  flex-direction: column;
+  width: 97vw;
+  font-size: 100%;
+  color: white;
+}
+.adv {
+  background-color: DarkSlateGrey;
+  width: 200px; height: 100px;
+  flex: 0 0 200px;
+  margin: 10px 0;
+}
+#box {
+  display: flex;
+  flex: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0 10px;
+}
+
+ul {
+  background-color: DodgerBlue ; 
+  margin: 0;
+   display: flex;
+  padding: 20px;
+  width: 100%; 
+  flex: row; 
+  justify-content: space-between;
+}
+li {
+  list-style-type: none;
+  
+}
+.fill {
+  flex-grow: 1;
+}
+#footer {background-color: RoyalBlue ; text-align: center; padding: 20px; width: 100%;}
+#t {background-color: #4D9B40; margin-top: 10px;  flex: row; padding: 20px; width: 100%;}
+/*@media only screen and (max-width: 768px){}*/
+    </style>
+
+</head>
+
+<body>
+    <div id="c">
+        <div id="m1">
+          <ul>
+            <li>menu</li>
+            <li>menu4</li>
+          </ul>
+        </div>
+        <div id="m2">
+          <ul>
+           <ul class="left">
+             <li>menu1</li>
+             <li>menu2</li>
+             <li>menu3</li>
+           </ul>
+          <ul class="right">
+             <li>menu4</li>
+          </ul>
+          </ul>
+        </div>  
+        <div id="t">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+        <div id="box">
+          <div class="adv">reklama 1</div>
+          <div class="adv">reklama 2</div>
+          <div class="adv">reklama 3</div>
+          <div class="adv">reklama 4</div>
+        </div>
+        <div id="footer">
+        Kontaktai
+        </div>
+        </div>
+</body>
+
+
+</html>
