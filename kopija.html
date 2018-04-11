@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Uždavinys9</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #FCDE8C;
+      font-size: 100%;
+      color: white;
+    }
+
+    .visas {
+      width: 97.5vw;
+      height: 97.5vh;
+      flex-direction: column;
+      display: flex;
+    }
+  
+    ul {
+      background-color: DodgerBlue;
+      list-style-type: none;
+      justify-content: space-between;
+      margin: 0;
+      display: flex;
+      padding: 1.2em;
+      flex-direction: row;
+    }
+
+    li {cursor: pointer; margin: 0 1vw;}
+
+   /* #c {
+      /*display: flex;
+      flex-direction: row;
+      width: 93vw;
+      font-size: 100%;
+      color: white;
+      font-family: 'PT Sans Narrow', sans-serif;
+    }*/
+
+
+    .left {
+      justify-content: space-around;
+      margin-left: -70px;
+    }
+
+    .right {
+      justify-content: flex-end;
+    }
+
+    #text {
+      background-color: #4D9B40;
+      margin-top: 1.5vw;
+      padding: 1em;
+      flex: 1;
+      border: none;
+    }
+
+    #box {
+      flex-direction: row;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 0 10px;
+    }
+
+    .rek {
+      background-color: DarkSlateGrey;
+      width: 200px;
+      height: 100px;
+      flex: 0 0 200px;
+      margin: 0.5em 0 0.25em 0;
+      padding: 0.5em;
+
+    }
+    #c, footer { border-right: 2vw solid lightsalmon;}
+
+    footer {
+      background-color: RoyalBlue;
+      justify-content: center;
+      padding: 1.2em;
+      display: flex;
+      margin-top: 5px;
+      flex: 0 0 20px;
+    }
+
+
+    @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|News+Cycle|PT+Sans+Narrow');
+    @media only screen and (max-width: 768px) {
+      #m2 {
+        display: none;
+      }
+      #text {
+        font-size: 90%;
+            }
+    }
+
+    @media only screen and (min-width: 769px) {
+      #m1 {
+        display: none;
+      }
+      #box {
+        margin-left: auto;
+        margin-top: -46%;
+        width: 200px;
+        flex-direction: column;
+        display: flex;
+
+      }
+      #c {
+        display: flex;
+        flex-direction: row;
+      }
+
+      #text {
+        /*width: 60%;*/
+        margin-left: 10px;
+        /*flex-direction: column;
+        font-size: 110%;*/
+        padding: 1em;
+       /* height: 80vh;*/
+        overflow: hidden;
+        border-right: 2vw solid lightsalmon;
+      }
+      ul {
+        width: 95.65vw;
+        padding: 0px;
+        margin: 20px;
+        margin-right: 60px;
+
+      }
+
+      .left {
+        margin-left: 0;
+        justify-content: space-around;
+
+      }
+      footer {
+        width: 93.5%;
+        margin: 20px;
+        padding: 20px;
+      }
+      #c, footer {border-right: none;}
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="visas">
+    <header>
+      <ul id="m1"><li>menu</li><li style="padding-right:7px">menu4</li></ul>
+      <ul id="m2">
+        <ul class="left"><li>menu1</li><li>menu2</li><li>menu3</li></ul>
+        <ul class="right"><li>menu4</li></ul>
+      </ul>
+    </header>
+  <div id="c">
+    <div id="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. There are many variations of passages of Lorem
+      Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which
+      don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+      anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined
+      chunks as necessary, making this the first true generator on the Internet.Contrary to popular belief, Lorem Ipsum is
+      not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years
+      old. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+      of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+      electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+      the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+      like Aldus PageMaker including versions of Lorem Ipsum.All the Lorem Ipsum generators on the Internet tend to repeat
+      predefined chunks as necessary, making this the first true generator on the Internet.Contrary to popular belief, Lorem
+      Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000
+      years old. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+      a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+      leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+      of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+      including versions of Lorem Ipsum.</div>
+      <div id="box">
+      <div class="rek">reklama 1</div>
+      <div class="rek">reklama 2</div>
+      <div class="rek">reklama 3</div>
+      <div class="rek">reklama 4</div>
+    </div>
+  </div>
+  <footer>Kontaktai</footer>
+</div>
+</body>
+
+</html>
