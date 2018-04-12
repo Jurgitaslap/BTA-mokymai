@@ -1,30 +1,144 @@
 <!doctype html>
 <html>
-    <head>
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-                    <title>Užduotis9_2</title>
-        <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <style>
-            @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
-            body {
-                margin: 0; 
-                padding: 0; 
-                font-family: 'IBM Plex Sans', sans-serif;
-                background-color: linen;}
-            
-        </style>
-    </head>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-  
-    <body>
-        <div id="container">
-            <div id="header">
-                <div class="logo"></div><div class="nav"></div>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <title>Užduotis9_2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+        crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'IBM Plex Sans', sans-serif;
+            background-color: white;
+        }
+
+        .navbar {
+            background-color: white;
+            border-bottom: solid lightseagreen 0.06em;
+            height: 5rem;
+            /*jei neveiks mazinimas, nuimt aukstu*/
+        }
+
+        .nav-link {
+            font-size: 0.8em;
+        }
+
+        .blokas {
+            margin: 0.8em auto;
+            width: 30vw;
+            border: 1px solid lightgrey;
+            padding: 1.6em;
+        }
+
+        .mygtukas {
+            padding: 0.5em 1.5em;
+            font-size: 1em;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: rgb(9, 80, 74);
+            border: none;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- meniu juosta-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <i class="fab fa-apper" style="font-size: 5em;"></i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class=" navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">PAGES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">FEATURES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">SHOP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">ELEMENTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">MEGA MENU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </body>
+    </nav>
+    <!--prisijungimo blokas-->
+    <div class="blokas">
+        <div class="prisijungimas">
+            <div clas="header">
+                <h3 class="prisijungimas-heading">
+                    <strong>Login</strong>
+                </h3>
+            </div>
+            <div class="info1">
+                <p>Not signed up ?
+                    <a href="#"> Sign up here.</a>
+                </p>
+            </div>
+            <input type="emai" class="form-control" name="username" placeholder="Email" />
+            <input type="password" class="form-control" name="password" placeholder="Password" />
+            <div class="info2">
+                <button class="btn btn-primary btn-sm" type="submit">Login</button>
+                <span>|</span>
+                <a href="#" class="vertical">Forgotten Password?</a>
+            </div>
+        </div>
+    </div>
+    <!--aprasymo juosta-->
+    <div class="juosta">
+        <div class="dezute">
+            <div clas="tekstas">
+                <div class="col-md-8">
+                    <h2>AWESOME
+                        <span>FEATURES</span>
+                    </h2>
+                    <p>99.9% Uptime
+                        <span>/</span> Free Upgrades
+                        <span>/</span> Fully Responsive
+                        <span>/</span> Bug Free</p>
+                </div>
+                <div clas="col-md-4">
+                    <button class="mygtukas" type="submit">Get apper Today <i class="fas fa-arrow-right" ></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
