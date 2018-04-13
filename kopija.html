@@ -41,7 +41,7 @@
 
         .blokas {
             margin: 0.8em auto;
-            width: 30vw;
+            width: 38vw;
             border: 1px solid lightgrey;
             padding: 1.6em;
             box-shadow: 0.1em 0.1em 0.5em lightgrey;
@@ -60,6 +60,7 @@
             /*float: right;
             transform: translateY(-4em);*/
         }
+
         .blokas a {
             color: #009999;
         }
@@ -74,38 +75,42 @@
         .blokas input {
             margin-bottom: 0.5em;
         }
-        
+
         .blokas .header {
             border-bottom: 1px solid rgb(87, 88, 88);
         }
+
         .vertical {
             padding-left: 0;
             margin-left: 0;
         }
+
         .juosta {
             background-color: #009999;
             color: white;
             padding: 2em 3em;
             font-weight: bold;
         }
+
         .juosta span {
-            color:  rgb(9, 80, 74);
+            color: rgb(9, 80, 74);
             font-weight: bold;
             font-size: 0.9em;
         }
-        
+
         .footer {
             background-color: rgb(36, 34, 34);
             color: beige;
             text-align: left;
             padding: 2rem 3rem;
         }
+
         .footer .btn {
             background-color: rgb(50, 121, 96);
             color: beige;
         }
-        
-        @media (max-width: 768px){
+
+        @media (max-width: 768px) {
             .blokas {
                 width: 60vw;
             }
@@ -123,11 +128,17 @@
     <!-- meniu juosta-->
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
+            <!-- logotipas-->
             <div class="navbar-header">
                 <a href="#" class="navbar-brand">
                     <i class="fab fa-apper" style="font-size: 5em;"></i>
                 </a>
             </div>
+            <!--mygtukai-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class=" navbar-nav ml-auto">
                     <li class="nav-item">
@@ -186,31 +197,31 @@
         <div class="dezute">
             <div class="tekstas">
                 <div class="row">
-                <div class="col-md-8">
-                    <h4>AWESOME
-                        <span>FEATURES</span>
-                    </h4>
-                    <p>99.9% Uptime
-                        <span>/</span> Free Upgrades
-                        <span>/</span> Fully Responsive
-                        <span>/</span> Bug Free</p>
+                    <div class="col-md-8">
+                        <h4>AWESOME
+                            <span>FEATURES</span>
+                        </h4>
+                        <p>99.9% Uptime
+                            <span>/</span> Free Upgrades
+                            <span>/</span> Fully Responsive
+                            <span>/</span> Bug Free</p>
                     </div>
-                <div clas="col-md-4">
-                    <button class="mygtukas" type="submit">Get apper Today
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
+                    <div clas="col-md-4">
+                        <button class="mygtukas" type="submit">Get apper Today
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!--apatine juosta-->
     <div class="footer">
-        <div class="dezute">
+        <div class="row">
             <div class="col-md-4">
                 <h5>CONTACT US</h5>
                 <div style="font-size: 0.8em;">
-                    <i class="fas fa-phone" ></i> 019223 8092344</div>
+                    <i class="fas fa-phone"></i> 019223 8092344</div>
                 <div style="font-size: 0.8em;">
                     <i class="fas fa-envelope"></i> info@apper.com</div>
                 <div style="font-size: 0.8em;">
@@ -219,29 +230,30 @@
         </div>
     </div>
     <div class="footer">
-        <div class="dezute">
-            <div class="col-md-4">
-                <h5>ABOUT US</h5>
-                <p style="font-size: 0.8em;">Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web
-                    templates!</p>
-            </div>
+
+        <div class="col-md-4">
+            <h5>ABOUT US</h5>
+            <p style="font-size: 0.8em;">Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web templates!
+            </p>
         </div>
     </div>
+
     <div class="footer">
-        <div class="dezute">
-            <div class="col-md-4">
-                <h5>NEWSLETTER</h5>
-                <p style="font-size: 0.8em;">Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
-                <form>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" style="font-size: 0.8em;" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <div class="input-group-append"></div>
-                        <button class="btn btn-outline-secondary" type="button" style="color: white; font-size: 0.8em;  background-color:  #009999; border-color:  #009999;">Go!</button>
-                    </div>
-                </form>
-            </div>
+
+        <div class="col-md-4">
+            <h5>NEWSLETTER</h5>
+            <p style="font-size: 0.8em;">Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
+            <form>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" style="font-size: 0.8em;" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append"></div>
+                    <button class="btn btn-outline-secondary" type="button" style="color: white; font-size: 0.8em;  background-color:  #009999; border-color:  #009999;">Go!</button>
+                </div>
+            </form>
         </div>
+
     </div>
+
 </body>
 
 </html>
