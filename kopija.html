@@ -56,7 +56,8 @@
             background-color: rgb(9, 80, 74);
             border: none;
             border-radius: 30px;
-            margin-top: 0.5em;
+           margin-top: 0.5em;
+           
         }
 
         .blokas a {
@@ -82,7 +83,7 @@
             padding-left: 0;
             margin-left: 0;
         }
-
+        .juosta #s {color: white;}
         .juosta {
             background-color: #009999;
             color: white;
@@ -107,18 +108,32 @@
             background-color: rgb(50, 121, 96);
             color: beige;
         }
+         /*.juosta .btn { background-color: rgb(50, 121, 96);
+            color: beige;
+            font-size: 1rem;
+            border-radius: 20px;
+            padding: 1rem 2rem;}*/
+            .menu .btn {display: none;}
 
-        @media (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
             .blokas {
                 width: 60vw;
+                
             }
             .juosta {
                 text-align: center;
             }
-
+            #r, #s {font-size: 1.5em;}
             .informacija {
                 margin-bottom: 1rem;
             }
+            .info2, .info1 {font-size: 0.9em;}
+          #a, #b, #c, #d, #e, #h, #i {display:none;}
+          .juosta .btn {margin-left: 25vmin;}
+          
+                   }
+                   @media only screen and (min-width: 769px), (min-width: 1295px){
+           #f, #g {display:none;}
         }
     </style>
 </head>
@@ -134,43 +149,42 @@
                 </a>
             </div>
             <!--meniu mygtukai-->
-          
-          
+                   
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class=" navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">
-                            <i class="fas fa-home"></i>
+                        <a class="nav-link" href="#" id="i" style="font-weight: bold; color: black;">
+                            <i class="fas fa-home" style="font-size: 1.5em;"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">PAGES</a>
+                        <a class="nav-link" id="a" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">PAGES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">FEATURES</a>
+                        <a class="nav-link" id="b" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">FEATURES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">SHOP</a>
+                        <a class="nav-link" id="c" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">SHOP</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">ELEMENTS</a>
+                        <a class="nav-link" id="d" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">ELEMENTS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">MEGA MENU</a>
+                        <a class="nav-link" id="e" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">MEGA MENU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="font-weight: bold; color: black;">
-                            <i class="fas fa-search"></i>
+                        <a class="nav-link" href="#" id="h" style="font-weight: bold; color: black;">
+                            <i class="fas fa-search" style="font-size: 1.5em; transform: rotate(90deg)"></i>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="menu-btn">
+         <div class="menu-btn">
                 <ul class="nav justify-content-end">
-                    <li class="nav-item"><a class="nav-link" href="#" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars" style="color: black; font-size: 1.5em;"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-search" style="color:black; font-size: 1.5em;"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" id="f" href="#" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars" style="color: black; font-size: 1.2em;"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" id="g" href="#"><i class="fas fa-search" style="color:black; font-size: 1.2em; transform: rotate(90deg);"></i></a></li>
                 </ul>
-                <div class="collapse" id="navbarToggle">
+                   <div class="collapse" id="navbarToggle">
                     <ul class="nav justify-content-end">
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fas fa-home"></i></a>
@@ -192,9 +206,9 @@
                             </li>
                     </ul>
                 </div>
-            </div> 
+            </div>
         </div>
-    </nav>
+  </nav>
     <!--prisijungimo blokas-->
     <div class="blokas">
         <form class="form-signin">
@@ -213,27 +227,26 @@
             <div class="info2">
                 <button class="btn btn-primary btn-sm" type="submit">Login</button>
                 <span>|</span>
-                <a href="#" class="vertical">Forgotten Password?</a>
+                <a href="#" class="vertical" >Forgotten Password?</a>
             </div>
         </form>
     </div>
     <!--aprasymo juosta-->
     <div class="juosta">
-        <div class="container-fluid">
+        <div class="container-fluid" style="border:solid black;">
 
             <div class="row">
                 <div class="col-md-8">
-                    <h4>AWESOME
-                        <span>FEATURES</span>
-                    </h4>
-                    <p>99.9% Uptime
+                    <h3 ><span id="s">AWESOME</span>
+                        <span id="r">FEATURES</span>
+                    </h3>
+                    <p style="font-size: 0.9em;">99.9% Uptime
                         <span>/</span> Free Upgrades
                         <span>/</span> Fully Responsive
                         <span>/</span> Bug Free</p>
                 </div>
-
                 <div clas="col-md-4">
-                    <button class="btn btn-primary btn-lg" type="submit">Get apper Today
+                    <button class="btn btn-sm" type="submit" >Get apper Today
                         <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
