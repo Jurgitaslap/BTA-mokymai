@@ -46,7 +46,7 @@
             box-shadow: 0.1em 0.1em 0.5em lightgrey;
         }
 
-        .mygtukas {
+        .juosta .btn {
             padding: 0.5em 1.5em;
             font-size: 1em;
             text-align: center;
@@ -57,7 +57,7 @@
             border: none;
             border-radius: 30px;
             margin-top: 0.5em;
-             }
+        }
 
         .blokas a {
             color: #009999;
@@ -74,7 +74,7 @@
             margin-bottom: 0.5em;
         }
 
-        .blokas .header {
+        .blokas .form-header {
             border-bottom: 1px solid rgb(87, 88, 88);
         }
 
@@ -115,8 +115,8 @@
             .juosta {
                 text-align: center;
             }
-            
-            .contact {
+
+            .informacija {
                 margin-bottom: 1rem;
             }
         }
@@ -134,10 +134,8 @@
                 </a>
             </div>
             <!--meniu mygtukai-->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+          
+          
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class=" navbar-nav ml-auto">
                     <li class="nav-item">
@@ -167,6 +165,34 @@
                     </li>
                 </ul>
             </div>
+            <div class="menu-btn">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a class="nav-link" href="#" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars" style="color: black; font-size: 1.5em;"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-search" style="color:black; font-size: 1.5em;"></i></a></li>
+                </ul>
+                <div class="collapse" id="navbarToggle">
+                    <ul class="nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-home"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Elements</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Mega menu</a>
+                            </li>
+                    </ul>
+                </div>
+            </div> 
         </div>
     </nav>
     <!--prisijungimo blokas-->
@@ -194,66 +220,67 @@
     <!--aprasymo juosta-->
     <div class="juosta">
         <div class="container-fluid">
-            
-                <div class="row">
-                    <div class="col-md-8">
-                        <h4>AWESOME
-                            <span>FEATURES</span>
-                        </h4>
-                        <p>99.9% Uptime
-                            <span>/</span> Free Upgrades
-                            <span>/</span> Fully Responsive
-                            <span>/</span> Bug Free</p>
-                    </div>
 
-                    <div clas="col-md-4">
-                        <button class="btn btn-primary btn-lg" type="submit">Get apper Today
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <h4>AWESOME
+                        <span>FEATURES</span>
+                    </h4>
+                    <p>99.9% Uptime
+                        <span>/</span> Free Upgrades
+                        <span>/</span> Fully Responsive
+                        <span>/</span> Bug Free</p>
+                </div>
+
+                <div clas="col-md-4">
+                    <button class="btn btn-primary btn-lg" type="submit">Get apper Today
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
-  
+    </div>
+
     <!--apatine juosta-->
     <div class="footer">
         <div class="row">
             <div class="col-md-4">
                 <h5>CONTACT US</h5>
-                <div class="contact">
-                <div style="font-size: 0.8em;">
-                    <i class="fas fa-phone"></i> 019223 8092344</div>
-                <div style="font-size: 0.8em;">
-                    <i class="fas fa-envelope"></i> info@apper.com</div>
-                <div style="font-size: 0.8em;">
-                    <i class="fas fa-home"></i> Sunshine House, Sunville, SUN12 8LU</div>
+                <div class="informacija">
+                    <div style="font-size: 0.8em;">
+                        <i class="fas fa-phone"></i> 019223 8092344</div>
+                    <div style="font-size: 0.8em;">
+                        <i class="fas fa-envelope"></i> info@apper.com</div>
+                    <div style="font-size: 0.8em;">
+                        <i class="fas fa-home"></i> Sunshine House, Sunville, SUN12 8LU</div>
+                </div>
             </div>
-        </div>
-  
-   
-        <div class="col-md-4">
-            <h5>ABOUT US</h5>
-            <div>
-            <p style="font-size: 0.8em;">Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web templates!
-            </p>
-        </div>
-    </div>
 
-           <div class="col-md-4">
-            <h5>NEWSLETTER</h5>
-            <div>
-            <p style="font-size: 0.8em;">Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
+
+            <div class="col-md-4">
+                <h5>ABOUT US</h5>
+                <div>
+                    <p style="font-size: 0.8em;">Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal
+                        & web templates!
+                    </p>
+                </div>
             </div>
+
+            <div class="col-md-4">
+                <h5>NEWSLETTER</h5>
+                <div>
+                    <p style="font-size: 0.8em;">Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
+                </div>
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" style="font-size: 0.8em;" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" style="color: white; font-size: 0.8em;  background-color:  #009999; border-color:  #009999;">Go!</button>
+                        <button class="btn btn-outline-secondary" type="button" style="color: white; font-size: 0.8em;  background-color:  #009999; border-color:  #009999;">Go!</button>
+                    </div>
                 </div>
-        </div>
 
+            </div>
+        </div>
     </div>
-</div>
-</div>
 </body>
 
 </html>
