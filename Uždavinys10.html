@@ -84,15 +84,15 @@
             margin-left: 0;
         }
 
-        .juosta #s {
-            color: white;
-        }
-
         .juosta {
             background-color: #009999;
             color: white;
             padding: 2em 3em;
             font-weight: bold;
+        }
+        
+            .juosta #s {
+            color: white;
         }
 
         .juosta span {
@@ -126,9 +126,8 @@
                 text-align: center;
             }
 
-            #r,
-            #s {
-                font-size: 2.2em;
+            .juosta #r {
+                font-size: 1.8rem;
             }
 
             .informacija {
@@ -151,7 +150,7 @@
             }
 
             .juosta .btn {
-                margin-left: 25vmin;
+                margin-left: 24vmin;
             }
 
             nav ul>li {
@@ -165,12 +164,12 @@
                 display: block;
                 padding: 5px;
                 border: none;
-                
+
             }
             nav ul li a:link,
             nav ul li a:hover {
                 color: #009999;
-                
+
 
             }
             nav ul li ul {
@@ -195,11 +194,16 @@
             a:link {
                 text-decoration-line: none;
             }
+            .juosta #s {
+            color: white;
+            font-size: 2.5rem;
+        }
+        .juosta #r {font-size: 2.5rem;}
         }
 
         @media only screen and (min-width: 769px),
         (min-width: 1295px) {
-          
+
             #f,
             #g {
                 display: none;
@@ -209,8 +213,7 @@
             nav ul li ul li {
                 display: none;
             }
-        }
-        
+                  }
     </style>
 
 </head>
@@ -348,10 +351,10 @@
 
             <div class="row">
                 <div class="col-md-8">
-                    <h4>
+                    <h3>
                         <span id="s">AWESOME</span>
                         <span id="r">FEATURES</span>
-                    </h4>
+                    </h3>
                     <p style="font-size: 0.9em;">99.9% Uptime
                         <span>/</span> Free Upgrades
                         <span>/</span> Fully Responsive
