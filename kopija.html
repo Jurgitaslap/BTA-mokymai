@@ -154,7 +154,42 @@
                 margin-left: 25vmin;
             }
      
-        }
+             nav ul > li {
+			list-style-type: none;
+			display: inline-block;
+           
+		}
+		 nav ul li a {
+			text-decoration: none;
+            color: rgb(9, 80, 74);
+			display: block;
+			padding: 5px;
+			border: none;
+		}
+		nav ul li a:link, nav ul li a:hover {
+			color:  #009999;
+            
+            		}
+		 nav ul li ul {
+			display: none;
+			height: 45px;
+			position: relative;
+		}
+		 nav ul li:hover > ul {
+			display: block;
+			position: absolute;
+			top: 60px;
+			width: 100%;
+			padding-left: 0px;
+		}
+		 nav ul li ul li {
+			display: initial;
+		}
+		 nav ul li ul li a {
+			border: none;
+		}
+       a:link {text-decoration-line: none;}
+       }
 
         @media only screen and (min-width: 769px),
         (min-width: 1295px) {
@@ -181,73 +216,82 @@
             <!--meniu mygtukai-->
 
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class=" navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" id="i" style="font-weight: bold; color: black;">
-                            <i class="fas fa-home" style="font-size: 1.5em;"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="a" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">PAGES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="b" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">FEATURES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="c" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">SHOP</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="d" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">ELEMENTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="e" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">MEGA MENU</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" id="h" style="font-weight: bold; color: black;">
-                            <i class="fas fa-search" style="font-size: 1.5em; transform: rotate(90deg)"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="menu-btn">
-                <ul class="nav justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link" id="f" href="#" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                          <i class="fas fa-bars" style="color: black; font-size: 1.2em;"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="g" href="#">
-                            <i class="fas fa-search" style="color:black; font-size: 1.2em; transform: rotate(90deg);"></i>
-                        </a>
-                    </li>
-                </ul>
-                <div class="collapse" id="navbarToggle">
-                    <ul class="nav justify-content-end">
+                    <ul class=" navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-home"></i>
+                            <a class="nav-link" href="#" id="i" style="font-weight: bold; color: black;">
+                                <i class="fas fa-home" style="font-size: 1.5em;"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pages</a>
+                            <a class="nav-link" id="a" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">PAGES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" id="b" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">FEATURES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Shop</a>
+                            <a class="nav-link" id="c" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">SHOP</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Elements</a>
+                            <a class="nav-link" id="d" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">ELEMENTS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Mega menu</a>
+                            <a class="nav-link" id="e" href="#" style="font-weight: bold; color: black; font-size: 0.9em;">MEGA MENU</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="h" style="font-weight: bold; color: black;">
+                                <i class="fas fa-search" style="font-size: 1.5em; transform: rotate(90deg)"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
+                <div class="menu-btn">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" id="f" href="#" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <i class="fas fa-bars" style="color: black; font-size: 1.2em;"></i>
+                            </a>
+                            <ul>
+                                    <li><a href="">Pages</a></li>
+                                    <li><a href="">Features</a></li>
+                                    <li><a href="">Shop</a></li>
+                                    <li><a href="">Elements</a></li>
+                                    <li><a href="">Mega menu</a></li>
+                                </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="g" href="#">
+                                <i class="fas fa-search" style="color:black; font-size: 1.2em; transform: rotate(90deg);"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="collapse" id="navbarToggle">
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-home"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Elements</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Mega menu</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
     <!--prisijungimo blokas-->
 
