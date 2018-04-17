@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Uždavinys13</title>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <style>
+        #trikampis {border: solid 0.1em blue; font-size: 1.2em; width: 30vmin;}
+        button {text-size: 0.8em; color:green; border;}
+    </style>em solid purple;
+</head>
+<body>
+    <h2>Trikampiai</h2>
+    <div class="form-group">
+        <h5>Kraštinė A</h5>
+            <imput type="number" id="A" placeholder=""><br>
+                <h5>Kraštinė B</h5>
+                <imput type="number" id="B" placeholder=""><br>
+                    <h5>Kraštinė C</h5>
+                    <imput type="number" id="C" placeholder=""><br>
+                        <button type="submit" class="btn btn-primary" onclick="function()">Apskaičiuoti</button>
+                        </imput>
+          </div>
+<div id="trikampis"></div>
+
+    <script>
+        var triarea = function(sideA,sideB,sideC) {
+            var p = (sideA+sideB+sideC)/2;
+            var trikampis = Math.sqrt(p*(p-sideA)*(p-sideB)*(p-sideC));
+          return trikampis;
+        }
+        
+        document.getElementById('trikampis').innerHTML = 'Plotas: ' + (triarea(3,4,5))
+
+
+</script>
+
+
+</body>
+</html>
