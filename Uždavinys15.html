@@ -25,7 +25,6 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th scope="col">Eil. Nr.</th>
                 <th scope="col">Data</th>
                 <th scope="col">Valstybinis Nr.</th>
                 <th scope="col">Atstumas (m)</th>
@@ -33,34 +32,38 @@
                 <th scope="col">Greitis (km/h)</th>
             </tr>
             <tr>
-                <th scope="col"> <button onclick="myFunction()">Išsaugoti</button></th>
                 <th scope="col"> <input type="text" class="form-control"></th>
                 <th scope="col"> <input type="text" class="form-control"></th>
                 <th scope="col"><input type="number" class="form-control"></th>
                 <th scope="col"><input type="number" class="form-control"></th>
-                <th scope="col">ND</th>
+                <th scope="col"><button onclick="myFunction()">Išsaugoti</button></th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                    <th scope="row">1</th>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="atsakymas"></td>
             </tr>
 </tbody>
 </table>
 
-            <p id="demo"></p>
+                 <script>
+                     var autos = ['', '', i++, i++];
+                     var atsakymas = '';
+                     for (i = 0; i < autos.length; i++) { 
+        atsakymas += 
+        '<tr>' + 
+        '<td style="background-color: lightgrey;">' + autos[i][0] + '</td>' +
+        '<td>' + autos[i][1] + '</td>' +
+        '<td style="background-color: lightgrey;">' + autos[i][2] + '</td>' +
+        '<td>' + autos[i][3] + '</td>' + '</tr>';}
 
-            <script>
-                function myFunction() {
-                    var x = document.getElementById("info").value;
-                    document.getElementById("demo").innerHTML = demo;
-
-
+                function atsakymas() {
+                document.getElementById("autos").value;
+                    document.getElementById('tbody').innerHTML = atsakymas;
                 }
             </script>
 
