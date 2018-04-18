@@ -13,35 +13,39 @@
 <body>
     <h2>Automobiliai</h2>
 
-    <table>
+    <table border ="1"> 
             <thead>
         <tr>
             <td>Data</td>
             <td>Numeris</td>
-            <td>Laikas</td>
             <td>Atstumas</td>
+            <td>Laikas</td>
             <td>Greitis</td>
         </tr>
         </thead>
         <tbody>
-            
+
         </tbody>
     </table>
 
 <script> 
-var autos = [
-    ['2018-01-01', 'FFF023', 5000, 100],
-    ['2018-01-02', 'BBB023', 5000, 99],
-    ['2018-01-03', 'AAA123', 5000, 101]
-    ];
+    var autos = [
+        ['2018-01-01', 'FFF023', 5000, 100],
+        ['2018-01-02', 'BBB023', 5000, 99],
+        ['2018-01-03', 'AAA123', 5000, 101]
+        ];
     var tekstas = '';
-    for (i = 0, i < autos.length; i++;) {
+    for (i = 0; i < autos.length; i++) {
         tekstas += //arba galima rasyti tekstas+= tekstas + ...
          '<tr>' + 
         '<td>' + autos[i][0] + '</td>' +
+        '<td>' + autos[i][1] + '</td>' +
+        '<td>' + autos[i][2] + '</td>' +
+        '<td>' + autos[i][3] + '</td>' +
+        '<td>' + autos[i][2] / autos[i][3] * 3.6 + '</td>' +
         '</tr>';
-    document.querySelector('tbody').innerHTML = tekstas;
     }
+    document.querySelector('tbody').innerHTML = tekstas;
     </script>
 </body>
 </html>
