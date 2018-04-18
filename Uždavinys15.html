@@ -49,20 +49,22 @@
                         function getVar(atsakymas) {
                 return document.getElementById(atsakymas).value;
             }
-            var d = getVar("d");
+                     var d = getVar("d");
                      var n = getvar("n");
                      var a = parseInt(getVar("a"));
                      var l = parseInt(getVar("l"));
                     var duomenys = [d, n, a, l];
-                    var g = Math.round(duomenys[2] / duomenys[3] * 3.6);
+                    var formu = (duomenys[2] / duomenys[3]) * 3.6;
+                    var g = Math.round(formu, 0);
                     duomenys.push(g);
+
                     var informacija = "";
-                    informacija += '<tr>';
+                    informacija += "<tr>";
                    
-                    for (i=0; i < duomenys.length; i++){
-                        informacija += '<td>' + duomenys[i] + "</td>"
+                    for (i = 0; i < duomenys.length; i++){
+                        informacija += "<td>" + duomenys[i] + "</td>"
                      }
-                    informacija += '</tr>';
+                    informacija += "</tr>";
                        document.querySelector('tbody').innerHTML += informacija;
 
                 function clear(atsakymas) {
