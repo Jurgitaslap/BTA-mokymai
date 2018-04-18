@@ -40,24 +40,24 @@
             var p = (sideA+sideB+sideC)/2;
             var trikampis = Math.sqrt(p*(p-sideA)*(p-sideB)*(p-sideC));
                 
-                document.getElementById('atsakymas').innerHTML = '<td>Plotas:  ' + ' ' + trikampis + '</td> ';
+                document.getElementById('atsakymas').innerHTML = '<tr>Plotas:  ' + ' ' + trikampis + '</tr> ';
 
         if ((sideA + sideB > sideC) && (sideA + sideC > sideB) && (sideB + sideC > sideA)) { 
                 if ((sideA == sideB) && (sideA == sideC) && (sideB == sideC)) {
-                    document.getElementById("atsakymas").innerHTML += "<td>Lygiakrastis</td>";
+                    document.getElementById("atsakymas").innerHTML += "<tr>Lygiakrastis</tr>";
                 }
                 else if ((sideA*sideA == sideB*sideB + sideC*sideC) || (sideB*sideB == sideA*sideA + sideC*sideC) || (sideC*sideC == sideA*sideA + sideB*sideB)) {
-                    document.getElementById("atsakymas").innerHTML += "<td>Statusis</td>";
+                    document.getElementById("atsakymas").innerHTML += "<tr>Statusis</tr>";
                 }
                 else if ((sideA == sideB) || (sideA == sideC) || (sideB == sideC)) {
-                    document.getElementById("atsakymas").innerHTML += "<td>Lygiasonis</td>";
+                    document.getElementById("atsakymas").innerHTML += "<tr>Lygiasonis</tr>";
                 }
                 else {
-                    document.getElementById("atsakymas").innerHTML += "<td>Ivairiakrastis</td>";
+                    document.getElementById("atsakymas").innerHTML += "<tr>Ivairiakrastis</tr>";
                 }
             }
             else {
-                document.getElementById("atsakymas").innerHTML += "<td>Trikampis nesusidaro</td>";
+                document.getElementById("atsakymas").innerHTML += "<tr>Trikampis nesusidaro</tr>";
             }
         }
 
