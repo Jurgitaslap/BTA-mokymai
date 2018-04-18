@@ -36,7 +36,7 @@
         ['2017-07-07 14:03:12', 'KTT491', 5000, 145]
         ];
     var tekstas = '';
-   
+
     for (i = 0; i < autos.length; i++) { 
         tekstas += 
         '<tr>' + 
@@ -46,10 +46,10 @@
         '<td>' + autos[i][3] + '</td>' +
         '<td style="background-color: lightgrey;">' + Math.round(autos[i][2] / autos[i][3] * 3.6) + '</td>' +
         '</tr>';
-    }
+    }  
     
     document.querySelector('tbody').innerHTML = tekstas;
-
+    
     </script>
 </body>
 </html>
