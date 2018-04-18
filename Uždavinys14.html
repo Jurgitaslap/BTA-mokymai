@@ -36,7 +36,8 @@
         ];
     var tekstas = '';
     
-    for (i = 0; i < autos.length; i++)//skiriama kabliataskiais {
+    for (i = 0; i < autos.length; i++) { //skiriama kabliataskiais. reiksme galima patikrint if (!autos[i][3]) rodo ar skaicius yra 0
+    //jei norime sustabdyti paieska kai randa greiti 0.galima nustatyti if (autos[i][3] == 0){break;} arba continue,jei toliau testi. Brake iseina is ciklo ir nutraukia visa cikla,tada eina i eil. document... continue nutraukia einama zingsni, eina i sekanti ir 'tekstas' praleidzia
         tekstas += //arba galima rasyti tekstas+= tekstas + ...
          '<tr>' + 
         '<td>' + autos[i][0] + '</td>' +
