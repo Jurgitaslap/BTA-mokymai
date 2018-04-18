@@ -60,7 +60,7 @@
             var p = (sideA + sideB + sideC) / 2;
             var trikampis = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
 
-            document.getElementById('atsakymas').innerHTML = '<tr>Plotas:  ' + ' ' + trikampis + '</tr> ';
+            document.getElementById('atsakymas').innerHTML = '<tr>Plotas:  ' + ' ' + '-' + trikampis + '</tr> ';
 
             if ((sideA + sideB > sideC) && (sideA + sideC > sideB) && (sideB + sideC > sideA)) {
                 if ((sideA == sideB) && (sideA == sideC) && (sideB == sideC)) {
