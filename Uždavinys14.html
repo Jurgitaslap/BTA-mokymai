@@ -7,18 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    
     <style>
-       
+      tr, td {border: solid black 0.02em;}
     </style>
 </head>
 <body>
     <h2>Automobiliai</h2>
     <table>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Data</td>
+            <td>Numeris</td>
+            <td>Laikas</td>
+            <td>Atstumas</td>
+            <td>Greitis</td>
         </tr>
         <tbody>
 
@@ -30,8 +30,13 @@ var autos = [
     ['2018-01-02', 'BBB023', 5000, 99],
     ['2018-01-03', 'AAA123', 5000, 101]
     ];
+    var tekstas = '';
     for (i = 0, i < autos.length; i++;) {
-        console.log(autos[i][1]);
+        tekstas + //arba galima rasyti tekstas+= tekstas + ...
+         '<tr>' + 
+        '<td>' + autos[i][0] + '</td>' +
+        '</tr>';
+    document.querySelector('tbody').innerHTML = tekstas;
     }
     </script>
 </body>
