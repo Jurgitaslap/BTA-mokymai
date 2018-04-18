@@ -40,14 +40,22 @@
     //jei norime sustabdyti paieska kai randa greiti 0.galima nustatyti if (autos[i][3] == 0){break;} arba continue,jei toliau testi. Brake iseina is ciklo ir nutraukia visa cikla,tada eina i eil. document... continue nutraukia einama zingsni, eina i sekanti ir 'tekstas' praleidzia
         tekstas += //arba galima rasyti tekstas+= tekstas + ...
          '<tr>' + 
-        '<td>' + autos[i][0] + '</td>' +
-        '<td>' + autos[i][1] + '</td>' +
-        '<td>' + autos[i][2] + '</td>' +
-        '<td>' + autos[i][3] + '</td>' +
-        '<td>' + autos[i][2] / autos[i][3] * 3.6 + '</td>' +
+         stulpelis(autos [i][0]) +
+         stulpelis(autos [i][1]) +
+         stulpelis(autos [i][2]) +
+         stulpelis(autos [i][3]) +
+         stulpelis(autos [i][2] / autos[i][3] * 3.6) +
+        // arba '<td>' + autos[i][0] + '</td>' +
+        // '<td>' + autos[i][1] + '</td>' +
+        // '<td>' + autos[i][2] + '</td>' +
+        // '<td>' + autos[i][3] + '</td>' +
+        // '<td>' + autos[i][2] / autos[i][3] * 3.6 + '</td>' +
         '</tr>';
     }
     document.querySelector('tbody').innerHTML = tekstas;
+
+    //funkcijas galima deti betkurioje vietoje apsrasant savo reiksmes pvz.: 
+    function stulpelis (reiksme) { var td = '<td>' +  reiksme + '</td>'; return td;}
     </script>
 </body>
 </html>
