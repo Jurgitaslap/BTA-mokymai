@@ -5,7 +5,7 @@
     <title>Uždavinys14</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   
+    
     <style>
       tr, td {border: solid black 0.02em;}
     </style>
@@ -13,15 +13,15 @@
 <body>
     <h2>Automobiliai</h2>
 
-    <table border ="1"> 
+    <table border ="2" > 
             <thead>
         <tr>
-            <td>Data</td>
-            <td>Numeris</td>
-            <td>Atstumas</td>
-            <td>Laikas</td>
-            <td>Greitis</td>
-        </tr>
+            <td style="background-color: lightgrey;"><b>Data</b></td>
+            <td><b>Numeris</b></td>
+            <td style="background-color: lightgrey;"v><b>Atstumas</b></td>
+            <td><b>Laikas</b></td>
+            <td style="background-color: lightgrey;"><b>Greitis</b></td>
+       </tr>
         </thead>
         <tbody>
 
@@ -36,28 +36,20 @@
         ['2017-07-07 14:03:12', 'KTT491', 5000, 145]
         ];
     var tekstas = '';
-    
-    for (i = 0; i < autos.length; i++) { //skiriama kabliataskiais. reiksme galima patikrint if (!autos[i][3]) rodo ar skaicius yra 0
-    //jei norime sustabdyti paieska kai randa greiti 0.galima nustatyti if (autos[i][3] == 0){break;} arba continue,jei toliau testi. Brake iseina is ciklo ir nutraukia visa cikla,tada eina i eil. document... continue nutraukia einama zingsni, eina i sekanti ir 'tekstas' praleidzia
-        tekstas += //arba galima rasyti tekstas+= tekstas + ...
-         '<tr>' + 
-         stulpelis(autos [i][0]) +
-         stulpelis(autos [i][1]) +
-         stulpelis(autos [i][2]) +
-         stulpelis(autos [i][3]) +
-         stulpelis(autos [i][4]) +
-         stulpelis(autos [i][2] / autos[i][3] * 3.6) +
-        // arba '<td>' + autos[i][0] + '</td>' +
-        // '<td>' + autos[i][1] + '</td>' +
-        // '<td>' + autos[i][2] + '</td>' +
-        // '<td>' + autos[i][3] + '</td>' +
-        // '<td>' + autos[i][2] / autos[i][3] * 3.6 + '</td>' +
+   
+    for (i = 0; i < autos.length; i++) { 
+        tekstas += 
+        '<tr>' + 
+        '<td style="background-color: lightgrey;">' + autos[i][0] + '</td>' +
+        '<td>' + autos[i][1] + '</td>' +
+        '<td style="background-color: lightgrey;">' + autos[i][2] + '</td>' +
+        '<td>' + autos[i][3] + '</td>' +
+        '<td style="background-color: lightgrey;">' + Math.round(autos[i][2] / autos[i][3] * 3.6) + '</td>' +
         '</tr>';
     }
+    
     document.querySelector('tbody').innerHTML = tekstas;
 
-    //funkcijas galima deti betkurioje vietoje apsrasant savo reiksmes, bet galima ir be sio funkcijos. Pvz.: 
-    function stulpelis (reiksme) { var td = '<td><b>' +  reiksme + '</b></td>'; return td;}
     </script>
 </body>
 </html>
