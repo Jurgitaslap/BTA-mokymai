@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <title>Uždavinys13</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
@@ -14,39 +15,58 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <style>
-        #atsakymas, #rusis {border: solid 0.02em grey; font-size: 1.2em; width: 30vmin; margin-top: 0.3em;}
-       .box {text-align: left;}
-       .box button {margin: 1vmin;}
+        #atsakymas,
+        #rusis {
+            border: solid 0.02em grey;
+            font-size: 1.2em;
+            width: 30vmin;
+            margin-top: 0.3em;
+        }
+
+        .box {
+            text-align: left;
+        }
+
+        .box button {
+            margin: 1vmin;
+        }
     </style>
 </head>
+
 <body>
     <h2>Trikampiai</h2>
     <div class="form-group box">
-        <h5>Kraštinė A <input type="number" id="pirma" placeholder=""></h5>
-        <h5>Kraštinė B <input type="number" id="antra" placeholder=""></h5>
-        <h5>Kraštinė C <input type="number" id="trecia" placeholder=""></h5>
+        <h5>Kraštinė A
+            <input type="number" id="pirma" placeholder="">
+        </h5>
+        <h5>Kraštinė B
+            <input type="number" id="antra" placeholder="">
+        </h5>
+        <h5>Kraštinė C
+            <input type="number" id="trecia" placeholder="">
+        </h5>
         <button type="submit" class="btn btn-primary" onclick="funk()" style="color: black; background-color: green; font-size: 1em; border: yellow solid;">Apskaičiuoti</button>
-       <table>
-        <tr id="atsakymas"></tr>  
-      </table>      
-          </div>
+        <table>
+            <tr id="atsakymas"></tr>
+        </table>
+    </div>
 
     <script>
 
-         function funk() {
+        function funk() {
             var sideA = parseInt(document.getElementById("pirma").value);
             var sideB = parseInt(document.getElementById("antra").value);
             var sideC = parseInt(document.getElementById("trecia").value);
-            var p = (sideA+sideB+sideC)/2;
-            var trikampis = Math.sqrt(p*(p-sideA)*(p-sideB)*(p-sideC));
-                
-                document.getElementById('atsakymas').innerHTML = '<tr>Plotas:  ' + ' ' + trikampis + '</tr> ';
+            var p = (sideA + sideB + sideC) / 2;
+            var trikampis = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
 
-        if ((sideA + sideB > sideC) && (sideA + sideC > sideB) && (sideB + sideC > sideA)) { 
+            document.getElementById('atsakymas').innerHTML = '<tr>Plotas:  ' + ' ' + trikampis + '</tr> ';
+
+            if ((sideA + sideB > sideC) && (sideA + sideC > sideB) && (sideB + sideC > sideA)) {
                 if ((sideA == sideB) && (sideA == sideC) && (sideB == sideC)) {
                     document.getElementById("atsakymas").innerHTML += "<tr>Lygiakrastis</tr>";
                 }
-                else if ((sideA*sideA == sideB*sideB + sideC*sideC) || (sideB*sideB == sideA*sideA + sideC*sideC) || (sideC*sideC == sideA*sideA + sideB*sideB)) {
+                else if ((sideA * sideA == sideB * sideB + sideC * sideC) || (sideB * sideB == sideA * sideA + sideC * sideC) || (sideC * sideC == sideA * sideA + sideB * sideB)) {
                     document.getElementById("atsakymas").innerHTML += "<tr>Statusis</tr>";
                 }
                 else if ((sideA == sideB) || (sideA == sideC) || (sideB == sideC)) {
@@ -61,8 +81,9 @@
             }
         }
 
-</script>
+    </script>
 
 
 </body>
+
 </html>
