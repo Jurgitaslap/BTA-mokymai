@@ -24,7 +24,7 @@
    
     <table class="table table-bordered">
         <thead>
-            <tr>
+            <tr style="background-color: black; color: white;">
                 <th scope="col">Data</th>
                 <th scope="col">Valstybinis Nr.</th>
                 <th scope="col">Atstumas (m)</th>
@@ -32,38 +32,42 @@
                 <th scope="col">Greitis (km/h)</th>
             </tr>
             <tr>
-                <th scope="col"> <input type="text" class="form-control"></th>
-                <th scope="col"> <input type="text" class="form-control"></th>
-                <th scope="col"><input type="number" class="form-control"></th>
-                <th scope="col"><input type="number" class="form-control"></th>
-                <th scope="col"><button onclick="myFunction()">Išsaugoti</button></th>
+                <th scope="col"> <input type="text" id="d" placeholder=""></th>
+                <th scope="col"> <input type="text" id="v" placeholder=""></th>
+                <th scope="col"><input type="number" id="a" placeholder=""></th>
+                <th scope="col"><input type="number" id="l" placeholder=""></th>
+                <th scope="col"><button type="button" class="btn btn-secondary" onclick="myFunction()">Įkelti</button></th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td id="atsakymas"></td>
-            </tr>
+            
 </tbody>
 </table>
+                  <script>
+                      
+                     function myFunction() {
+                        function getVar(atsakymas) {
+                return document.getElementById(atsakymas).value;
+            }
+            var d = getVar("d");
+                     var n = getvar("n");
+                     var a = parseInt(getVar("a"));
+                     var l = parseInt(getVar("l"));
+                    var duomenys = [d, n, a, l];
+                    var g = Math.round(duomenys[2] / duomenys[3] * 3.6);
+                    duomenys.push(g);
+                    var informacija = "";
+                    informacija += '<tr>';
+                   
+                    for (i=0; i < duomenys.length; i++){
+                        informacija += '<td>' + duomenys[i] + "</td>"
+                     }
+                    informacija += '</tr>';
+                       document.querySelector('tbody').innerHTML += informacija;
 
-                 <script>
-                     var autos = ['', '', i++, i++];
-                     var atsakymas = '';
-                     for (i = 0; i < autos.length; i++) { 
-        atsakymas += 
-        '<tr>' + 
-        '<td style="background-color: lightgrey;">' + autos[i][0] + '</td>' +
-        '<td>' + autos[i][1] + '</td>' +
-        '<td style="background-color: lightgrey;">' + autos[i][2] + '</td>' +
-        '<td>' + autos[i][3] + '</td>' + '</tr>';}
-
-                function atsakymas() {
-                document.getElementById("autos").value;
-                    document.getElementById('tbody').innerHTML = atsakymas;
+                function clear(atsakymas) {
+                document.getElementById("atsakymas").value = "";}
+                 clear("d", "n", "a", "l");
                 }
             </script>
 
