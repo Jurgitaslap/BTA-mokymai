@@ -1,5 +1,6 @@
 
  body {font-family: 'Open Sans', sans-serif;
+    background-color: #dfe6e9;
     }
 
 nav {
@@ -32,4 +33,23 @@ nav {
        padding-bottom: 11px;
       
        }
-   
+   /*responsive dizaina galima su px ir % gauti nenaudojant flex*/
+   main {width: 90%; max-width: 1100px; margin: 80px auto 0 auto;}
+   article { 
+       background-color: #fff;
+       width: 100%;
+       margin-bottom:  20px;
+       padding: 20px;
+       box-sizing: border-box;
+       /*savybe kuri iskaiciuoja i article ploti paddingus.borderius*/
+}
+article h1 { 
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+article p { 
+    font-size: 16px;
+    font-weight: 400;
+   line-height: 1.5;
+}
