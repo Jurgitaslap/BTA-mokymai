@@ -56,10 +56,11 @@ article p {
     font-weight: 400;
    line-height: 1.5;
 }
- article.halfWidth {
+ article:nth-of-type(2),
+ article:nth-of-type(3) {
     width: 49%;
 }
-.withRightSpace {
+article:nth-of-type(2) {
     margin-right: 2%;
 }
 .noFont {
