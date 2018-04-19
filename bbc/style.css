@@ -56,12 +56,15 @@ article p {
     font-weight: 400;
    line-height: 1.5;
 }
- article:nth-of-type(2),
- article:nth-of-type(3) {
+ article:nth-of-type(6n + 2),
+ article:nth-of-type(6n + 3) {
     width: 49%;
 }
-article:nth-of-type(2) {
-    margin-right: 2%;
+article:nth-of-type(6n + 2),
+article:nth-of-type(6n + 4),
+article:nth-of-type(6n + 5){
+
+  margin-right: 2%;
 }
 .noFont {
     font-size: 0px;
@@ -69,6 +72,8 @@ article:nth-of-type(2) {
 .noFont * { 
     font-size: 16px;}
 
-.thirdWidth {
+article:nth-of-type(6n + 4),
+article:nth-of-type(6n + 5),
+article:nth-of-type(6n + 6) {
     width: 32%;
 }
