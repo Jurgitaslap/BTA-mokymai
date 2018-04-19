@@ -1,5 +1,5 @@
 
- body {font-family: 'Open Sans', sans-serif;
+body {font-family: 'Open Sans', sans-serif;
     background-color: #dfe6e9;
     }
 
@@ -9,7 +9,7 @@ nav {
 
     /*stengtis nedeti elemento aukscio, kad automatiskai formuotu aukscius langu*/
 
-    nav ul {
+nav ul {
         color: #fff;
         /*font-size: 16px;*/
         width: 90%;
@@ -20,7 +20,7 @@ nav {
       /*ji pakeiti display tipa,tada margin negalioja*/
     /* jei nenurodome block elementui plocio, jis automatiskai uzima 100% lango*/
     /*teviniam elementui parasius text-align,  issidelioja visi inline block.*/
-    nav ul li {
+nav ul li {
         padding: 15px 20px; /*su margin geriau nedaryti centravimo, nes sunkiau valdyti*/
         display: inline-block;
         /*inline negalima nurodyti apatinio,virsutinio margin*/
@@ -28,20 +28,21 @@ nav {
         cursor: pointer;
         font-size: 16px;
     }
-   nav li:hover {
+nav li:hover {
        border-bottom: 4px solid #0984e3;
        padding-bottom: 11px;
       
        }
    /*responsive dizaina galima su px ir % gauti nenaudojant flex*/
-   main {width: 90%; max-width: 1100px; margin: 80px auto 0 auto;}
-   article { 
+main {width: 90%; max-width: 1100px; margin: 80px auto 0 auto;}
+article { 
        background-color: #fff;
        width: 100%;
        margin-bottom:  20px;
        padding: 20px;
        box-sizing: border-box;
-       /*savybe kuri iskaiciuoja i article ploti paddingus.borderius*/
+       /*savybe kuri iskaiciuoja i article ploti paddingus.borderius, kad papildomai neuzimtu vietos ir ji galima isidet i reset'a*/
+       display: inline-block;
 }
 article h1 { 
     font-size: 24px;
@@ -53,3 +54,11 @@ article p {
     font-weight: 400;
    line-height: 1.5;
 }
+ article.halfWidth {
+    width: 50%;
+}
+.noFont {
+    font-size: 0px;
+}
+.noFont * { 
+    font-size: 16px;}
