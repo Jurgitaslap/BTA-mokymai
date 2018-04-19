@@ -59,7 +59,7 @@ article p {
  article.halfWidth {
     width: 49%;
 }
-.halfWidth.withRightSpace {
+.withRightSpace {
     margin-right: 2%;
 }
 .noFont {
@@ -67,3 +67,7 @@ article p {
 }
 .noFont * { 
     font-size: 16px;}
+
+.thirdWidth {
+    width: 32%;
+}
