@@ -43,6 +43,8 @@ article {
        box-sizing: border-box;
        /*savybe kuri iskaiciuoja i article ploti paddingus.borderius, kad papildomai neuzimtu vietos ir ji galima isidet i reset'a*/
        display: inline-block;
+       vertical-align: middle; /*kai tekstas trumpesnis,kad graziai bloka sulygiuoti dedasi si f-ja ir nedeti height,nes tekstas eis uz ribu*/
+
 }
 article h1 { 
     font-size: 24px;
@@ -55,7 +57,10 @@ article p {
    line-height: 1.5;
 }
  article.halfWidth {
-    width: 50%;
+    width: 49%;
+}
+.halfWidth.withRightSpace {
+    margin-right: 2%;
 }
 .noFont {
     font-size: 0px;
