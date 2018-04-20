@@ -12,14 +12,13 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-          <title>Uždavinys15</title>
+    <title>Uždavinys15</title>
     <style>
-       
     </style>
 </head>
 
 <body>
-   
+
     <table class="table table-bordered">
         <thead>
             <tr style="background-color: black; color: white;">
@@ -30,46 +29,57 @@
                 <th scope="col">Greitis (km/h)</th>
             </tr>
             <tr>
-                <th scope="col"> <input type="text" id="d" placeholder=""></th>
-                <th scope="col"> <input type="text" id="v" placeholder=""></th>
-                <th scope="col"><input type="number" id="a" placeholder=""></th>
-                <th scope="col"><input type="number" id="l" placeholder=""></th>
-                <th scope="col"><button type="button" class="btn btn-secondary" onclick="myFunction()">Įkelti</button></th>
+                <th scope="col">
+                    <input type="text" id="d" placeholder="">
+                </th>
+                <th scope="col">
+                    <input type="text" id="v" placeholder="">
+                </th>
+                <th scope="col">
+                    <input type="number" id="a" placeholder="">
+                </th>
+                <th scope="col">
+                    <input type="number" id="l" placeholder="">
+                </th>
+                <th scope="col">
+                    <button type="button" class="btn btn-secondary" onclick="myFunction()">Įkelti</button>
+                </th>
             </tr>
         </thead>
         <tbody>
-            
-</tbody>
-</table>
-                  <script>
-                      
-                     function myFunction() {
-                        function getVar(atsakymas) {
+
+        </tbody>
+    </table>
+    <script>
+
+        function myFunction() {
+            function getVar(atsakymas) {
                 return document.getElementById(atsakymas).value;
             }
-                     var d = getVar("d");
-                     var n = getvar("n");
-                     var a = parseInt(getVar("a"));
-                     var l = parseInt(getVar("l"));
-                    var duomenys = [d, n, a, l];
-                    var formu = (duomenys[2] / duomenys[3]) * 3.6;
-                    var g = Math.round(formu, 0);
-                    duomenys.push(g);
+            var d = getVar("d");
+            var n = getvar("n");
+            var a = parseInt(getVar("a"));
+            var l = parseInt(getVar("l"));
+            var duomenys = [d, n, a, l];
+            var formu = (duomenys[2] / duomenys[3]) * 3.6;
+            var g = Math.round(formu, 0);
+            duomenys.push(g);
 
-                    var informacija = "";
-                    informacija += "<tr>";
-                   
-                    for (i = 0; i < duomenys.length; i++){
-                        informacija += "<td>" + duomenys[i] + "</td>"
-                     }
-                    informacija += "</tr>";
-                       document.querySelector('tbody').innerHTML += informacija;
+            var informacija = "";
+            informacija += "<tr>";
 
-                function clear(atsakymas) {
-                document.getElementById("atsakymas").value = "";}
-                 clear("d", "n", "a", "l");
-                }
-            </script>
+            for (i = 0; i < duomenys.length; i++) {
+                informacija += "<td>" + duomenys[i] + "</td>"
+            }
+            informacija += "</tr>";
+            document.querySelector('tbody').innerHTML += informacija;
+
+            function clear(atsakymas) {
+                document.getElementById("atsakymas").value = "";
+            }
+            clear("d", "n", "a", "l");
+        }
+    </script>
 
 </body>
 
