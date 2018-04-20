@@ -60,10 +60,7 @@
             var n = getvar("n");
             var a = parseInt(getVar("a"));
             var l = parseInt(getVar("l"));
-            var duomenys = [d];
-            var duomenys = [n];
-            var duomenys = [a];
-            var duomenys = [l];
+            var duomenys = [d, n, a, l];
             var formu = (duomenys[2] / duomenys[3]) * 3.6;
             var g = Math.round(formu, 0);
             duomenys.push(g);
