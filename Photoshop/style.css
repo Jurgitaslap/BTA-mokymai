@@ -10,6 +10,7 @@ background-color: #fff;
 header nav {
     padding: 20px 29px 78px 20px;
     color: #333333;
+    overflow: auto;
 }
 header nav .leftSide {
     float: left;
