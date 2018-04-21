@@ -80,40 +80,35 @@ p {
 
 span1 {font-size: 0.3em;color: #dfe6e9;} /*ideti borderi*/
 #an {font-size: 5em;}
-#i {font-weight: bold; color: black;}
-#j {font-size: 1.5em;}
-#k {font-size: 1.1em;}
-#a, #b, #c, #d, #e {font-weight: bold; color: black; font-size: 0.9em;}
-#h {font-weight: bold; color: black;}
-#l {font-size: 1.5em; transform: rotate(90deg);}
-#m {color: black; font-size: 1.2em;}
-#n { color:black; font-size: 1.2em; transform: rotate(90deg);}
+#i, #h {font-weight: bold; color: black;}
+#j {font-size: 1.2em;}
+#k {font-size: 1em;}
+#a, #b, #c, #d, #e {font-weight: bold; color: black; font-size: 0.8em;}
+#l {font-size: 1.2em; transform: rotate(90deg);}
+#m, #n {color: black; font-size: 1.2em;}
+#n {transform: rotate(90deg);}
 #o {color:black; font-weight: bold;}
 #p, #pa {color:grey;}
-#t, #ta {font-size: 0.6em; color: grey;}
-#u, #v, #z, #ar, #af, #ag {font-size: 0.9em; font-weight: bold; text-align:center;}
+#t, #ta, #cc {font-size: 0.6em; color: grey;}
+#u, #v, #z, #ar, #af, #ag {font-size: 1em; font-weight: bold; text-align:center;}
 #vb {color:black; font-weight: bold;}
 #ca {justify-content:space-around; display: flex;}
 #cb {color:black; font-weight: bold;}
-#cc {font-size: 0.6em; color: grey;}
 #tb {padding: 0;}
 #tc {color: #009999; font-size: 0.7em; border-top: solid lightgrey 1px; border-left: solid lightseagreen 3px; margin-left: 1.3em;}
 #td {color: black; font-size: 0.7em; border-top: solid lightgrey 1px; border-right: solid lightgrey 1px; margin-left: 1.3em;}
-#te {color: black; font-size: 0.7em; border-right: solid lightgrey 1px; margin-left: 1.3em;}
-#tf {color: black; font-size: 0.7em; border-right: solid lightgrey 1px; margin-left: 1.3em;}
+#te, #tf {color: black; font-size: 0.7em; border-right: solid lightgrey 1px; margin-left: 1.3em;}
 #tg {font-weight: bold; margin-left: 3.2em;}
 #tn {margin-left: 2em;}
 #th {text-align: left; ; width: 53%; margin-left: 3em;}
 #ff {font-size: 7em; color:#009999; margin: -0.25em auto 0.1em 0.1em;}
 #fl {text-align: left; margin-left: 5.7em;}
-#gg, #ge, #gf {font-size: 0.8em;}
+#gg, #ge, #gf, #kk, #kl, #km, #ll, #ii {font-size: 0.8em;}
 #hh {background-color: blue;}
 #he {background-color: #009999; width: 85%; color: white; padding: 0.5em 0.5em 0 0.5em; text-align: center;}
 #hf {padding: 0 0.5em 0.5em 0.5em;}
-#ii {font-size: 0.8em;}
 #im {color: white; font-size: 0.8em;  background-color:  #353b48; border-color:  #353b48;}
 #jj {font-size: 0.9em; text-align: left;}
-#kk, #kl, #km, #ll {font-size: 0.8em;}
 #ko, #kp {font-size: 0.8em; text-align: left;}
 #ls {color: white; font-size: 0.8em;  background-color:  #009999; border-color:  #009999;}
 
