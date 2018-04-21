@@ -184,8 +184,8 @@ span1 {font-size: 0.3em;color: #dfe6e9;} /*ideti borderi*/
     a:link {
         text-decoration-line: none;
     }
-    #new {margin-left: -2em;;}
-    #old {margin-left: 2em;}
+    #new {margin-left: -2em; padding: 1em;}
+    #old {margin-left: 2em; padding: 1em;}
    #myg {margin-left: -2em;}
    .section i {margin-left: 3.5em;}
    #home {margin-left: -1em;}
