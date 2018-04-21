@@ -188,6 +188,7 @@ span1 {font-size: 0.3em;color: #dfe6e9;} /*ideti borderi*/
     #old {margin-left: 2em;}
    #myg {margin-left: -2em;}
    .section i {margin-left: 3.5em;}
+   #mm, #mn, #mo, #mp, #mr {display: flex;}
     
 }
 
