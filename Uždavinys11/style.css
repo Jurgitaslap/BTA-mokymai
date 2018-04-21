@@ -79,6 +79,8 @@ p {
 }
 
 span1 {font-size: 0.3em;color: #dfe6e9;} /*ideti borderi*/
+#an {font-size: 5em;}
+#i {font-weight: bold; color: black;}
 @media only screen and (max-width: 768px) {
 
 
