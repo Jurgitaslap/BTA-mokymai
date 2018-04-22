@@ -16,7 +16,7 @@
     <title>Uždavinys16_1</title>
     <style>
         h2,
-        tr {
+        tr, td {
             text-align: center;
         }
         
@@ -91,7 +91,7 @@
                         '<td>' + a.laikas + '</td>' +
                         '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
                         '<td><button onclick="trinti(' + i + ')">Trinti</button></td>' +
-                        '<td><button onclick="koreguoti(' + i + ')">Koreguoti</button></td>' +
+                        '<td><button id="koreg" onclick="koreguoti(' + i + ')">Koreguoti</button></td>' +
                      '</tr>'; 
             });
             document.getElementById('a').innerHTML = lentele;
@@ -111,13 +111,13 @@
             {'data': '2018-01-03', 'numeris': 'ABC003', 'atstumas': 5000, 'laikas': 105},
             {'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111}];
 
-            for (var i = 0; i < auto.length; i += 1)
+            for (var i = 0; i > auto.length; i++)
             var auto = i++;
+         function auto() {
         auto(i++).push(auto);
-        console.log(auto(n));
-        function naujas(auto) {
-        return document.getElementById('a').value = '';
-        }
+        console.log(auto);
+         return document.getElementById('a').value = '';}
+        
            
             function trinti(index) {
             auto.splice(index, 1);
@@ -125,8 +125,8 @@
         }
 
         function koreguoti(index) {
-            auto.splice(index, 1);
-            lentele();
+            document.getElementById('#d', '#n', '#km', '#l').valueL = 'koreg';
+                return lentele();
         }
 
     </script>
