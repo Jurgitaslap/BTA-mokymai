@@ -24,28 +24,24 @@
     <table class="table table-bordered">
         <thead>
             <tr style="background-color: black; color: white;">
-                <th scope="col"><div onclick="sort('data')">Data</div></th>
-                <th scope="col"><div onclick="sort('numeris')">Valstybinis Nr.</div></th>
-                <th scope="col"><div onclick="sort('atstumas')">Atstumas (m)</div></th>
-                <th scope="col"><div onclick="sort('laikas')">Laikas (s)</div></th>
+                <th scope="col">Data</th>
+                <th scope="col">Valstybinis Nr.</th>
+                <th scope="col">Atstumas (m)</th>
+                <th scope="col">Laikas (s)</th>
                 <th scope="col">Greitis (km/h)</th>
                 <th scope="col">Veiksmai</th>
             </tr>
             <tr>
-                <td scope="col">
-                    <input type="text" id="d" placeholder="">
+                <td scope="col"><input type="text" id="data" placeholder="">
                 </td>
-                <td scope="col">
-                    <input type="text" id="n" placeholder="">
+                <td scope="col"><input type="text" id="numeris" placeholder="">
                 </td>
-                <td scope="col">
-                    <input type="number" id="a" placeholder="">
+                <td scope="col"><input type="number" id="atstumas" placeholder="">
                 </td>
-                <td scope="col">
-                    <input type="number" id="l" placeholder="">
+                <td scope="col"><input type="number" id="laikas" placeholder="">
                 </td>
-                <td scope="col" id="g"></td>
-                <td scope="col"> <button type="button" class="btn btn-secondary" onclick="myFunction()">Įkelti</button></td>
+                <td scope="col"></td>
+                 <td scope="col"> <button type="submit" class="btn btn-secondary" onclick="myFunction()">Įkelti</button></td>
             </tr>
         </thead>
         <tbody id="atsakymas">
