@@ -27,11 +27,11 @@
     <table class="table table-bordered">
         <thead>
             <tr style="background-color: black; color: white;">
-                <th scope="col">Data</th>
-                <th scope="col">Valstybinis Nr.</th>
-                <th scope="col">Atstumas (m)</th>
-                <th scope="col">Laikas (s)</th>
-                <th scope="col">Greitis (km/h)</th>
+                <th scope="col"><div onclick="sort('data')">Data</div></th>
+                <th scope="col"><div onclick="sort('numeris')">Valstybinis Nr.</div></th>
+                <th scope="col"><div onclick="sort('atstumas')">Atstumas (m)</div></th>
+                <th scope="col"><div onclick="sort('laikas')">Laikas (s)</div></th>
+                <th scope="col"><div onclick="sort('greitis')">Greitis (km/h)</div></th>
                 <th scope="col">Veiksmai</th>
             </tr>
             <tr>
@@ -53,7 +53,7 @@
                 </td>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="x">
 
         </tbody>
     </table>
@@ -91,7 +91,42 @@
             salinti("a");
             salinti("l");
         }
+            var sortOrder;
+            function sort(laukas) {
+                sortOrder = (a, b) => {
+                    return a[laukas] < b[laukas] ? -1 : a[laukas] > b[laukas] ? 1 : 0;
+                }
+                lentele();
+            }
+            lentele() 
+            
+            function lentele() {
+                var lentele = "";
+                sortOrder = sortOrder || sort('data');
+                informacija.sort(sortOrder);
+                informacija.forEach ((a, i) => {
+                    lentele +=
+                    '<tr>' +
+                    '<td>' + a.data + '</td>' +
+                    '<td>' + a.numeris + '</td>' +
+                    '<td>' + a.laikas + '</td>' +
+                    '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
+                    '<td><button onclick="trinti(' + i + ')">Trinti</button></td>'
+                    '</tr>';
+                });
+    document.getElementById('a').innerHTML = lentele;
+            }
 
+            function add() {
+                informacija.push({'data': document.getQuerySelector('#data').value});
+                lentele();
+                document.querySelector('#data').value = '';
+            }
+
+    function trinti(index) {
+        informacija.splice(index, 1);
+        lentele();
+    }
     </script>
 
 </body>
