@@ -13,7 +13,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    <title>Uždavinys15</title>
+    <title>Uždavinys16_1</title>
     <style>
         h2,
         tr {
@@ -31,8 +31,9 @@
                 <th scope="col"><div onclick="sort('numeris')">Valstybinis Nr.</div></th>
                 <th scope="col"><div onclick="sort('atstumas')">Atstumas (m)</div></th>
                 <th scope="col"><div onclick="sort('laikas')">Laikas (s)</div></th>
-                <th scope="col"><div onclick="sort('greitis')">Greitis (km/h)</div></th>
-                <th scope="col">Veiksmai</th>
+                <th scope="col" >Greitis (km/h)</th>
+                <th scope="col" colspan="2">Veiksmai</th>
+                
             </tr>
             <tr>
                 <td scope="col">
@@ -42,91 +43,91 @@
                     <input type="text" id="n" placeholder="">
                 </td>
                 <td scope="col">
-                    <input type="number" id="a" placeholder="">
+                    <input type="number" id="km" placeholder="">
                 </td>
                 <td scope="col">
                     <input type="number" id="l" placeholder="">
                 </td>
                 <td scope="col"></td>
-                <td scope="col">
-                    <button type="submit" class="btn btn-secondary" onclick="myFunction()">Įkelti</button>
+                <td scope="col" colspan="2">
+                    <button type="submit" class="btn btn-secondary" onclick="add()">Įkelti</button>
                 </td>
             </tr>
         </thead>
-        <tbody id="x">
+        <tbody id="a">
 
         </tbody>
     </table>
     <script>
-
-        function myFunction() {
-            function getVar(duomenys) {
-                return document.getElementById(duomenys).value;
-            }
-            var data = getVar("d");
-            var numeris = getVar("n");
-            var atstumas = parseInt(getVar("a"));
-            var laikas = parseInt(getVar("l"));
-            var visi = [data, numeris, atstumas, laikas];
-            var gr = (visi[2] / visi[3]) * 3.6;
-            var g = Math.round(gr, 0);
-            visi.push(g);
-
-            var informacija = "";
-            informacija += "<tr>";
-
-            for (i = 0; i < visi.length; i++) {
-                informacija += "<td>" + visi[i] + "</td>"
-            }
-            informacija += "</tr>";
-            document.querySelector('tbody').innerHTML += informacija;
-
-
-
-            function salinti(duomenys) {
-                document.getElementById(duomenys).value = "";
-            }
-            salinti("d");
-            salinti("n");
-            salinti("a");
-            salinti("l");
+        var auto = [
+            {'data': '2018-04-01', 'numeris': 'ABC001', 'atstumas': 5000, 'laikas': 110},
+            {'data': '2018-02-02', 'numeris': 'ABC002', 'atstumas': 5000, 'laikas': 100},
+            {'data': '2018-01-03', 'numeris': 'ABC003', 'atstumas': 5000, 'laikas': 105},
+            {'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111}
+        ];
+        
+        var sortOrder;
+        function sort(laukas) {
+            sortOrder = (a, b) => {
+                return a[laukas] < b[laukas] ? -1 : a[laukas] > b[laukas] ? 1 : 0;
+            }; 
+            lentele();
         }
-            var sortOrder;
-            function sort(laukas) {
-                sortOrder = (a, b) => {
-                    return a[laukas] < b[laukas] ? -1 : a[laukas] > b[laukas] ? 1 : 0;
-                }
-                lentele();
-            }
-            lentele() 
-            
-            function lentele() {
-                var lentele = "";
-                sortOrder = sortOrder || sort('data');
-                informacija.sort(sortOrder);
-                informacija.forEach ((a, i) => {
-                    lentele +=
-                    '<tr>' +
-                    '<td>' + a.data + '</td>' +
-                    '<td>' + a.numeris + '</td>' +
-                    '<td>' + a.laikas + '</td>' +
-                    '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
-                    '<td><button onclick="trinti(' + i + ')">Trinti</button></td>'
-                    '</tr>';
-                });
-    document.getElementById('a').innerHTML = lentele;
-            }
 
-            function add() {
-                informacija.push({'data': document.getQuerySelector('#data').value});
-                lentele();
-                document.querySelector('#data').value = '';
-            }
 
-    function trinti(index) {
-        informacija.splice(index, 1);
         lentele();
-    }
+
+        function lentele() {
+            var lentele = '';
+            sortOrder = sortOrder || sort('data');
+            auto.sort(sortOrder);
+            auto.forEach((a, i) => {
+                lentele += 
+                    '<tr>' +
+                        '<td>' + a.data + '</td>' +
+                        '<td>' + a.numeris + '</td>' +
+                        '<td>' + a.atstumas + '</td>' +
+                        '<td>' + a.laikas + '</td>' +
+                        '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
+                        '<td><button onclick="trinti(' + i + ')">Trinti</button></td>' +
+                        '<td><button onclick="koreguoti(' + i + ')">Koreguoti</button></td>' +
+                     '</tr>'; 
+            });
+            document.getElementById('a').innerHTML = lentele;
+        }
+
+        function add() {
+            auto.push({'data': document.querySelector('#d').value, 'numeris': document.querySelector('#n').value, 'atstumas': document.querySelector('#km').value, 'laikas': document.querySelector('#l').value});
+            lentele();
+            document.getElementById('#d', '#n', '#km', '#l').value = '';
+                   }
+
+
+
+         var auto = [
+            {'data': '2018-04-01', 'numeris': 'ABC001', 'atstumas': 5000, 'laikas': 110},
+            {'data': '2018-02-02', 'numeris': 'ABC002', 'atstumas': 5000, 'laikas': 100},
+            {'data': '2018-01-03', 'numeris': 'ABC003', 'atstumas': 5000, 'laikas': 105},
+            {'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111}];
+
+            for (var i = 0; i > auto.length; i += 1)
+            var auto = i++;
+        auto(i++).push(auto);
+        console.log(auto(n));
+        function naujas(auto) {
+        return document.getElementById('a').value = '';
+        }
+           
+            function trinti(index) {
+            auto.splice(index, 1);
+            lentele();
+        }
+
+        function koreguoti(index) {
+            auto.splice(index, 1);
+            lentele();
+        }
+
     </script>
 
 </body>
