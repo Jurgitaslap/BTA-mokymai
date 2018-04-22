@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #E6E6E6;
+        font-size: 20px;
+      }
+      table {
+        border-spacing: 1px;
+        width: 100%;
+      }
+      th {
+        padding: 1px;
+      }
+      #firsttablediv {
+        width: 100%;
+      }
+      #firsttable {
+        color: white;
+        background-color: green;
+      }
+      #insertitem {
+        width: 100%;
+        padding: 2px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      #insertfirsttable > tr {
+        background-color: #31B404;
+      }
+    </style>
+</head>
+<body>
+  <div id="firsttablediv">
+    <table id="firsttable" border="1">
+      <thead>
+        <th>Item Type</th>
+        <th colspan="3">Filling</th>
+        <th>Stock</th>
+        <th>Stock Minimum</th>
+        <th>Closing Inventory</th>
+        <th>Sell</th>
+        <th>Last Month Inventory</th>
+        <th colspan="2">
+          <button id="insertitem">New Item</button>
+        </th>
+      </thead>
+      <tbody id="insertfirsttable">
+      </tbody>
+    </table>
+  </div>
+<script>
+    var insert = document.getElementById('insertitem');
+insert.addEventListener('click', function() {
+  var table = document.getElementById('insertfirsttable'),
+    itemType = prompt("Enter the Item type"),
+    filling1 = prompt("Enter the filling"),
+    filling2 = prompt("Enter the filling"),
+    filling3 = prompt("Enter the filling"),
+    stock = prompt("Enter the amount in stock"),
+    minimum_Stock = prompt("Enter the stock minimum");
+
+  for (var r = 0; r < 1; r += 1) {
+    var x = document.getElementById('insertfirsttable').insertRow(r);
+    for (var c = 0; c < 10; c += 1) {
+      var y = x.insertCell(c);
+    }
+
+    table.rows[r].cells[0].innerHTML = itemType;
+    table.rows[r].cells[1].innerHTML = filling1;
+    table.rows[r].cells[2].innerHTML = filling2;
+    table.rows[r].cells[3].innerHTML = filling3;
+    table.rows[r].cells[4].innerHTML = stock;
+    table.rows[r].cells[5].innerHTML = minimum_Stock;
+    table.rows[r].cells[9].style.width = "100px";
+    var CreateBtn = document.createElement("button");
+    CreateBtn.innerHTML = "sell";
+    CreateBtn.id = "sellbtn";
+    CreateBtn.style.width = "100px";
+    CreateBtn.style.height = "25px";
+    CreateBtn.style.cursor = "pointer";
+    CreateBtn.style.fontSize = "18px";
+    table.rows[r].cells[9].appendChild(CreateBtn);
+    var sellBtn = document.getElementById("sellbtn");
+    CreateBtn.onclick = function Sell() {
+      var sell = prompt("Enter the amount of stock you're selling");
+      for (var a = 0; a < table.length; a += 1) {
+        for (var b = 0; b < table.cells.length; b += 1) {
+
+        }
+      }
+      this.parentNode.parentNode.cells[4].innerHTML = parseInt(this.parentNode.parentNode.cells[4].innerHTML) - sell;
+    }
+  }
+
+});
+</script>
+</body>
+
+</html>
