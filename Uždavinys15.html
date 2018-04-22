@@ -15,12 +15,13 @@
         crossorigin="anonymous"></script>
     <title>Uždavinys15</title>
     <style>
-        tr {text-align: center;}
+        h2, tr {text-align: center;}
+        
     </style>
 </head>
 
 <body>
-
+<h2>Užpildykite laukus</h2>
     <table class="table table-bordered">
         <thead>
             <tr style="background-color: black; color: white;">
@@ -32,42 +33,42 @@
                 <th scope="col">Veiksmai</th>
             </tr>
             <tr>
-                <td scope="col"><input type="text" id="data" placeholder="">
+                <td scope="col"><input type="text" id="d" placeholder="">
                 </td>
-                <td scope="col"><input type="text" id="numeris" placeholder="">
+                <td scope="col"><input type="text" id="n" placeholder="">
                 </td>
-                <td scope="col"><input type="number" id="atstumas" placeholder="">
+                <td scope="col"><input type="number" id="a" placeholder="">
                 </td>
-                <td scope="col"><input type="number" id="laikas" placeholder="">
+                <td scope="col"><input type="number" id="l" placeholder="">
                 </td>
                 <td scope="col"></td>
                  <td scope="col"> <button type="submit" class="btn btn-secondary" onclick="myFunction()">Įkelti</button></td>
             </tr>
         </thead>
-        <tbody id="atsakymas">
+        <tbody>
 
         </tbody>
     </table>
     <script>
 
-        function add() {
+        function myFunction() {
             function getVar(duomenys) {
                 return document.getElementById(duomenys).value;
             }
             var data = getVar("d");
-            var numeris = getvar("n");
+            var numeris = getVar("n");
             var atstumas = parseInt(getVar("a"));
             var laikas = parseInt(getVar("l"));
-            var masyvas = [data, numeris, atstumas, laikas];
-            var grei = (masyvas[2] / masyvas[3]) * 3.6;
-            var g = Math.round(greitis, 0);
-            masyvas.push(g);
+            var visi = [data, numeris, atstumas, laikas];
+            var gr = (visi[2] / visi[3]) * 3.6;
+            var g = Math.round(gr, 0);
+            visi.push(g);
 
             var informacija = "";
             informacija += "<tr>";
 
-            for (i = 0; i < masyvas.length; i++) {
-                informacija += "<td>" + masyvas[i] + "</td>"
+            for (i = 0; i < visi.length; i++) {
+                informacija += "<td>" + visi[i] + "</td>"
             }
             informacija += "</tr>";
             document.querySelector('tbody').innerHTML += informacija;
@@ -75,13 +76,14 @@
 
 
             function salinti(duomenys) {
-                document.getElementById("duomenys").value = "";
+                document.getElementById(duomenys).value = "";
             }
             salinti("d");
             salinti("n");
             salinti("a");
             salinti("l");
         }
+      
     </script>
 
 </body>
