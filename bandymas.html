@@ -1,85 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-    <title>Document</title> 
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <title>Uždavinys15</title>
     <style>
-            .forma {
-                width: 80vw;
-                margin: auto;
-                text-align: center;
-            }
-            .forma button {
-                margin: 2vw;
-            }
-    </style> 
+        h2, tr {text-align: center;}
+        
+    </style>
 </head>
-<body>
-        <div class="form-group forma">
-                <legend>Iveskite duomenis:</legend>
-                        Data:<br>
-                        <input type="text" id="data" placeholder=""><br>
-                        Numeris:<br>
-                        <input type="text" id="numeris" placeholder=""><br>
-                        Atstumas, m:<br>
-                        <input type="number" id="atstumas" placeholder=""><br>
-                        Laikas, s:<br>
-                        <input type="number" id="laikas" placeholder=""><br>
-                        <button type="submit" class="btn btn-primary" onclick="myFunction()">Skaiciuoti</button>
-                        <table class="table table-bordered">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th>Data</th>
-                                    <th>Numeris</th>
-                                    <th>Atstumas, m</th>
-                                    <th>Laikas, s</th>
-                                    <th>Greitis, km/h</th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-        </div>
 
+<body>
+<h2>Užpildykite laukus</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr style="background-color: black; color: white;">
+                <th scope="col">Data</th>
+                <th scope="col">Valstybinis Nr.</th>
+                <th scope="col">Atstumas (m)</th>
+                <th scope="col">Laikas (s)</th>
+                <th scope="col">Greitis (km/h)</th>
+                <th scope="col">Veiksmai</th>
+            </tr>
+            <tr>
+                <td scope="col"><input type="text" id="d" placeholder="">
+                </td>
+                <td scope="col"><input type="text" id="n" placeholder="">
+                </td>
+                <td scope="col"><input type="number" id="a" placeholder="">
+                </td>
+                <td scope="col"><input type="number" id="l" placeholder="">
+                </td>
+                <td scope="col"></td>
+                 <td scope="col"> <button type="submit" class="btn btn-secondary" onclick="myFunction()">Įkelti</button></td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
     <script>
+
         function myFunction() {
-            function getVar(duom) {
-                return document.getElementById(duom).value;
+            function getVar(duomenys) {
+                return document.getElementById(duomenys).value;
             }
-            
-            var data = getVar("data");
-            var numeris = getVar("numeris");
-            var atstumas = parseInt(getVar("atstumas"));
-            var laikas = parseInt(getVar("laikas"));
-            var masyvas = [data, numeris, atstumas, laikas];
-            var greitis = (masyvas[2] / masyvas[3]) * 3.6;
-            var gkmH = Math.round(greitis, 0);
-            masyvas.push(gkmH); 
-            var textas = "";
-            textas += "<tr>";
-            for (i = 0; i < masyvas.length; i++){     
-                    textas += "<td>" + masyvas[i] + "</td>"; 
+            var data = getVar("d");
+            var numeris = getVar("n");
+            var atstumas = parseInt(getVar("a"));
+            var laikas = parseInt(getVar("l"));
+            var visi = [data, numeris, atstumas, laikas];
+            var gr = (visi[2] / visi[3]) * 3.6;
+            var g = Math.round(gr, 0);
+            visi.push(g);
+
+            var informacija = "";
+            informacija += "<tr>";
+
+            for (i = 0; i < visi.length; i++) {
+                informacija += "<td>" + visi[i] + "</td>"
             }
-            textas += "</tr>";
-            document.querySelector("tbody").innerHTML += textas;
-            
-            function valyti(duom) {
-                document.getElementById(duom).value = "";
+            informacija += "</tr>";
+            document.querySelector('tbody').innerHTML += informacija;
+
+
+
+            function salinti(duomenys) {
+                document.getElementById(duomenys).value = "";
             }
-            valyti("data");
-            valyti("numeris");
-            valyti("atstumas");
-            valyti("laikas");    
-                                                      
+            salinti("d");
+            salinti("n");
+            salinti("a");
+            salinti("l");
         }
+      
     </script>
+
 </body>
+
 </html>
