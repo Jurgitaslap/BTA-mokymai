@@ -18,3 +18,14 @@ header nav .leftSide {
 header nav .rightSide {
     float: right;
 }
+nav .leftSide li,
+nav .leftSide img {
+    display: inline-block;
+    vertical-align: middle;
+}
+nav .leftSide img {
+    margin-right: 30px;
+}
+nav .leftSide li:not(:last-of-type) {
+    margin-right: 42px;
+}
