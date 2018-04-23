@@ -54,7 +54,19 @@ nav .rightSide span {
     color: #0089cf;
     /* vertical-align: top; */
    }
-.topWrapper {
-
+header.topWrapper {
+width: 78%;
+margin: auto;
+font-size: 0px;
 }
 /* su float lygiuos paveiklelius ir prasymus nuo eilutes virsaus, o inline block-nuo apacios, todel geriau naudoti inline-block */
+header.topWrapper .shoe {
+width: 74%;
+display: inline-block;
+vertical-align: bottom;
+}
+header .rightSide {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 26%;
+}
