@@ -19,6 +19,8 @@ header nav .rightSide {
     float: right;
 }
 nav .leftSide li,
+nav .rightSide li,
+nav .rightSide li *,
 nav .leftSide img {
     display: inline-block;
     vertical-align: middle;
@@ -29,3 +31,25 @@ nav .leftSide img {
 nav .leftSide li:not(:last-of-type) {
     margin-right: 42px;
 }
+nav .leftSide li,
+nav .rightSide li {
+    text-transform: uppercase;
+    color: #333;
+    cursor: pointer;
+}
+nav .rightSide {
+    line-height: 50px;}
+
+    nav .rightSide li:not(:last-of-type) {
+        margin-right: 30px;
+    }
+nav .rightSide li img {
+    margin-right: 10px;
+}
+img.cart {
+    margin-top: -4px;
+}
+nav .rightSide span {
+    color: #0089cf;
+    vertical-align: top;
+   }
