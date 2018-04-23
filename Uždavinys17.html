@@ -3,8 +3,41 @@
 <head>
 <title>Uždavinys17</title>
 <style>
+    #container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background: red;
+  justify-content: center;
+}
+.animacija {
+  border-radius: 50%;
+  background-color: green;
+  
+}
 </style>
+
 </head>
 <body>
+<button onclick="keisti">Keisti</button>
+<div class="animacija"></div>
+  <div id="container"></div>  
+    <script>
+function keisti() {
+  var elem = localStorage.getItem("keisti");
+  var pos = 0;
+ 
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+</script>
+    </script>
 </body>
 </html>

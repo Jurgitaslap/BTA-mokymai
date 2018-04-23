@@ -51,7 +51,7 @@
                 </td>
                 <td scope="col"></td>
                 <td scope="col" colspan="2">
-                    <button type="submit" class="btn btn-secondary" onclick="add()">Įkelti</button>
+                    <button type="submit" class="btn btn-secondary" action="saugoti" onclick="add()">Saugoti</button>
                 </td>
             </tr>
         </thead>
@@ -66,7 +66,7 @@
             {'data': '2018-01-03', 'numeris': 'ABC003', 'atstumas': 5000, 'laikas': 105},
             {'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111}
         ];
-        
+       
         var sortOrder;
         function sort(laukas) {
             sortOrder = (a, b) => {
@@ -91,14 +91,15 @@
                         '<td>' + a.laikas + '</td>' +
                         '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
                         '<td><button onclick="trinti(' + i + ')">Trinti</button></td>' +
-                        '<td><button id="koreg" onclick="koreguoti(' + i + ')">Koreguoti</button></td>' +
+                        '<td><button id="koreg" onclick="taisyti(' + i + ')">Taisyti</button></td>' +
                      '</tr>'; 
             });
             document.getElementById('a').innerHTML = lentele;
         }
-
+        var busena = -1;
         function add() {
-            auto.push({'data': document.querySelector('#d').value, 'numeris': document.querySelector('#n').value, 'atstumas': document.querySelector('#km').value, 'laikas': document.querySelector('#l').value});
+            if (busena >=0) {
+            auto.push({'data': document.querySelector('#d').value, 'numeris': document.querySelector('#n').value, 'atstumas': document.querySelector('#km').value, 'laikas': document.querySelector('#l').value});}
             lentele();
             document.getElementById('#d', '#n', '#km', '#l').value = '';
                    }
@@ -124,9 +125,11 @@
             lentele();
         }
 
-        function koreguoti(index) {
-            document.getElementById('#d', '#n', '#km', '#l').value = 'koreg';
-               lentele();
+        function taisyti(index) {
+           var a = auto(index);
+           document.querySelector('#d').value = a.data;
+           document.getElementById('action').innerHTML = 'Saugoti';
+           busena = index;
         }
 
     </script>
