@@ -20,13 +20,14 @@ header nav .rightSide {
 }
 nav .leftSide li,
 nav .rightSide li,
-nav .rightSide li *,
+/* nav .rightSide li *, */
 nav .leftSide img {
     display: inline-block;
     vertical-align: middle;
 }
 nav .leftSide img {
     margin-right: 30px;
+    vertical-align: middle;
 }
 nav .leftSide li:not(:last-of-type) {
     margin-right: 42px;
@@ -51,5 +52,9 @@ img.cart {
 }
 nav .rightSide span {
     color: #0089cf;
-    vertical-align: top;
+    /* vertical-align: top; */
    }
+.topWrapper {
+
+}
+/* su float lygiuos paveiklelius ir prasymus nuo eilutes virsaus, o inline block-nuo apacios, todel geriau naudoti inline-block */
