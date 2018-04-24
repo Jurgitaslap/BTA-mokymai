@@ -5,8 +5,8 @@ body {
     }
 
 header {
-padding-bottom: 150px; 
-background-color: #fff;
+    padding-bottom: 150px; 
+    background-color: #fff;
     }
 
 header nav {
@@ -39,6 +39,7 @@ nav .leftSide img {
 nav .leftSide li:not(:last-of-type) {
     margin-right: 42px;
 }
+
 nav .leftSide li,
 nav .rightSide li {
     text-transform: uppercase;
@@ -67,17 +68,17 @@ nav .rightSide span {
    }
 
 header .topWrapper {
-width: 90%;
-max-width: 1400px;
-margin: auto;
-font-size: 0px;
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    font-size: 0px;
 }
 
 /* su float lygiuos paveiklelius ir prasymus nuo eilutes virsaus, o inline block-nuo apacios, todel geriau naudoti inline-block */
 header .topWrapper .shoe {
-width: 74%;
-display: inline-block;
-vertical-align: bottom;
+    width: 74%;
+    display: inline-block;
+    vertical-align: bottom;
 }
 
 header .topWrapper .rightSide {
@@ -100,10 +101,10 @@ header .topWrapper .rightSide {
 
 .heart img {
 /* vertical-align: middle; arba */
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 } 
 
 header .rightSide h3 {
@@ -122,8 +123,8 @@ header .rightSide h2 {
 
 header .rightSide .price {
     margin-bottom: 27px;
-font-size: 18px;
-color: #666666;
+    font-size: 18px;
+    color: #666666;
 }
 
 header .rightSide .colors {
@@ -135,7 +136,7 @@ header .rightSide .colors {
 }
 
 header .rightSide .colors span {
-color: #0089cf;
+    color: #0089cf;
 }
 
 header .rightSide .box {
@@ -146,9 +147,9 @@ header .rightSide .box {
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
-position: relative;
-margin-right: 10px;
-margin-bottom: 20px;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 header .rightSide .box img {
@@ -172,10 +173,10 @@ display: block;
 }
 
 header .rightSide select {
-  appearance: none;
+     /* appearance: none; */
     -webkit-appearance: none;
     -moz-appearance: none;
-   
+       
     margin-top: 15px;
     border: solid 1px #e4e4e4;
     background-color: transparent;
@@ -207,7 +208,7 @@ header .rightSide button {
 }
 
 .feat1 {
-    background-image: url(Layer2.jpg);
+    background-image: url(Feat1.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -216,17 +217,18 @@ header .rightSide button {
 }
 
 .feat1 h4 {
-    font-size: 25px;
-   font-weight: 600;
-   margin-bottom: 30px;
+     font-size: 25px;
+     font-weight: 600;
+     margin-bottom: 30px;
 }
 
-.feat1 h4 p {
+.feat1 h4 p { /*nuo cia pasitikrint*/
     font-size: 14px;
     line-height: 1.78;
     max-width: 420px;
     text-align: justify;
 }
+
 .feat2 {
     background-color: #f5f5f5;
     padding: 50px;
