@@ -13,31 +13,135 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
+
     <title>Uždavinys18</title>
     <style>
-        body { background-color: darkgrey ; margin-top: 15%;}
-        label {color: black; font-weight: 700;}
-        div { width: 15em; display: block; text-align: center; margin: auto;}
-        button { position: relative; margin: auto; }
-        section { position: absolute; width: 100vw;justify-content: center; text-align: center;}
-        #pranesimas { width: 40vw; text-align: center; color: red; font-weight: 600; background-color: transparent; outline: none; border: none;}
-    </style>
-    </head>
-    <body>
-        <section>
-                <div class="alert alert-danger" role="alert" id="pranesimas"></div>
-            <div class="form-group">
-                    <label for="exampleInputPassword1">Įveskite slaptažodį</label>
-                    <input type="password" class="form-control" id="Password1" placeholder="Slaptažodis">
-                  </div>
-                  <div class="form-group">
-                        <label for="exampleInputPassword1">Pakartokite slaptažodį</label>
-                        <input type="password" class="form-control" id="Password2" placeholder="Slaptažodis">
-                      </div>
-                      <button type="button" class="btn btn-dark">Patvirtinti</button>
-                    </section>
-        <script>
+        body {
+            background-color: darkgrey;
+            margin-top: 5%;
+        }
 
+        label {
+            color: black;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        div {
+            width: 15em;
+            display: block;
+            text-align: center;
+            margin: auto;
+        }
+
+        button {
+            position: relative;
+            margin: auto;
+        }
+
+        img {
+            width: 3em;
+            padding: 2em 0em 5em 0em;
+        }
+
+        section {
+            position: absolute;
+            width: 100vw;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #pranesimasRed {
+            width: 40vw;
+            text-align: center;
+            color: red;
+            font-weight: 600;
+            background-color: transparent;
+            outline: none;
+            border: none;
+        }
+
+       
+        #keisti {
+            animation-iteration-count: infinite;
+            animation: mymove 5s infinite;
+        }
+
+        @keyframes animation1 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(720deg);
+
+            }
+        }
+       
+    </style>
+</head>
+
+<body>
+    <section>
+        <img src="bug.svg" id="animation">
+        <div class="alert alert-danger" role="alert" id="pranesimasRed"></div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Įveskite slaptažodį</label>
+            <input type="password" class="form-control" id="password1" placeholder="Slaptažodis">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Pakartokite slaptažodį</label>
+            <input type="password" class="form-control" id="password2" placeholder="Slaptažodis">
+        </div>
+        <button type="submit" class="btn btn-dark" id="keisti" value="Keisti" onclick="submit()">Keisti</button>
+       
+
+    </section>
+    <script>
+            function animation2() {
+                slapta1Zodis = document.getElementById("password1").value;
+                slapta2Zodis = document.getElementById("password2").value;
+                var tikslus = new Zodis(slapta1Zodis, slapta2Zodis);
+                tikslus.teisingas();
+            }
+            function Zodis(password1, password2) {
+                this.password1 = password1;
+                this.password2 = password2;
+                this.teisingas = function() {
+                    if (this.password1 == "" || this.password2 == "") {
+                        document.getElementById("pranesimasRed").innerHTML = "Įveskite slaptažodį į abu laukus";
+                                } else {
+                        if (this.password1 == this.password2) {
+                            document.getElementById("pranesimasRed").innerHTML = "Laukite, vyksta slaptažodžio keitimas...";
+                            document.getElementById("keisti").style.display = "none";
+                            document.getElementById("loader").style.display = "block";
+                        } else {
+                            document.getElementById("pranesimasRed").innerHTML = "Slaptažodžiai nesutampa. Veskite iš naujo";
+                            document.querySelector("p").style.color = "red";
+                        }
+                    }
+                }
+            }
+            var a = document.getElementById('animation');
+            var b = document.getElementById('keisti');
+    
+            keisti = 0;
+            function animation() {
+                if (keisti) {
+                    animation1();
+                               }
+                else {
+                    animation0();
+                }
+                keisti = !keisti;
+    
+            }
+    
+            function animation0() {
+                a.style.animation = "animation1 3s ease 0s normal 10 both running";
+                a.innerHTML
+            }
+    
         </script>
-    </body>
-    </html>
+</body>
+
+</html>
