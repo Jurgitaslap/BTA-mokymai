@@ -2,9 +2,29 @@
 <html>
 <head>
   <title>JavaScript Introduction</title>
+ 
+  <script type="text/javascript">
+ 
+    function updateMessage(){
+      var msg;
+      msg = getInput();
+      writeMessage(msg);
+    }
+ 
+    function getInput() {
+      return document.getElementById('msgInput').value;
+    }
+ 
+    function writeMessage(theMessage){
+      document.getElementById('message').innerHTML = theMessage;
+    }
+  </script>
+ 
 </head>
 <body>
   <h1>HTML, meet JavaScript</h1>
-  <button onclick="alert('Why, hello there.')">Say Hi</button>
+  <div>Get typing:</div>
+  <input id="msgInput" onkeyup="updateMessage()">
+  <h2 id="message"></h2>
 </body>
 </html>
