@@ -15,22 +15,35 @@
 .animacija {
   border-radius: 50%;
   background-color: green;
-  
-}
+  }
+  @ keyframes animation { from {
+    background-color: red;
+  }}
 </style>
 
 </head>
 <body>
-    <div id="container">
-        <div class="animation"> </div></div>
+    <div id="container" onclick="animation()"></div>
     
     <script>
-function keisti() {
-  var elem = localStorage.getItem("keisti");
-  var pos = 0;
- 
-  function frame() }
+ var t = document.getElementById('container');
+ var x = document.getElementById('click');
 
+ var vieta = 0;
+ function animation() {
+   if(vieta) {
+     animation1();
+       }
+       else {
+         animation0();
+       }
+       vieta = !vieta;
+ }
+
+function animation0() {
+  t.style.animation = "animation1 1s ease 0s alternate 1 both running";
+  t.innerHTML
+}
     </script>
 </body>
 </html>
