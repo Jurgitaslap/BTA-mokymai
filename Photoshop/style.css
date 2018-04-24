@@ -3,21 +3,26 @@ body {
     background-color: #c8cfdc;
     font-family: 'Roboto', sans-serif;
     }
+
 header {
 padding-bottom: 150px; 
 background-color: #fff;
     }
+
 header nav {
     padding: 20px 29px 78px 20px;
     color: #333333;
     overflow: auto;
 }
+
 header nav .leftSide {
     float: left;
 }
+
 header nav .rightSide {
     float: right;
 }
+
 nav .leftSide li,
 nav .rightSide li,
 /* nav .rightSide li *, */
@@ -25,10 +30,12 @@ nav .leftSide img {
     display: inline-block;
     vertical-align: middle;
 }
+
 nav .leftSide img {
     margin-right: 30px;
     vertical-align: middle;
 }
+
 nav .leftSide li:not(:last-of-type) {
     margin-right: 42px;
 }
@@ -38,29 +45,34 @@ nav .rightSide li {
     color: #333;
     cursor: pointer;
 }
+
 nav .rightSide {
     line-height: 50px;}
 
     nav .rightSide li:not(:last-of-type) {
         margin-right: 30px;
     }
+
 nav .rightSide li img {
     margin-right: 10px;
 }
+
 img.cart {
     margin-top: -4px;
 }
+
 nav .rightSide span {
     color: #0089cf;
     /* vertical-align: top; */
    }
+
 header .topWrapper {
 width: 90%;
 max-width: 1400px;
 margin: auto;
 font-size: 0px;
-
 }
+
 /* su float lygiuos paveiklelius ir prasymus nuo eilutes virsaus, o inline block-nuo apacios, todel geriau naudoti inline-block */
 header .topWrapper .shoe {
 width: 74%;
@@ -75,6 +87,7 @@ header .topWrapper .rightSide {
     font-size: 16px;
 /* truksta */
 }
+
 .heart {
     border: #e4e4e4 1px solid;
     width: 48px;
@@ -84,6 +97,7 @@ header .topWrapper .rightSide {
     position: relative;
     margin-bottom: 43px;
 }
+
 .heart img {
 /* vertical-align: middle; arba */
 position: absolute;
@@ -91,23 +105,27 @@ top: 50%;
 left: 50%;
 transform: translateX(-50%) translateY(-50%);
 } 
+
 header .rightSide h3 {
     color: #333333;
     font-size: 25px;
     margin-bottom: 17px;
     font-weight: 600;
 }
+
 header .rightSide h2 {
     color: #333333;
     font-size: 35px;
     margin-bottom: 15px;
     font-weight: 600;
 }
+
 header .rightSide .price {
     margin-bottom: 27px;
 font-size: 18px;
 color: #666666;
 }
+
 header .rightSide .colors {
     text-transform: uppercase;
     font-size: 14px;
@@ -115,9 +133,11 @@ header .rightSide .colors {
     margin-bottom: 15px;
     line-height: 1.5;
 }
+
 header .rightSide .colors span {
 color: #0089cf;
 }
+
 header .rightSide .box {
     border: 1px solid #e4e4e4;
     background-color: #f5f5f5;
@@ -130,6 +150,7 @@ position: relative;
 margin-right: 10px;
 margin-bottom: 20px;
 }
+
 header .rightSide .box img {
     width: 85%;
     height: auto;
@@ -139,16 +160,19 @@ header .rightSide .box img {
     transform: translate(-50%, -30%);
     filter: grayscale(100%);
 }
+
 header .rightSide .box.selected img {
     filter: none;
 }
+
 header .rightSide label {
 font-size: 12px;
 color: #666;
 display: block;
 }
+
 header .rightSide select {
-    appearance: none;
+  appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
    
@@ -169,6 +193,7 @@ header .rightSide select {
     background-position: 100px center;
     margin-right: 10px;
 }
+
 header .rightSide button {
     padding: 21px;
     box-sizing: border-box;
@@ -180,3 +205,30 @@ header .rightSide button {
     border: none;
     margin-bottom: 15px;
 }
+
+.feat1 {
+    background-image: url(Layer2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 260px 50px;
+    color: #fff;
+}
+
+.feat1 h4 {
+    font-size: 25px;
+   font-weight: 600;
+   margin-bottom: 30px;
+}
+
+.feat1 h4 p {
+    font-size: 14px;
+    line-height: 1.78;
+    max-width: 420px;
+    text-align: justify;
+}
+.feat2 {
+    background-color: #f5f5f5;
+    padding: 50px;
+}
+
