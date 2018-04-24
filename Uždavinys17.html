@@ -1,46 +1,109 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Uždavinys17</title>
-<style>
-  @import url("https://fonts.googleapis.com/css?family=Roboto:300");
+  <title>Uždavinys17</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Roboto:300");
+    body {
+      background-color: rgb(137, 201, 192);
+  margin: auto;
+  padding-top: 15%;
+    }
 
     #container {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  background: red;
-  justify-content: center;
-}
+      
+      width: 200px;
+      height: 200px;
+           background: red;
+      margin: auto
+      
+    }
 
-  @ keyframes animation { from {
-    background-color: red;
-  }}
-</style>
+    button {
+      background-color: transparent;
+       color: white;
+      font-size: 20px;
+      transform: translate(50%, 120%);
+      width: 100px;
+      height: 60px;
+      outline: none;
+      border: none;
+      
+    }
+
+    @keyframes animation1 {
+      from {
+        background-color: red;
+
+      }
+      to {
+        background-color: green;
+        border-radius: 50%;
+        transform: rotate(360deg)
+        
+      }
+    }
+
+    @keyframes animation2 {
+      from {
+        background-color: green;
+        border-radius: 50%;
+        
+
+      }
+      to {
+        background-color: red;
+        transform: rotate(-360deg)
+      }
+    }
+
+  </style>
 
 </head>
+
 <body>
-    <div id="container" onclick="animation()"></div>
+  <div id="container">
+    <button onclick="animation('click')">click</button>
+  </div>
+
+  <script>
+    var g = document.getElementById('container');
+    var b = document.getElementById('click');
+
+    var vieta = 0;
+    var atgal = 0;
+            function animation() {
+      if (vieta) {
+        animation1();
+              }
+      else {
+        animation0();
+      }
+      vieta = !vieta;
+
+      function animation() {
+      if (vieta) {
+        animation2();
+      }
+      else {
+        animation0();
+      }
+      atgal != atgal;
+     }}
+   
+      
+    function animation0() {
+      g.style.animation = "animation1 1s ease 0s alternate 1 both running";
+      g.innerHTML
+    }
+    function animation1() {
+      g.style.animation = "animation2 1s ease 0s alternate 1 both running";
+      g.innerHTML
+    }
     
-    <script>
- var t = document.getElementById('container');
- var x = document.getElementById('click');
 
- var vieta = 0;
- function animation() {
-   if(vieta) {
-     animation1();
-       }
-       else {
-         animation0();
-       }
-       vieta = !vieta;
- }
-
-function animation0() {
-  t.style.animation = "animation1 1s ease 0s alternate 1 both running";
-  t.innerHTML
-}
-    </script>
+  </script>
 </body>
+
 </html>
