@@ -62,7 +62,7 @@
             margin: auto;
         }
 
-        #keisti {
+        .keisti {
             animation: animation 5s infinite;
         }
 
@@ -90,7 +90,7 @@
             <label for="exampleInputPassword1">Pakartokite slaptažodį</label>
             <input type="password" class="form-control" id="password2" placeholder="Slaptažodis">
         </div>
-        <button type="submit" class="btn btn-dark" id="keisti" value="Keisti" onclick="animation()">Keisti</button>
+        <button type="submit" class="btn btn-dark" id="keisti" onclick="animation()">Keisti</button>
     </section>
 
     <script>
@@ -108,40 +108,39 @@
                 if (this.password1 == "" || this.password2 == "") {
                     document.querySelector("p").innerHTML = "Įveskite slaptažodį į abu laukus";
                     document.querySelector("p").style.color = "red";
+
                 }
                 else {
                     if (this.password1 == this.password2) {
                         document.querySelector("p").innerHTML = "Laukite, vyksta slaptažodžio keitimas...";
                         document.querySelector("p").style.color = "green";
-                        document.getElementById("keisti").style.display = "none";
-                     
+                        var a = document.getElementById('animation');
+                        var b = document.getElementById('keisti');
+                        keisti = 0;
+                        function animation() {
+                            if (keisti) {
+                                animation1();
+                            }
+                            else {
+                                animation0();
+                            }
+                            keisti = !keisti;
+                        }
+
+                        function animation0() {
+                            a.style.animation = "animation1 3s ease 0s normal 10 both running";
+                            a.innerHTML;
+                        }
                     }
-                       
-                   
+
                     else {
                         document.querySelector("p").innerHTML = "Slaptažodžiai nesutampa. Veskite iš naujo";
                         document.querySelector("p").style.color = "red";
                     }
                 }
-
-                var a = document.getElementById('animation');
-                var b = document.getElementById('keisti');
-                keisti = 0;
-                function animation() {
-                    if (keisti) {
-                        animation1();
-                    }
-                    else {
-                        animation0();
-                    }
-                    keisti = !keisti;
-                }
-
-                function animation0() {
-                    a.style.animation = "animation1 3s ease 0s normal 10 both running";
-                    a.innerHTML;
-             } }
+            }
         }
+
     </script>
 </body>
 
