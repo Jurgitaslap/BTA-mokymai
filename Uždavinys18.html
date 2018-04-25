@@ -21,10 +21,27 @@
             margin-top: 5%;
         }
 
-        label {
-            color: black;
-            font-weight: 700;
-            line-height: 1;
+        section {
+            position: absolute;
+            width: 100vw;
+            justify-content: center;
+            text-align: center;
+        }
+
+        img {
+            width: 3em;
+            padding: 2em 0em 5em 0em;
+        }
+
+        p {
+            width: 40vw;
+            text-align: center;
+            margin: auto;
+            padding: 1em;
+            font-weight: 600;
+            background-color: transparent;
+            outline: none;
+            border: none;
         }
 
         div {
@@ -34,37 +51,19 @@
             margin: auto;
         }
 
+        label {
+            color: black;
+            font-weight: 700;
+            line-height: 1;
+        }
+
         button {
             position: relative;
             margin: auto;
         }
 
-        img {
-            width: 3em;
-            padding: 2em 0em 5em 0em;
-        }
-
-        section {
-            position: absolute;
-            width: 100vw;
-            justify-content: center;
-            text-align: center;
-        }
-
-        #pranesimasRed {
-            width: 40vw;
-            text-align: center;
-            color: red;
-            font-weight: 600;
-            background-color: transparent;
-            outline: none;
-            border: none;
-        }
-
-       
         #keisti {
-            animation-iteration-count: infinite;
-            animation: mymove 5s infinite;
+            animation: animation 5s infinite;
         }
 
         @keyframes animation1 {
@@ -76,14 +75,13 @@
 
             }
         }
-       
     </style>
 </head>
 
 <body>
     <section>
         <img src="bug.svg" id="animation">
-        <div class="alert alert-danger" role="alert" id="pranesimasRed"></div>
+        <p>Slaptažodžio tvirtinimas</p>
         <div class="form-group">
             <label for="exampleInputPassword1">Įveskite slaptažodį</label>
             <input type="password" class="form-control" id="password1" placeholder="Slaptažodis">
@@ -92,56 +90,57 @@
             <label for="exampleInputPassword1">Pakartokite slaptažodį</label>
             <input type="password" class="form-control" id="password2" placeholder="Slaptažodis">
         </div>
-        <button type="submit" class="btn btn-dark" id="keisti" value="Keisti" onclick="submit()">Keisti</button>
-       
-
+        <button type="submit" class="btn btn-dark" id="keisti" value="Keisti" onclick="animation()">Keisti</button>
     </section>
+
     <script>
-            function animation2() {
-                slapta1Zodis = document.getElementById("password1").value;
-                slapta2Zodis = document.getElementById("password2").value;
-                var tikslus = new Zodis(slapta1Zodis, slapta2Zodis);
-                tikslus.teisingas();
-            }
-            function Zodis(password1, password2) {
-                this.password1 = password1;
-                this.password2 = password2;
-                this.teisingas = function() {
-                    if (this.password1 == "" || this.password2 == "") {
-                        document.getElementById("pranesimasRed").innerHTML = "Įveskite slaptažodį į abu laukus";
-                                } else {
-                        if (this.password1 == this.password2) {
-                            document.getElementById("pranesimasRed").innerHTML = "Laukite, vyksta slaptažodžio keitimas...";
-                            document.getElementById("keisti").style.display = "none";
-                            document.getElementById("loader").style.display = "block";
-                        } else {
-                            document.getElementById("pranesimasRed").innerHTML = "Slaptažodžiai nesutampa. Veskite iš naujo";
-                            document.querySelector("p").style.color = "red";
-                        }
+        function animation() {
+            slapta1ZODIS = document.getElementById("password1").value;
+            slapta2ZODIS = document.getElementById("password2").value;
+            var tikslus = new Zodis(slapta1ZODIS, slapta2ZODIS);
+            tikslus.teisingas();
+        }
+
+        function Zodis(password1, password2) {
+            this.password1 = password1;
+            this.password2 = password2;
+            this.teisingas = function () {
+                if (this.password1 == "" || this.password2 == "") {
+                    document.querySelector("p").innerHTML = "Įveskite slaptažodį į abu laukus";
+                    document.querySelector("p").style.color = "red";
+                }
+                else {
+                    if (this.password1 == this.password2) {
+                        document.querySelector("p").innerHTML = "Laukite, vyksta slaptažodžio keitimas...";
+                        document.querySelector("p").style.color = "green";
+                        document.getElementById("keisti").style.display = "none";
+                    }
+                    else {
+                        document.querySelector("p").innerHTML = "Slaptažodžiai nesutampa. Veskite iš naujo";
+                        document.querySelector("p").style.color = "red";
                     }
                 }
-            }
-            var a = document.getElementById('animation');
-            var b = document.getElementById('keisti');
-    
-            keisti = 0;
-            function animation() {
-                if (keisti) {
-                    animation1();
-                               }
-                else {
-                    animation0();
+
+                var a = document.getElementById('animation');
+                var b = document.getElementById('keisti');
+                keisti = 0;
+                function animation() {
+                    if (keisti) {
+                        animation1();
+                    }
+                    else {
+                        animation0();
+                    }
+                    keisti = !keisti;
                 }
-                keisti = !keisti;
-    
+
+                function animation0() {
+                    a.style.animation = "animation1 3s ease 0s normal 10 both running";
+                    a.innerHTML;
+                }
             }
-    
-            function animation0() {
-                a.style.animation = "animation1 3s ease 0s normal 10 both running";
-                a.innerHTML
-            }
-    
-        </script>
+        }
+    </script>
 </body>
 
 </html>
