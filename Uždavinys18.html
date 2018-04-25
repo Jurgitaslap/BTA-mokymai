@@ -117,15 +117,10 @@
                         var a = document.getElementById('animation');
                         var b = document.getElementById('keisti');
                         keisti = 0;
-                        function animation() {
-                            if (keisti) {
-                                animation1();
-                            }
-                            else {
-                                animation0();
-                            }
-                            keisti = !keisti;
-                        }
+                       
+                        animation0();
+                        
+                       
 
                         function animation0() {
                             a.style.animation = "animation1 3s ease 0s normal 10 both running";
