@@ -67,13 +67,17 @@
             {'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111}
         ];
 
-        // function getVar(y) {
-        //     return document.getElementById(y).value;
-        // }
+
+
+        function getVar(y) {
+            return document.getElementById(y).value;
+        }
         
-        // function isvalyti(y) {
-        //         document.getElementById(y).value = "";
-        // }
+        function isvalyti(y) {
+                document.getElementById(y).value = ""; //uzkomentuot
+        }
+
+
 
         var sortOrder;
         function sort(laukas) {
@@ -101,6 +105,7 @@
                         '<td><button id="koreg" + onclick="taisyti(' + i + ')">Taisyti</button></td>' +
                      '</tr>'; 
             });
+
             document.getElementById('ya').innerHTML = lentele;
         }
         var busena = -1;
@@ -173,8 +178,8 @@
             valyti("numeris");
             valyti("atstumas");
             valyti("laikas");
-            document.getElementById("resave").classList.add("hide");
-            document.getElementById("save").classList.remove("hide");
+            document.getElementById("saugoti").classList.add;
+            document.getElementById("saugoti").classList.remove;
         }
         }
     </script>
