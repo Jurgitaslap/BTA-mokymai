@@ -51,7 +51,7 @@
                 </td>
                 <td scope="col"></td>
                 <td scope="col" colspan="2">
-                    <button type="submit" class="btn btn-secondary" action="saugoti" onclick="add()">Saugoti</button>
+                    <button type="submit" id="saugoti" class="btn btn-secondary" action="saugoti" onclick="add()">Saugoti</button>
                 </td>
             </tr>
         </thead>
@@ -59,7 +59,7 @@
 
         </tbody>
     </table>
-    <script>
+    <script type="text/javascript">
         var auto = [
             {'data': '2018-04-01', 'numeris': 'ABC001', 'atstumas': 5000, 'laikas': 110},
             {'data': '2018-02-02', 'numeris': 'ABC002', 'atstumas': 5000, 'laikas': 100},
@@ -72,7 +72,7 @@
             sortOrder = (a, b) => {
                 return a[laukas] < b[laukas] ? -1 : a[laukas] > b[laukas] ? 1 : 0;
             }; 
-            lentele();
+            // lentele();
         }
 
 
@@ -90,8 +90,8 @@
                         '<td>' + a.atstumas + '</td>' +
                         '<td>' + a.laikas + '</td>' +
                         '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
-                        '<td><button onclick="trinti(' + i + ')">Trinti</button></td>' +
-                        '<td><button id="koreg" onclick="taisyti(' + i + ')">Taisyti</button></td>' +
+                        '<td><button id ="trinti" onclick="trinti(' + i + ')">Trinti</button></td>' +
+                        '<td><button id="koreg" + onclick="taisyti(' + i + ')">Taisyti</button></td>' +
                      '</tr>'; 
             });
             document.getElementById('a').innerHTML = lentele;
@@ -122,16 +122,37 @@
            
             function trinti(index) {
             auto.splice(index, 1);
+            document.querySelector("tbody").innerHTML = "";
             lentele();
         }
 
         function taisyti(index) {
-           var a = auto(index);
-           document.querySelector('#d').value = a.data;
-           document.getElementById('action').innerHTML = 'Saugoti';
-           busena = index;
+            var y = document.querySelectorAll('input' + i);
+           var a;
+           for (a = 0; a < x.length; a++) {
+                y[a].removeAttribute("disabled");
+                y[a].style.backgroundColor = 'red';
         }
+        document.getElementById("saugoti" + i).removeAttribute("disabled");
+            document.getElementById("koreg" + i).disabled = true;
+            document.getElementById("trinti" + i).disabled = true; }
 
+            function saugoti(index) {
+                var y = document.querySelectorAll("input" + i);
+            var a;
+            for (a = 0; a < y.length; a++) {
+                y[a].disabled = true;
+            }
+            document.getElementById("koreg" + i).removeAttribute("disabled");
+            document.getElementById("trinti" + i).removeAttribute("disabled");
+            document.getElementById("saugoti" + i).disabled = true;
+            auto[i][0] = document.getElementById("d" + i).value;
+            auto[i][1] = document.getElementById("n" + i).value;
+            auto[i][2] = document.getElementById("km" + i).value;
+            auto[i][3] = document.getElementById("l" + i).value;
+            document.querySelector("tbody").innerHTML = "";
+            lentele();
+        }
     </script>
 
 </body>
