@@ -38,150 +38,84 @@
             </tr>
             <tr>
                 <td scope="col">
-                    <input type="text" id="d" placeholder="">
+                    <input type="text" id="data" placeholder="">
                 </td>
                 <td scope="col">
-                    <input type="text" id="n" placeholder="">
+                    <input type="text" id="numeris" placeholder="">
                 </td>
                 <td scope="col">
-                    <input type="number" id="km" placeholder="">
+                    <input type="number" id="atstumas" placeholder="">
                 </td>
                 <td scope="col">
-                    <input type="number" id="l" placeholder="">
+                    <input type="number" id="laikas" placeholder="">
                 </td>
                 <td scope="col"></td>
                 <td scope="col" colspan="2">
                     <button type="submit" id="saugoti" class="btn btn-secondary" action="saugoti" onclick="add()">Saugoti</button>
-                </td>
+                                   </td>
             </tr>
         </thead>
-        <tbody id="ya">
+        <tbody id="a">
 
         </tbody>
     </table>
     <script type="text/javascript">
-        var auto = [
+
+  var auto = [
             {'data': '2018-04-01', 'numeris': 'ABC001', 'atstumas': 5000, 'laikas': 110},
             {'data': '2018-02-02', 'numeris': 'ABC002', 'atstumas': 5000, 'laikas': 100},
             {'data': '2018-01-03', 'numeris': 'ABC003', 'atstumas': 5000, 'laikas': 105},
             {'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111}
         ];
 
-
-
-        function getVar(y) {
-            return document.getElementById(y).value;
-        }
-        
-        function isvalyti(y) {
-                document.getElementById(y).value = ""; //uzkomentuot
-        }
-
-
+        function add() {
+             auto.push({'data': document.querySelector('#data').value, 'numeris': document.querySelector('#numeris').value, 'atstumas': document.querySelector('#atstumas').value, 'laikas': document.querySelector('#laikas').value});
+            lentele();
+            istrinti ("data");
+             istrinti ("numeris");
+             istrinti ("atstumas");
+             istrinti ("laikas");
+             };
 
         var sortOrder;
         function sort(laukas) {
             sortOrder = (a, b) => {
                 return a[laukas] < b[laukas] ? -1 : a[laukas] > b[laukas] ? 1 : 0;
             }; 
-            // lentele();
+            lentele();
         }
-
         lentele();
 
         function lentele() {
-            var lentele = ''; //tekstas pabandyti irasyt vietoj lentele
+            var lentele = '';
             sortOrder = sortOrder || sort('data');
             auto.sort(sortOrder);
             auto.forEach((a, i) => {
-                lentele += 
+               lentele += 
                     '<tr>' +
                         '<td>' + a.data + '</td>' +
                         '<td>' + a.numeris + '</td>' +
                         '<td>' + a.atstumas + '</td>' +
                         '<td>' + a.laikas + '</td>' +
                         '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
-                        '<td><button id ="trinti" onclick="trinti(' + i + ')">Trinti</button></td>' +
-                        '<td><button id="koreg" + onclick="taisyti(' + i + ')">Taisyti</button></td>' +
-                     '</tr>'; 
+                        '<td><button onclick="trinti(' + i + ')">Trinti</button></td>' +
+                        '<td><button onclick="taisyti(' + i + ')">Taisyti</button></td>'
+                    '</tr>';
             });
-
-            document.getElementById('ya').innerHTML = lentele;
-        }
-        var busena = -1;
-        function add() {
-            if (busena >=0) {
-            auto.push({'data': document.querySelector('#d').value, 'numeris': document.querySelector('#n').value, 'atstumas': document.querySelector('#km').value, 'laikas': document.querySelector('#l').value});}
-            lentele();
-            document.getElementById('#d', '#n', '#km', '#l').value = '';
-                   }
-
-
-
-         var auto = [
-            {'data': '2018-04-01', 'numeris': 'ABC001', 'atstumas': 5000, 'laikas': 110},
-            {'data': '2018-02-02', 'numeris': 'ABC002', 'atstumas': 5000, 'laikas': 100},
-            {'data': '2018-01-03', 'numeris': 'ABC003', 'atstumas': 5000, 'laikas': 105},
-            {'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111}];
-
-            for (var i = 0; i > auto.length; i++)
-            var auto = i++;
-         function auto() {
-        auto(i++).push(auto);
-        console.log(auto);
-         return document.getElementById('a').value = '';}
-        
-           
-            function trinti(i) {
-            auto.splice(i, 1);
-            // document.querySelector("tbody").innerHTML = "";
-            lentele();
-        }
-        var koreguoti = 0;
-        function taisyti(i) {
-            koreguoti = index;
-            document.getElementById('saugoti').classList.add;
-        //     var x = document.querySelectorAll('input' + i);
-        //    var a;
-        //    for (a = 0; a < x.length; a++) {
-        //    x[a].style.backgroundColor = 'red';
-        }
-        // document.getElementById("saugoti" + i).innerHTML;
-        //     document.getElementById("koreg" + i).innerHTML = true;
-        //     document.getElementById("trinti" + i).innerHTML = true; 
-
-        //     function saugoti(index) {
-        //         var x = document.querySelectorAll("input" + i);
-        //     var a;
-        //     for (a = 0; a < x.length; a++) {
-        //                     }
-        //     auto[i][0] = document.getElementById("d" + i).value;
-        //     auto[i][1] = document.getElementById("n" + i).value;
-        //     auto[i][2] = document.getElementById("km" + i).value;
-        //     auto[i][3] = document.getElementById("l" + i).value;
-        //     document.querySelector("tbody").innerHTML = "";
-        //     lentele();
-
-            function saugoti(){
-            var newData = getVar("data");
-            var newNum = getVar("numeris");
-            var newAtstumas = getVar("atstumas");
-            var newLaikas = getVar("laikas");
-           
-            if(newData != '') objektas[editing].data = newData;
-            if(newNr != '') objektas[editing].numeris = newNr;
-            if(newAtstumas != '') objektas[editing].atstumas= newAtstumas;
-            if(newLaikas != '') objektas[editing].laikas = newLaikas;
-            
-            lentele();
-            valyti("data");
-            valyti("numeris");
-            valyti("atstumas");
-            valyti("laikas");
-            document.getElementById("saugoti").classList.add;
-            document.getElementById("saugoti").classList.remove;
+            document.getElementById('a').innerHTML = lentele;
         }
         
+        
+        
+
+        function istrinti(lentele) {
+                document.getElementById(a).value = "";
+        }
+
+        function trinti(index) {
+            auto.splice(index, 1);
+            lentele();
+        }         
     </script>
 
 </body>
