@@ -7,18 +7,21 @@
     <title>Meniu</title>
     <style>
         .wrap {
+            position: absolute;
             overflow: hidden;
         }
 
         .menu {
             width: 33vw;
             background-color: blue;
-           transform: translateY(-100%);
-           transition: transform 1s;
+            transform: translateY(-100%);
+            transition: transform 1s;
         }
-    .open {
-        transform: translateY(0);
-    }
+
+        .open {
+            transform: translateY(0);
+        }
+
         div+div {
             background-color: green;
         }
@@ -31,13 +34,26 @@
 
 <body>
     <div class="container">
-        <button>ABC 2xclick</button>
+        <button>ABC</button>
         <div class="wrap">
-            <div class="menu">gkgyhkddhhhhhhhhd gfhsjsjjj</div>
+            <div class="menu">
+                gkgyhkddhhhhhhhhd gfhsjsjjj
+                gkgyhkddhhhhhhhhd gfhsjs
+                gkgyhkddhhhhhhhhd gfhsjs
+                gkgyhkddhhhhhhhhd gfhsjs</div>
+        </div>
+        <div>
+                gkgyhkddhhhhhhhhd gfhsjsjjj
+                gkgyhkddhhhhhhhhd gfhsjs
+                gkgyhkddhhhhhhhhd gfhsjs
+                gkgyhkddhhhhhhhhd gfhsjs</div>
         </div>
     </div>
     <script>
-
+        var b = document.querySelector('button');
+        document.querySelector('button').onclick = () => {
+            document.querySelector('.menu').classList.toggle('open');
+        };
     </script>
 
 </body>
