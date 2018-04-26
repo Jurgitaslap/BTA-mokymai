@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv=""
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <title>Meniu</title>
         <style>
@@ -16,17 +16,19 @@
     </head>
     <body>
             <div class="container">
-            <button>ABC</button>
-            <div>gkgyhkdddddddddddddfdhhhhhd
-            </div>
-            <div>
-            </div>
-                    sdd kjkjjkgddddddddddddddddddddddh      ggggggggggghhhhhhhhhhbbbbbbbbbbbbbbbbbbbbb       k
+            <button>ABC 2xclick</button>
+            <div class="menu">gkgyhkddddjkggkghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhdddddddddfdhhhhhd gfhsjsjjj </div>
+            <div>sdd kjkjjkgdddddddddddddddkgggggggggggggggggggdddddddh      ggggggggggghhhhhhhhhhbbbbbbbbbbbbbbbbbbbbb   </div>
+        </div>
             <script>
                 // $(() => {       }); arba
+                $('button + div').slideUp();
                 $('button').click(function () {
-                    $('button + div').slideToggle();
-                });
+                    // $('button + div').slideToggle();
+                    $('button + div').hide(1000); // sita uzkomentuot,o virsu atkomentuot
+              }).dblclick(function() {   //papildoma funkcija,reikia uzkomentuoti iki galo po }) skliaustu ir det ; 
+                  $('button + div').show(1000);
+              });
 
 
                 </script>
