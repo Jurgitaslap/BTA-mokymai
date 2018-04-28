@@ -30,7 +30,7 @@
                 <th scope="col"><div onclick="sort('numeris')">Valstybinis Nr.</div></th>
                 <th scope="col"><div onclick="sort('atstumas')">Atstumas (m)</div></th>
                 <th scope="col"><div onclick="sort('laikas')">Laikas (s)</div></th>
-                <th scope="col" >Greitis (km/h)</th>
+                <th scope="col">Greitis (km/h)</th>
                 <th scope="col" colspan="2">Veiksmai</th>
             </tr>
             <tr>
@@ -63,6 +63,7 @@
 
              auto.push({'data': document.querySelector('#data').value, 'numeris': document.querySelector('#numeris').value, 'atstumas': document.querySelector('#atstumas').value, 'laikas': document.querySelector('#laikas').value});
             lentele();
+
             istrinti ("data");
              istrinti ("numeris");
              istrinti ("atstumas");
