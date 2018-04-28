@@ -18,14 +18,15 @@
         tr, td {
             text-align: center;
         }
+        #saugoti, #issaugoti {width: 9em; margin: 0.1em; }
     </style>
 </head>
 <body>
     <h2>Užpildykite laukus</h2>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered" id="table">
         <thead>
-            <tr style="background-color: black; color: white;">
+            <tr style="background-color: black; color: white;" >
                 <th scope="col"><div onclick="sort('data')">Data</div></th>
                 <th scope="col"><div onclick="sort('numeris')">Valstybinis Nr.</div></th>
                 <th scope="col"><div onclick="sort('atstumas')">Atstumas (m)</div></th>
@@ -34,19 +35,19 @@
                 <th scope="col" colspan="2">Veiksmai</th>
             </tr>
             <tr>
-                <td scope="col"><input type="text" id="data" placeholder=""></td>
-                <td scope="col"><input type="text" id="numeris" placeholder=""></td>
-                <td scope="col"><input type="number" id="atstumas" placeholder=""></td>
-                <td scope="col"><input type="number" id="laikas" placeholder=""></td>
+                <td scope="col"><input type="text" name="data" id="data" placeholder=""></td>
+                <td scope="col"><input type="text" name="numeris" id="numeris" placeholder=""></td>
+                <td scope="col"><input type="number" name="atstumas" id="atstumas" placeholder=""></td>
+                <td scope="col"><input type="number" name="laikas" id="laikas" placeholder=""></td>
                 <td scope="col"></td>
-                <td scope="col" colspan="2"><button type="submit" id="saugoti" class="btn btn-secondary" action="saugoti" onclick="add()">Saugoti</button></td>
+                <td scope="col" colspan="2"><button type="submit" id="saugoti" class="btn btn-secondary" onclick="add()">Saugoti</button><button type="submit" id="issaugoti" class="btn btn-secondary" onclick="keisti()">Išsaugoti</button></td>
             </tr>
         </thead>
         <tbody id="a">
         </tbody>
     </table>
 
-    <script type="text/javascript">
+    <script>
 
   var auto = [
             {'data': '2018-04-01', 'numeris': 'ABC001', 'atstumas': 5000, 'laikas': 110},
@@ -55,20 +56,20 @@
             {'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111}
         ];
 
+function getVar(a) {
+    return document.getElementById(a).value;
+}
+function salinti(a) {
+    document.getElementById(a).value = "";
+}
         function add() {
-            var data = getVar("data");
-            var numeris = getVar("numeris");
-            var atstumas = parseInt(getVar("atstumas"));
-            var laikas = parseInt(getVar("laikas"));
-
-             auto.push({'data': document.querySelector('#data').value, 'numeris': document.querySelector('#numeris').value, 'atstumas': document.querySelector('#atstumas').value, 'laikas': document.querySelector('#laikas').value});
+           auto.push({'data': document.querySelector('#data').value, 'numeris': document.querySelector('#numeris').value, 'atstumas': document.querySelector('#atstumas').value, 'laikas': document.querySelector('#laikas').value});
             lentele();
-
-            istrinti ("data");
-             istrinti ("numeris");
-             istrinti ("atstumas");
-             istrinti ("laikas");
-             };
+             salinti('data');
+             salinti('numeris');
+             salinti('atstumas');
+             salinti('laikas');
+         };
 
         var sortOrder;
         function sort(laukas) {
@@ -76,39 +77,79 @@
                 return a[laukas] < b[laukas] ? -1 : a[laukas] > b[laukas] ? 1 : 0;
             }; 
             lentele();
-        }
+        };
         lentele();
 
         function lentele() {
             var lentele = '';
             sortOrder = sortOrder || sort('data');
-            auto.sort(sortOrder);
-            auto.forEach((a, i) => {
-               lentele += 
+          auto.sort(sortOrder); 
+           auto.forEach((a, i) => { 
+               lentele +=   
                     '<tr>' +
                         '<td>' + a.data + '</td>' +
                         '<td>' + a.numeris + '</td>' +
                         '<td>' + a.atstumas + '</td>' +
                         '<td>' + a.laikas + '</td>' +
                         '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
-                        '<td><button onclick="trinti(' + i + ')">Trinti</button></td>' +
-                        '<td><button onclick="taisyti(' + i + ')">Taisyti</button></td>'
+                        '<td><button onclick="trinti(' + i + ')">Trinti</button> <button onclick="taisyti(' + i + ')">Taisyti</button></td>' +
                     '</tr>';
             });
-            document.getElementById('a').innerHTML = lentele;
-        }
+            document.getElementById('a').innerHTML = lentele; 
+        };
         
-        
-        
-
-        function istrinti(lentele) {
-                document.getElementById(a).value = "";
-        }
-
-        function trinti(index) {
-            auto.splice(index, 1);
+          function trinti(index) {
+          auto.splice(index, 1); 
             lentele();
-        }         
+        };    
+        
+    function keisti() {
+        var newD = getVar("data");
+        var newN = getVar("numeris");
+        var newA = getVar("atstumas");
+        var newL = getVar("laikas");
+
+        if(newD != '') auto[editing].data = newD;
+         if(newN != '') auto[editing].numeris = newN;
+         if(newA != '') auto[editing].atstumas = newA;
+         if(newL != '') auto[editing].laikas = newL;
+         lentele();
+            salinti('data');
+             salinti('numeris');
+             salinti('atstumas');
+             salinti('laikas');
+             document.getElementById("issaugoti").classList.add("hide");
+             document.getElementById("saugoti").classList.add("hide");
+    }
+        var koreguoti = 0;
+        function taisyti(index) {
+            koreguoti = index;
+            document.getElementById("issaugoti").classList.remove("hide");
+            document.getElementById("saugoti").classList.add("hide");
+        }
+        
+            // //pasizymim eilute
+            // var table = document.getElementById("table"), rIndex;
+            // for (var i=1; i< table.rows.length; i++) {
+            //     table.rows[i].onclick = function() {
+            //         rIndex = this.rowIndex;
+            //         console.log(rIndex);
+            //         document.getElementById("data").value = this.cells[0].innerHTML;
+            //         document.getElementById("numeris").value = this.cells[1].innerHTML;
+            //         document.getElementById("atstumas").value = this.cells[2].innerHTML;
+            //         document.getElementById("laikas").value = this.cells[3].innerHTML;
+            //     };
+            // };
+            // //koreguoti reiksmes
+            // function taisyti() {
+            //    table.rows[rIndex].cells[0].innerHTML = document.getquerySelector("data").value;
+            //    table.rows[rIndex].cells[1].innerHTML = document.getquerySelector("numeris").value;
+            //    table.rows[rIndex].cells[2].innerHTML = document.getquerySelector("atstumas").value;
+            //    table.rows[rIndex].cells[3].innerHTML = document.getquerySelector("laikas").value;
+            // };
+
+     
+
     </script>
 
 </body>
