@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,12 +18,11 @@
         tr, td {
             text-align: center;
         }
-        
     </style>
 </head>
-
 <body>
     <h2>Užpildykite laukus</h2>
+
     <table class="table table-bordered">
         <thead>
             <tr style="background-color: black; color: white;">
@@ -34,31 +32,20 @@
                 <th scope="col"><div onclick="sort('laikas')">Laikas (s)</div></th>
                 <th scope="col" >Greitis (km/h)</th>
                 <th scope="col" colspan="2">Veiksmai</th>
-                
             </tr>
             <tr>
-                <td scope="col">
-                    <input type="text" id="data" placeholder="">
-                </td>
-                <td scope="col">
-                    <input type="text" id="numeris" placeholder="">
-                </td>
-                <td scope="col">
-                    <input type="number" id="atstumas" placeholder="">
-                </td>
-                <td scope="col">
-                    <input type="number" id="laikas" placeholder="">
-                </td>
+                <td scope="col"><input type="text" id="data" placeholder=""></td>
+                <td scope="col"><input type="text" id="numeris" placeholder=""></td>
+                <td scope="col"><input type="number" id="atstumas" placeholder=""></td>
+                <td scope="col"><input type="number" id="laikas" placeholder=""></td>
                 <td scope="col"></td>
-                <td scope="col" colspan="2">
-                    <button type="submit" id="saugoti" class="btn btn-secondary" action="saugoti" onclick="add()">Saugoti</button>
-                                   </td>
+                <td scope="col" colspan="2"><button type="submit" id="saugoti" class="btn btn-secondary" action="saugoti" onclick="add()">Saugoti</button></td>
             </tr>
         </thead>
         <tbody id="a">
-
         </tbody>
     </table>
+
     <script type="text/javascript">
 
   var auto = [
@@ -69,6 +56,11 @@
         ];
 
         function add() {
+            var data = getVar("data");
+            var numeris = getVar("numeris");
+            var atstumas = parseInt(getVar("atstumas"));
+            var laikas = parseInt(getVar("laikas"));
+
              auto.push({'data': document.querySelector('#data').value, 'numeris': document.querySelector('#numeris').value, 'atstumas': document.querySelector('#atstumas').value, 'laikas': document.querySelector('#laikas').value});
             lentele();
             istrinti ("data");
