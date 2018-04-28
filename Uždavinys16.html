@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <title>Uždavinys16_1</title>
+    <style>
+        h2,
+        tr,
+        td {
+            text-align: center;
+        }
+
+        #saugoti,
+        #issaugoti {
+            width: 9em;
+            margin: 0.1em;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Užpildykite laukus</h2>
+
+    <table class="table table-bordered" id="table">
+        <thead>
+            <tr style="background-color: black; color: white;">
+                <th scope="col">
+                    <div onclick="sort('data')">Data</div>
+                </th>
+                <th scope="col">
+                    <div onclick="sort('numeris')">Valstybinis Nr.</div>
+                </th>
+                <th scope="col">
+                    <div onclick="sort('atstumas')">Atstumas (m)</div>
+                </th>
+                <th scope="col">
+                    <div onclick="sort('laikas')">Laikas (s)</div>
+                </th>
+                <th scope="col">Greitis (km/h)</th>
+                <th scope="col" colspan="2">Veiksmai</th>
+            </tr>
+            <tr>
+                <td scope="col">
+                    <input type="text" name="data" id="data" placeholder="">
+                </td>
+                <td scope="col">
+                    <input type="text" name="numeris" id="numeris" placeholder="">
+                </td>
+                <td scope="col">
+                    <input type="number" name="atstumas" id="atstumas" placeholder="">
+                </td>
+                <td scope="col">
+                    <input type="number" name="laikas" id="laikas" placeholder="">
+                </td>
+                <td scope="col"></td>
+                <td scope="col" colspan="2">
+                    <button type="submit" id="saugoti" class="btn btn-secondary" onclick="add()">Saugoti</button>
+                    <button type="submit" id="issaugoti" class="btn btn-secondary hide" onclick="keisti()">Išsaugoti</button>
+                </td>
+            </tr>
+        </thead>
+        <tbody id="a">
+        </tbody>
+    </table>
+
+    <script>
+
+        var auto = [
+            { 'data': '2018-04-01', 'numeris': 'ABC001', 'atstumas': 5000, 'laikas': 110 },
+            { 'data': '2018-02-02', 'numeris': 'ABC002', 'atstumas': 5000, 'laikas': 100 },
+            { 'data': '2018-01-03', 'numeris': 'ABC003', 'atstumas': 5000, 'laikas': 105 },
+            { 'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111 }
+        ];
+
+        function getVar(a) {
+            return document.getElementById(a).value;
+        }
+        function salinti(a) {
+            document.getElementById(a).value = "";
+        }
+        function add() {
+            auto.push({ 'data': document.querySelector('#data').value, 'numeris': document.querySelector('#numeris').value, 'atstumas': document.querySelector('#atstumas').value, 'laikas': document.querySelector('#laikas').value });
+            lentele();
+            salinti('data');
+            salinti('numeris');
+            salinti('atstumas');
+            salinti('laikas');
+        };
+
+        var sortOrder;
+        function sort(laukas) {
+            sortOrder = (a, b) => {
+                return a[laukas] < b[laukas] ? -1 : a[laukas] > b[laukas] ? 1 : 0;
+            };
+            lentele();
+        };
+        lentele();
+
+        function lentele() {
+            var lentele = '';
+            sortOrder = sortOrder || sort('data');
+            auto.sort(sortOrder);
+            auto.forEach((a, i) => {
+                lentele +=
+                    '<tr>' +
+                    '<td>' + a.data + '</td>' +
+                    '<td>' + a.numeris + '</td>' +
+                    '<td>' + a.atstumas + '</td>' +
+                    '<td>' + a.laikas + '</td>' +
+                    '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
+                    '<td><button onclick="trinti(' + i + ')">Trinti</button> <button id="myg" onclick="taisyti(' + i + ')">Taisyti</button></td>' +
+                    '</tr>';
+            });
+            document.getElementById('a').innerHTML = lentele;
+        };
+
+        function trinti(index) {
+            auto.splice(index, 1);
+            lentele();
+        };
+
+        function keisti() {
+            var newD = getVar("data");
+            var newN = getVar("numeris");
+            var newA = getVar("atstumas");
+            var newL = getVar("laikas");
+
+
+            if (newD != '') auto[editing].data = newD;
+            if (newN != '') auto[editing].numeris = newN;
+            if (newA != '') auto[editing].atstumas = newA;
+            if (newL != '') auto[editing].laikas = newL;
+
+            lentele();
+            salinti('data');
+            salinti('numeris');
+            salinti('atstumas');
+            salinti('laikas');
+            document.getElementById("issaugoti").classList.add("hide");
+            document.getElementById("saugoti").classList.remove("hide");
+        }
+        var editing = 0;
+        function taisyti(index) {
+            editing = index;
+            alert('PAKEISTUS DUOMENIS BŪTINA IŠSAUGOTI !')
+            document.getElementById("issaugoti").classList.remove("hide");
+            document.getElementById("saugoti").classList.add("hide");
+        }
+
+    </script>
+
+</body>
+
+</html>
