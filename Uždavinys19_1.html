@@ -13,8 +13,8 @@
                 crossorigin="anonymous"></script>
 
                   <style>
-                      body {background-color: gainsboro; width: 100%; display: block; }
-                      #red, #green, #blue {width: 30vmin; height: 30vmin; border-radius: 50%; border: solid 0.5em; display: inline-block; margin: 5em 5em; padding: 2em 2em;
+                      body {background-color: gainsboro; width: 95%; margin: 2em;}
+                      #red, #green, #blue {width: 30vmin; height: 30vmin; border-radius: 50%; border: solid 0.5em; display: inline-block; margin: 5em 5em; padding: 1em 1em;
                 }
                 #red { background-color: red; border: red;}
                 #green {background-color: green; border: green;} 
@@ -24,14 +24,24 @@
             </style>
     </head>
     <body>
+            <a href>SLĖPTI</a> 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum nisi vitae dui porta, ac pretium ex rutrum. Etiam malesuada feugiat malesuada. Vestibulum nec ante molestie, gravida dolor vitae, accumsan nunc. Nunc malesuada at quam sit amet vestibulum. Praesent maximus risus ut dignissim finibus. Vestibulum massa est, sagittis in velit fringilla, imperdiet pellentesque ligula. Cras faucibus efficitur massa, ut ullamcorper felis molestie quis. Aliquam fringilla posuere elit at volutpat. Etiam mollis nulla orci, in hendrerit dolor lacinia ut. Donec quis rhoncus arcu. Ut suscipit justo nec velit fermentum lobortis. Aliquam sagittis molestie purus, vitae tempus urna scelerisque in. Nunc dapibus libero eget fermentum volutpat. Nam laoreet, dolor ac semper dictum, eros velit dictum ex, at congue ipsum ligula non sapien. Suspendisse molestie, arcu sit amet ultricies dapibus, est dolor dignissim lorem, non faucibus quam diam quis sapien. Pellentesque scelerisque dolor non turpis luctus scelerisque.</p>
-        <a href>SLĖPTI</a>
-<div class="container">
+        
+
+<div class="box">
 <div id="red"></div>
 <div id="green"></div>
 <div id="blue"></div>
 </div>
         <script>
+
+               $(document).ready(function(){
+$("a").hover(function(){
+    
+    $("p").toggle();
+});
+              }); 
+                
 
         </script>
     </body>
