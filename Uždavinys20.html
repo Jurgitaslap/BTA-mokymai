@@ -11,11 +11,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Uždavinys20</title>
     <style>
-      body {background-color: #ffeaa7;}
+      body {background-color: #ffeaa7; margin-top: 10%;}
       h3, p { text-align: center;}
-      button {margin-left: 39%; width: 10em; height: 2.2em; margin-bottom: 2em;}
+      button { margin-left: 34%; width: 30vmin; height: 2.2em; margin-bottom: 2em;}
         #box { width: 90vmin; background-color: burlywood; margin: auto; border: solid 0.2em #e17055; display: box; }
-        input {margin: 1em 0 1em 36%;}
+        input {margin: 0.8em 0 0.8em 28%; width: 40vmin;}
        
     
     </style>
@@ -46,8 +46,7 @@
                 console.log(rezultatas);
                 if (rezultatas.data && rezultatas.data.length > 0) {
                     $('p').html('Pašto indeksas: ' + rezultatas.data[0].post_code);
-                    $('p').css("text-align","center");
-                    
+                                       
                 } else {
                     $('p').html('Pašto kodas nerastas! Patikrinkite ar teisingai įvedėte adresą');
                 }
