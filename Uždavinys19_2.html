@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
@@ -13,31 +13,37 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
     <title>Uždavinys19_2</title>
     <style>
-        h2,
+        h2, h4
         tr,
         td {
             text-align: center;
         }
-
-        #saugoti,
+       
+         #saugoti,
         #issaugoti {
             width: 9em;
             margin: 0.1em;
         }
-
-        .hide {
+        .virs { background-color:lightgray; }
+        /*.hide {
             display: none;
-        }
+        } */
     </style>
 </head>
 
 <body>
-    <h2>Užpildykite laukus</h2>
+    <h2>Įveskite duomenis</h2>
+ 
 
     <table class="table table-bordered" id="table">
+          
         <thead>
+            <tr>
+                <td scope="col" colspan="6"><button type="button" id="saugoti" class="btn btn-secondary" data-toggle="modal" data-target="#modalData">Naujas</button></td>
+            </tr>
             <tr style="background-color: black; color: white;">
                 <th scope="col">
                     <div onclick="sort('data')">Data</div>
@@ -54,37 +60,89 @@
                 <th scope="col">Greitis (km/h)</th>
                 <th scope="col" colspan="2">Veiksmai</th>
             </tr>
-            <tr>
-                <td scope="col">
-                    <input type="text" name="data" id="data" placeholder="">
-                </td>
-                <td scope="col">
-                    <input type="text" name="numeris" id="numeris" placeholder="">
-                </td>
-                <td scope="col">
-                    <input type="number" name="atstumas" id="atstumas" placeholder="">
-                </td>
-                <td scope="col">
-                    <input type="number" name="laikas" id="laikas" placeholder="">
-                </td>
-                <td scope="col"></td>
-                <td scope="col" colspan="2">
-                    <button type="submit" id="saugoti" class="btn btn-secondary" onclick="add()">Saugoti</button>
-                    <button type="submit" id="issaugoti" class="btn btn-secondary hide" onclick="keisti()">Išsaugoti</button>
-                </td>
-            </tr>
         </thead>
+
         <tbody id="a">
         </tbody>
     </table>
 
+<!-- bootstrap modal-->
+<div id="modalData" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header virs">
+              <h4 class="modal-title">Užpildykite laukus</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+                 
+                    <input type="text" id="data" placeholder="Data"><br>
+                  
+                    <input type="text" id="numeris" placeholder="Valstybinis Nr."><br>
+                   
+                    <input type="number" id="atstumas" placeholder="Atstumas"><br>
+                 
+                    <input type="number" id="laikas" placeholder="Laikas"><br>
+            </div>
+            <div class="modal-footer virs">
+
+                <button id="save" type="button" class="btn btn-outline-dark" data-dismiss="modal">Saugoti</button>
+                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Atšaukti</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" id="modalTrinti">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body text-center">
+                        <p>Ar tikrai norite ištrinti?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="istrinti" >Taip</button>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Ne</button>
+                </div>
+              </div>
+            </div>
+         </div>
+
+    <div class="modal fade" role="dialog"  id="koreguotiData" >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Keisti duomenis</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+                  
+                    <input type="text" id="newD" placeholder=""><br>
+                   
+                    <input type="text" id="newN" placeholder=""><br>
+                    
+                    <input type="number" id="newA" placeholder=""><br>
+                   
+                    <input type="number" id="newL" placeholder=""><br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="pakeisti" >Saugoti</button>
+                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Atšaukti</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
     <script>
 
         var auto = [
-            { 'data': '2018-04-01', 'numeris': 'ABC001', 'atstumas': 5000, 'laikas': 110 },
-            { 'data': '2018-02-02', 'numeris': 'ABC002', 'atstumas': 5000, 'laikas': 100 },
-            { 'data': '2018-01-03', 'numeris': 'ABC003', 'atstumas': 5000, 'laikas': 105 },
-            { 'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111 }
+            // { 'data': '2018-04-01', 'numeris': 'ABC001', 'atstumas': 5000, 'laikas': 110 },
+            // { 'data': '2018-02-02', 'numeris': 'ABC002', 'atstumas': 5000, 'laikas': 100 },
+            // { 'data': '2018-01-03', 'numeris': 'ABC003', 'atstumas': 5000, 'laikas': 105 },
+            // { 'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111 }
         ];
 
         function getVar(a) {
@@ -93,48 +151,68 @@
         function salinti(a) {
             document.getElementById(a).value = "";
         }
-        function add() {
-            auto.push({ 'data': document.querySelector('#data').value, 'numeris': document.querySelector('#numeris').value, 'atstumas': document.querySelector('#atstumas').value, 'laikas': document.querySelector('#laikas').value });
-            lentele();
+        function automobiliai(dt, nr, at, lk) {
+            this.data = dt;
+            this.numeris = nr;
+            this.atstumas = at;
+            this.laikas = lk;
+            this.greitis = this.atstumas / this.laikas * 3.6;}
+            var auto = [];
+            $('#saugoti').click(function() {
+                var data = getVar("data");
+            var numeris = getVar("numeris");
+            var atstumas = parseInt(getVar("atstumas"));
+            var laikas = parseInt(getVar("laikas"));
+
+            var kitiAutomobiliai = new automobiliai(dt, nr, at, lk);
+            objektas.push(kitiAutomobiliai);
+            printLentele();
             salinti('data');
             salinti('numeris');
             salinti('atstumas');
             salinti('laikas');
-        };
+        });
 
-        var sortOrder;
-        function sort(laukas) {
-            sortOrder = (a, b) => {
-                return a[laukas] < b[laukas] ? -1 : a[laukas] > b[laukas] ? 1 : 0;
-            };
-            lentele();
-        };
-        lentele();
+        // var sortOrder;
+        // function sort(laukas) {
+        //     sortOrder = (a, b) => {
+        //         return a[laukas] < b[laukas] ? -1 : a[laukas] > b[laukas] ? 1 : 0;
+        //     };
+        //     lentele();
+        // };
+        // lentele();
 
-        function lentele() {
-            var lentele = '';
-            sortOrder = sortOrder || sort('data');
-            auto.sort(sortOrder);
+        function printLentele() {
+            // $('#a').html("");
+            // var lentele = '';
+            // sortOrder = sortOrder || sort('data');
+            // auto.sort(sortOrder);
             auto.forEach((a, i) => {
-                lentele +=
-                    '<tr>' +
-                    '<td>' + a.data + '</td>' +
-                    '<td>' + a.numeris + '</td>' +
-                    '<td>' + a.atstumas + '</td>' +
-                    '<td>' + a.laikas + '</td>' +
-                    '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
-                    '<td><button onclick="trinti(' + i + ')">Trinti</button> <button id="myg" onclick="taisyti(' + i + ')">Taisyti</button></td>' +
-                    '</tr>';
-            });
-            document.getElementById('a').innerHTML = lentele;
-        };
+                $('#duomLentele').append('<tr><td>' + d.data + '</td><td>' + d.numeris + '</td><td>' + d.atstumas + '</td><td>' + d.laikas + '</td><td>' + d.greitis + '</td>'
+                + "<td><button class='btn btn-warning mr-3' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalTrinti'>Naikinti</button>"
+                + "<button class='btn btn-secondary' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#koreguotiData'>Taisyti</button></td>"
+                + '</tr>');
+                });
+           
+        }
 
+
+
+
+        var deleteEilute;
         function trinti(index) {
-            auto.splice(index, 1);
-            lentele();
-        };
+            deleteEilute = index;
+        }
 
-        function keisti() {
+        $ ('#trinti').click(function() {
+            auto.splice(deleteEilute, 1);
+            printLentele();
+        });
+        var editing;
+        function taisyti(index) {
+            editing = index;
+        }
+        $ ('#pakeisti').click(function() {
             var newD = getVar("data");
             var newN = getVar("numeris");
             var newA = getVar("atstumas");
@@ -146,21 +224,14 @@
             if (newA != '') auto[editing].atstumas = newA;
             if (newL != '') auto[editing].laikas = newL;
 
-            lentele();
+            printLentele();
             salinti('data');
             salinti('numeris');
             salinti('atstumas');
             salinti('laikas');
-            document.getElementById("issaugoti").classList.add("hide");
-            document.getElementById("saugoti").classList.remove("hide");
-        }
-        var editing = 0;
-        function taisyti(index) {
-            editing = index;
-            alert('PAKEISTUS DUOMENIS BŪTINA IŠSAUGOTI !')
-            document.getElementById("issaugoti").classList.remove("hide");
-            document.getElementById("saugoti").classList.add("hide");
-        }
+            
+        });
+       
 
     </script>
 
