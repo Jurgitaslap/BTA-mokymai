@@ -138,34 +138,15 @@
 
     <script>
 
-        var auto = [
-            // { 'data': '2018-04-01', 'numeris': 'ABC001', 'atstumas': 5000, 'laikas': 110 },
-            // { 'data': '2018-02-02', 'numeris': 'ABC002', 'atstumas': 5000, 'laikas': 100 },
-            // { 'data': '2018-01-03', 'numeris': 'ABC003', 'atstumas': 5000, 'laikas': 105 },
-            // { 'data': '2018-01-04', 'numeris': 'ABC004', 'atstumas': 5000, 'laikas': 111 }
-        ];
-
-        function getVar(a) {
-            return document.getElementById(a).value;
-        }
-        function salinti(a) {
-            document.getElementById(a).value = "";
-        }
-        function automobiliai(dt, nr, at, lk) {
-            this.data = dt;
-            this.numeris = nr;
-            this.atstumas = at;
-            this.laikas = lk;
-            this.greitis = this.atstumas / this.laikas * 3.6;}
-            var auto = [];
+          var auto = [];
             $('#saugoti').click(function() {
                 var data = getVar("data");
             var numeris = getVar("numeris");
             var atstumas = parseInt(getVar("atstumas"));
             var laikas = parseInt(getVar("laikas"));
 
-            var kitiAutomobiliai = new automobiliai(dt, nr, at, lk);
-            objektas.push(kitiAutomobiliai);
+            var naujasAutomobilis = new automobilis(dt, nr, at, lk);
+            auto.push(naujasAutomobilis);
             printLentele();
             salinti('data');
             salinti('numeris');
@@ -173,39 +154,38 @@
             salinti('laikas');
         });
 
-        // var sortOrder;
-        // function sort(laukas) {
-        //     sortOrder = (a, b) => {
-        //         return a[laukas] < b[laukas] ? -1 : a[laukas] > b[laukas] ? 1 : 0;
-        //     };
-        //     lentele();
-        // };
-        // lentele();
+        function getVar(a) {
+            return document.getElementById(a).value;
+        }
+        function salinti(a) {
+            document.getElementById(a).value = "";
+        }
 
-        function printLentele() {
-            // $('#a').html("");
-            // var lentele = '';
-            // sortOrder = sortOrder || sort('data');
-            // auto.sort(sortOrder);
+        function automobilis(DATA, NUMERIS, ATSTUMAS, LAIKAS) {
+            this.data = DATA;
+            this.numeris = NUMERIS;
+            this.atstumas = ATSTUMAS;
+            this.laikas = LAIKAS;
+            this.greitis = this.atstumas / this.laikas * 3.6;}
+          
+              function printLentele() {
+            $('#a').html("");
             auto.forEach((a, i) => {
-                $('#duomLentele').append('<tr><td>' + d.data + '</td><td>' + d.numeris + '</td><td>' + d.atstumas + '</td><td>' + d.laikas + '</td><td>' + d.greitis + '</td>'
-                + "<td><button class='btn btn-warning mr-3' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalTrinti'>Naikinti</button>"
-                + "<button class='btn btn-secondary' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#koreguotiData'>Taisyti</button></td>"
+                $('#a').append('<tr><td>' + d.data + '</td><td>' + d.numeris + '</td><td>' + d.atstumas + '</td><td>' + d.laikas + '</td><td>' + d.greitis + '</td>'
+                + "<td><button class='btn btn-outline-dark' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalTrinti'>Naikinti</button>"
+                + "<button class='btn btn-outline-dark' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#koreguotiData'>Taisyti</button></td>"
                 + '</tr>');
                 });
            
         }
 
-
-
-
-        var deleteEilute;
+        var deleteRow;
         function trinti(index) {
-            deleteEilute = index;
+            deleteRow = index;
         }
 
         $ ('#trinti').click(function() {
-            auto.splice(deleteEilute, 1);
+            auto.splice(deleteRow, 1);
             printLentele();
         });
         var editing;
@@ -213,10 +193,10 @@
             editing = index;
         }
         $ ('#pakeisti').click(function() {
-            var newD = getVar("data");
-            var newN = getVar("numeris");
-            var newA = getVar("atstumas");
-            var newL = getVar("laikas");
+            var newD = getVar("naujadata");
+            var newN = getVar("naujasnumeris");
+            var newA = getVar("naujasatstumas");
+            var newL = getVar("naujaslaikas");
 
 
             if (newD != '') auto[editing].data = newD;
@@ -225,10 +205,10 @@
             if (newL != '') auto[editing].laikas = newL;
 
             printLentele();
-            salinti('data');
-            salinti('numeris');
-            salinti('atstumas');
-            salinti('laikas');
+            salinti('naujadata');
+            salinti('naujasnumeris');
+            salinti('naujasatstumas');
+            salinti('naujaslaikas');
             
         });
        
