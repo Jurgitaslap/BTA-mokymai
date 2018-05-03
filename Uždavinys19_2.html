@@ -135,7 +135,13 @@
 
 
     <script>
-
+         function masina(date, number, distance, time) {
+            this.data = date;
+            this.numeris = number;
+            this.atstumas = distance;
+            this.laikas = time;
+            this.greitis = this.atstumas / this.laikas * 3.6;
+        }
         var auto = [];
         $('#save').click(function () {
             var data = getVar("data");
@@ -159,14 +165,7 @@
             document.getElementById(a).value = "";
         }
 
-        function masina(dt, nr, at, la) {
-            this.data = dt;
-            this.numeris = nr;
-            this.atstumas = at;
-            this.laikas = la;
-            this.greitis = this.atstumas / this.laikas * 3.6;
-        }
-
+       
         function printTable() {
             $('#a').html("");
             auto.forEach((b, i) => {
