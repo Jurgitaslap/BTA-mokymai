@@ -169,10 +169,19 @@
         function printTable() {
             $('#a').html("");
             auto.forEach((a, i) => {
-            //     $('#a').append('<tr><td>' + d.data + '</td><td>' + d.numeris + '</td><td>' + d.atstumas + '</td><td>' + d.laikas + '</td><td>' + d.greitis + '</td>'
-            //         + "<td><button class='btn btn-outline-dark' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalDelete'>Naikinti</button>"
-            //         + "<button class='btn btn-outline-dark' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#changeData'>Taisyti</button></td>"
-            //         + '</tr>');
+                // $('#a').append(
+                //     '<tr>' +
+                //     '<td>' + a.data + '</td>' +
+                //     '<td>' + a.numeris + '</td>' +
+                //     '<td>' + a.atstumas + '</td>' +
+                //     '<td>' + a.laikas + '</td>' +
+                //     '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
+                //     "<td><button class='btn btn-outline-dark' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalDelete'>Naikinti</button></td>' + <button class='btn btn-outline-dark' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#changeData'>Taisyti</button>"
+                //     '</tr>');
+                $('#a').append('<tr><td>' + d.data + '</td><td>' + d.numeris + '</td><td>' + d.atstumas + '</td><td>' + d.laikas + '</td><td>' + d.greitis + '</td>'
+                    + "<td><button class='btn btn-outline-dark' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalDelete'>Naikinti</button>"
+                    + "<button class='btn btn-outline-dark' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#changeData'>Taisyti</button></td>"
+                    + '</tr>');
             });
 
         }
