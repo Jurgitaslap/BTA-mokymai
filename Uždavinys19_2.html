@@ -13,50 +13,40 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Uždavinys19_2</title>
     <style>
-        h2, h4
-        tr,
+        h2,
+        h4 tr,
         td {
             text-align: center;
         }
-       
-         #saugoti,
-        #issaugoti {
+
+        #saugoti {
             width: 9em;
             margin: 0.1em;
         }
-        .virs { background-color:lightgray; }
-        /*.hide {
-            display: none;
-        } */
+
+        .virs {
+            background-color: lightgray;
+        }
     </style>
 </head>
 
 <body>
     <h2>Įveskite duomenis</h2>
- 
-
     <table class="table table-bordered" id="table">
-          
         <thead>
             <tr>
-                <td scope="col" colspan="6"><button type="button" id="saugoti" class="btn btn-secondary" data-toggle="modal" data-target="#modalData">Naujas</button></td>
+                <td scope="col" colspan="6">
+                    <button type="button" id="saugoti" class="btn btn-secondary" data-toggle="modal" data-target="#modalData">Naujas</button>
+                </td>
             </tr>
             <tr style="background-color: black; color: white;">
-                <th scope="col">
-                    <div onclick="sort('data')">Data</div>
-                </th>
-                <th scope="col">
-                    <div onclick="sort('numeris')">Valstybinis Nr.</div>
-                </th>
-                <th scope="col">
-                    <div onclick="sort('atstumas')">Atstumas (m)</div>
-                </th>
-                <th scope="col">
-                    <div onclick="sort('laikas')">Laikas (s)</div>
-                </th>
+                <th scope="col">Data</th>
+                <th scope="col">Valstybinis Nr.</th>
+                <th scope="col">Atstumas (m)</th>
+                <th scope="col">Laikas (s)</th>
                 <th scope="col">Greitis (km/h)</th>
                 <th scope="col" colspan="2">Veiksmai</th>
             </tr>
@@ -66,71 +56,79 @@
         </tbody>
     </table>
 
-<!-- bootstrap modal-->
-<div id="modalData" class="modal fade" role="dialog">
+    <!-- bootstrap modal-->
+    <div id="modalData" class="modal fade" role="dialog">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header virs">
-              <h4 class="modal-title">Užpildykite laukus</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body text-center">
-                 
-                    <input type="text" id="data" placeholder="Data"><br>
-                  
-                    <input type="text" id="numeris" placeholder="Valstybinis Nr."><br>
-                   
-                    <input type="number" id="atstumas" placeholder="Atstumas"><br>
-                 
-                    <input type="number" id="laikas" placeholder="Laikas"><br>
-            </div>
-            <div class="modal-footer virs">
-
-                <button id="save" type="button" class="btn btn-outline-dark" data-dismiss="modal">Saugoti</button>
-                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Atšaukti</button>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" id="modalTrinti">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-content">
+                <div class="modal-header virs">
+                    <h4 class="modal-title">Užpildykite laukus</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body text-center">
-                        <p>Ar tikrai norite ištrinti?</p>
+
+                    <input type="text" id="data" placeholder="Data">
+                    <br>
+
+                    <input type="text" id="numeris" placeholder="Valstybinis Nr.">
+                    <br>
+
+                    <input type="number" id="atstumas" placeholder="Atstumas">
+                    <br>
+
+                    <input type="number" id="laikas" placeholder="Laikas">
+                    <br>
+                </div>
+
+                <div class="modal-footer virs">
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="save">Saugoti</button>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Atšaukti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" id="modalDelete">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>Ar tikrai norite ištrinti?</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="istrinti" >Taip</button>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="istrinti">Taip</button>
                     <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Ne</button>
                 </div>
-              </div>
             </div>
-         </div>
+        </div>
+    </div>
 
-    <div class="modal fade" role="dialog"  id="koreguotiData" >
+    <div class="modal fade" role="dialog" id="changeData">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Keisti duomenis</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Keisti duomenis</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body text-center">
+
+                    <input type="text" id="newD" placeholder="">
+                    <br>
+
+                    <input type="text" id="newN" placeholder="">
+                    <br>
+
+                    <input type="number" id="newA" placeholder="">
+                    <br>
+
+                    <input type="number" id="newL" placeholder="">
+                    <br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="pakeisti">Saugoti</button>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Atšaukti</button>
+                </div>
             </div>
-            <div class="modal-body text-center">
-                  
-                    <input type="text" id="newD" placeholder=""><br>
-                   
-                    <input type="text" id="newN" placeholder=""><br>
-                    
-                    <input type="number" id="newA" placeholder=""><br>
-                   
-                    <input type="number" id="newL" placeholder=""><br>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="pakeisti" >Saugoti</button>
-                <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Atšaukti</button>
-            </div>
-          </div>
         </div>
     </div>
 
@@ -138,20 +136,20 @@
 
     <script>
 
-          var auto = [];
-            $('#saugoti').click(function() {
-                var data = getVar("data");
+        var auto = [];
+        $('#save').click(function () {
+            var data = getVar("data");
             var numeris = getVar("numeris");
             var atstumas = parseInt(getVar("atstumas"));
             var laikas = parseInt(getVar("laikas"));
 
-            var naujasAutomobilis = new automobilis(dt, nr, at, lk);
-            auto.push(naujasAutomobilis);
-            printLentele();
-            salinti('data');
-            salinti('numeris');
-            salinti('atstumas');
-            salinti('laikas');
+            var naujaMasina = new masina(data, numeris, atstumas, laikas);
+            auto.push(naujaMasina);
+            printTable();
+            salinti("data");
+            salinti("numeris");
+            salinti("atstumas");
+            salinti("laikas");
         });
 
         function getVar(a) {
@@ -161,22 +159,23 @@
             document.getElementById(a).value = "";
         }
 
-        function automobilis(DATA, NUMERIS, ATSTUMAS, LAIKAS) {
-            this.data = DATA;
-            this.numeris = NUMERIS;
-            this.atstumas = ATSTUMAS;
-            this.laikas = LAIKAS;
-            this.greitis = this.atstumas / this.laikas * 3.6;}
-          
-              function printLentele() {
+        function masina(dt, nr, at, la) {
+            this.data = dt;
+            this.numeris = nr;
+            this.atstumas = at;
+            this.laikas = la;
+            this.greitis = this.atstumas / this.laikas * 3.6;
+        }
+
+        function printTable() {
             $('#a').html("");
-            auto.forEach((a, i) => {
+            auto.forEach((b, i) => {
                 $('#a').append('<tr><td>' + d.data + '</td><td>' + d.numeris + '</td><td>' + d.atstumas + '</td><td>' + d.laikas + '</td><td>' + d.greitis + '</td>'
-                + "<td><button class='btn btn-outline-dark' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalTrinti'>Naikinti</button>"
-                + "<button class='btn btn-outline-dark' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#koreguotiData'>Taisyti</button></td>"
-                + '</tr>');
-                });
-           
+                    + "<td><button class='btn btn-outline-dark' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalDelete'>Naikinti</button>"
+                    + "<button class='btn btn-outline-dark' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#changeData'>Taisyti</button></td>"
+                    + '</tr>');
+            });
+
         }
 
         var deleteRow;
@@ -184,34 +183,34 @@
             deleteRow = index;
         }
 
-        $ ('#trinti').click(function() {
+        $('#trinti').click(function () {
             auto.splice(deleteRow, 1);
-            printLentele();
+            printTable();
         });
         var editing;
         function taisyti(index) {
             editing = index;
         }
-        $ ('#pakeisti').click(function() {
-            var newD = getVar("naujadata");
-            var newN = getVar("naujasnumeris");
-            var newA = getVar("naujasatstumas");
-            var newL = getVar("naujaslaikas");
+        $('#pakeisti').click(function () {
+            var newData = getVar("newD");
+            var newNumeris = getVar("newN");
+            var newAtstumas = getVar("newA");
+            var newLaikas = getVar("newL");
 
 
-            if (newD != '') auto[editing].data = newD;
-            if (newN != '') auto[editing].numeris = newN;
-            if (newA != '') auto[editing].atstumas = newA;
-            if (newL != '') auto[editing].laikas = newL;
+            if (newData != '') auto[editing].data = newData;
+            if (newNumeris != '') auto[editing].numeris = newNumeris;
+            if (newAtstumas != '') auto[editing].atstumas = newAtstumas;
+            if (newLaikas != '') auto[editing].laikas = newLaikas;
 
-            printLentele();
-            salinti('naujadata');
-            salinti('naujasnumeris');
-            salinti('naujasatstumas');
-            salinti('naujaslaikas');
-            
+            printTable();
+            salinti('newD');
+            salinti('newN');
+            salinti('newA');
+            salinti('newL');
+
         });
-       
+
 
     </script>
 
