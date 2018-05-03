@@ -27,15 +27,15 @@
             margin: 0.1em;
         }
 
-        .virs {
+        /* .virs {
             background-color: lightgray;
-        }
+        } */
     </style>
 </head>
 
 <body>
     <h2>Įveskite duomenis</h2>
-    <table class="table table-bordered" id="table">
+    <table class="table table-bordered">
         <thead>
             <tr>
                 <td scope="col" colspan="6">
@@ -60,26 +60,26 @@
     <div id="modalData" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header virs">
+                <div class="modal-header">
                     <h4 class="modal-title">Užpildykite laukus</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body text-center">
 
-                    <input type="text" id="data" placeholder="Data">
+                    <input type="text" id="data" placeholder="">
                     <br>
 
-                    <input type="text" id="numeris" placeholder="Valstybinis Nr.">
+                    <input type="text" id="numeris" placeholder="">
                     <br>
 
-                    <input type="number" id="atstumas" placeholder="Atstumas">
+                    <input type="number" id="atstumas" placeholder="">
                     <br>
 
-                    <input type="number" id="laikas" placeholder="Laikas">
+                    <input type="number" id="laikas" placeholder="">
                     <br>
                 </div>
 
-                <div class="modal-footer virs">
+                <div class="modal-footer">
                     <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="save">Saugoti</button>
                     <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Atšaukti</button>
                 </div>
@@ -96,7 +96,7 @@
                     <p>Ar tikrai norite ištrinti?</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="istrinti">Taip</button>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="trinti">Taip</button>
                     <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Ne</button>
                 </div>
             </div>
@@ -112,20 +112,20 @@
                 </div>
                 <div class="modal-body text-center">
 
-                    <input type="text" id="newD" placeholder="">
+                    <input type="text" id="naujaData" placeholder="">
                     <br>
 
-                    <input type="text" id="newN" placeholder="">
+                    <input type="text" id="naujasNumeris" placeholder="">
                     <br>
 
-                    <input type="number" id="newA" placeholder="">
+                    <input type="number" id="naujasAtstumas" placeholder="">
                     <br>
 
-                    <input type="number" id="newL" placeholder="">
+                    <input type="number" id="naujasLaikas" placeholder="">
                     <br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="pakeisti">Saugoti</button>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="keisti">Saugoti</button>
                     <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Atšaukti</button>
                 </div>
             </div>
@@ -135,7 +135,7 @@
 
 
     <script>
-         function masina(date, number, distance, time) {
+         function automobilis(date, number, distance, time) {
             this.data = date;
             this.numeris = number;
             this.atstumas = distance;
@@ -149,8 +149,8 @@
             var atstumas = parseInt(getVar("atstumas"));
             var laikas = parseInt(getVar("laikas"));
 
-            var naujaMasina = new masina(data, numeris, atstumas, laikas);
-            auto.push(naujaMasina);
+            var naujasAutomobilis = new automobilis(data, numeris, atstumas, laikas);
+            auto.push(naujsAutomobilis);
             printTable();
             salinti("data");
             salinti("numeris");
@@ -168,11 +168,11 @@
        
         function printTable() {
             $('#a').html("");
-            auto.forEach((b, i) => {
-                $('#a').append('<tr><td>' + d.data + '</td><td>' + d.numeris + '</td><td>' + d.atstumas + '</td><td>' + d.laikas + '</td><td>' + d.greitis + '</td>'
-                    + "<td><button class='btn btn-outline-dark' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalDelete'>Naikinti</button>"
-                    + "<button class='btn btn-outline-dark' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#changeData'>Taisyti</button></td>"
-                    + '</tr>');
+            auto.forEach((a, i) => {
+            //     $('#a').append('<tr><td>' + d.data + '</td><td>' + d.numeris + '</td><td>' + d.atstumas + '</td><td>' + d.laikas + '</td><td>' + d.greitis + '</td>'
+            //         + "<td><button class='btn btn-outline-dark' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalDelete'>Naikinti</button>"
+            //         + "<button class='btn btn-outline-dark' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#changeData'>Taisyti</button></td>"
+            //         + '</tr>');
             });
 
         }
@@ -190,11 +190,11 @@
         function taisyti(index) {
             editing = index;
         }
-        $('#pakeisti').click(function () {
-            var newData = getVar("newD");
-            var newNumeris = getVar("newN");
-            var newAtstumas = getVar("newA");
-            var newLaikas = getVar("newL");
+        $('#keisti').click(function () {
+            var newData = getVar("naujaData");
+            var newNumeris = getVar("naujasNumeris");
+            var newAtstumas = getVar("naujasAtstumas");
+            var newLaikas = getVar("naujasLaikas");
 
 
             if (newData != '') auto[editing].data = newData;
@@ -203,10 +203,10 @@
             if (newLaikas != '') auto[editing].laikas = newLaikas;
 
             printTable();
-            salinti('newD');
-            salinti('newN');
-            salinti('newA');
-            salinti('newL');
+            salinti('naujaData');
+            salinti('naujasNumeris');
+            salinti('naujasAtstumas');
+            salinti('naujasLaikas');
 
         });
 
