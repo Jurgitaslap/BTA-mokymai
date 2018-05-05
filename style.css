@@ -1,11 +1,14 @@
 
 body {font-family: 'Open Sans', sans-serif;
-    background-color: #dfe6e9;
+    background-color: #f4ece6;
     }
 
+.lineRight {float: right; border: none;}
+.lineRight:hover {border-bottom: none;}
+.logo {border: none; }
 nav {
     width: 100%;
-    background-color: #4b4b4b;
+    background-color: #685249;
     position: fixed;
     top: 0;} 
 
@@ -26,7 +29,7 @@ nav ul li {
         padding: 15px 20px; /*su margin geriau nedaryti centravimo, nes sunkiau valdyti*/
         display: inline-block;
         /*inline negalima nurodyti apatinio,virsutinio margin*/
-        border-right: 1px solid #636e72;
+        border-right: 1px solid #c1a185;
         cursor: pointer;
         font-size: 20px;
     }
@@ -36,7 +39,8 @@ nav li:hover {
       
        }
    /*responsive dizaina galima su px ir % gauti nenaudojant flex*/
-main {width: 90%; max-width: 1100px; margin: 80px auto 0 auto;}
+   
+main {width: 90%; max-width: 1200px; margin: 80px auto 0 auto;}
 article { 
        background-color: #fff;
        width: 100%;
@@ -79,6 +83,14 @@ article:nth-of-type(6n + 5),
 article:nth-of-type(6n + 6) {
     width: 32%;
 }
-img { background-size: cover; width: 100%; }
-#a { float: right; color: white;
-padding: 5px 20px; margin: auto; margin-top: 0px; list-style-type: none; display: inline-block; cursor: pointer;}
+img { background-size: cover; width: 100%;}
+/* #a { color: white;
+padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; display: inline-block; cursor: pointer; line-height: 0;} */
+
+#top {margin-top: -100px; padding: 0;}
+.night {font-size: 30px;}
+#bottom {background-size: cover; 
+      background-repeat: no-repeat; 
+     margin-top: -22px; width: 100%;
+     padding: 0; 
+    }
