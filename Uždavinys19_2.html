@@ -16,77 +16,73 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Uždavinys19_2</title>
     <style>
+        body { background-image: url(cars.png);
+        background-size:cover;
+        background-position: center;}
         h2,
-        h4 tr,
+        h4, tr,
         td {
             text-align: center;
         }
 
-        #saugoti {
+        button {
             width: 9em;
-            margin: 0.1em;
+            margin: 1em auto;
+            margin-left: 43%;
         }
-
-        /* .virs {
-            background-color: lightgray;
-        } */
-    </style>
+          </style>
 </head>
 
 <body>
-    <h2>Įveskite duomenis</h2>
+   <div>
+        <h2>Įveskite duomenis</h2>
+      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalType">Naujas</button>
     <table class="table table-bordered">
         <thead>
-            <tr>
-                <td scope="col" colspan="6">
-                    <button type="button" id="saugoti" class="btn btn-secondary" data-toggle="modal" data-target="#modalData">Naujas</button>
-                </td>
-            </tr>
             <tr style="background-color: black; color: white;">
                 <th scope="col">Data</th>
                 <th scope="col">Valstybinis Nr.</th>
                 <th scope="col">Atstumas (m)</th>
                 <th scope="col">Laikas (s)</th>
                 <th scope="col">Greitis (km/h)</th>
-                <th scope="col" colspan="2">Veiksmai</th>
+                <th scope="col">Veiksmai</th>
             </tr>
         </thead>
-
-        <tbody id="a">
+        <tbody id="irasLent">
         </tbody>
     </table>
-
+</div>
     <!-- bootstrap modal-->
-    <div id="modalData" class="modal fade" role="dialog">
+    <div id="modalType" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Užpildykite laukus</h4>
+                    <h4 class="modal-title">Įveskite duomenis</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body text-center">
-
-                    <input type="text" id="data" placeholder="">
+                    <label>Data</label>
+                    <input type="date" id="data" value="">
                     <br>
-
-                    <input type="text" id="numeris" placeholder="">
+                    <label>Valstybinis Nr.</label>
+                    <input type="text" id="numeris" value="">
                     <br>
-
-                    <input type="number" id="atstumas" placeholder="">
+                    <label>Atstumas (m)</label>
+                    <input type="number" id="atstumas" value="">
                     <br>
-
-                    <input type="number" id="laikas" placeholder="">
+                    <label>Laikas (s)</label>
+                    <input type="number" id="laikas" value="">
                     <br>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="save">Saugoti</button>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="save" onclick="save()">Saugoti</button>
                     <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Atšaukti</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" role="dialog" id="modalDelete">
+    <div class="modal fade" role="dialog" id="modalTrinti">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -112,20 +108,21 @@
                 </div>
                 <div class="modal-body text-center">
 
-                    <input type="text" id="naujaData" placeholder="">
-                    <br>
-
-                    <input type="text" id="naujasNumeris" placeholder="">
-                    <br>
-
-                    <input type="number" id="naujasAtstumas" placeholder="">
-                    <br>
-
-                    <input type="number" id="naujasLaikas" placeholder="">
-                    <br>
+                        <label>Data</label>
+                        <input type="date" id="naujaData" value="">
+                        <br>
+                        <label>Valstybinis Nr.</label>
+                        <input type="text" id="naujasNumeris" value="">
+                        <br>
+                        <label>Atstumas (m)</label>
+                        <input type="number" id="naujasAtstumas" value="">
+                        <br>
+                        <label>Laikas (s)</label>
+                        <input type="number" id="naujasLaikas" value="">
+                        <br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="keisti">Saugoti</button>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="keisti" onclick="keisti()">Saugoti</button>
                     <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Atšaukti</button>
                 </div>
             </div>
@@ -135,6 +132,13 @@
 
 
     <script>
+        function getVar(iras) {
+            return document.getElementById(iras).value;
+        }
+        function salinti(iras) {
+            document.getElementById(iras).value = "";
+        }
+
          function automobilis(date, number, distance, time) {
             this.data = date;
             this.numeris = number;
@@ -158,16 +162,11 @@
             salinti("laikas");
         });
 
-        function getVar(a) {
-            return document.getElementById(a).value;
-        }
-        function salinti(a) {
-            document.getElementById(a).value = "";
-        }
+        
 
        
         function printTable() {
-            $('#a').html("");
+            $('#irasLent').html("");
             auto.forEach((a, i) => {
                 // $('#a').append(
                 //     '<tr>' +
@@ -176,10 +175,10 @@
                 //     '<td>' + a.atstumas + '</td>' +
                 //     '<td>' + a.laikas + '</td>' +
                 //     '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
-                //     "<td><button class='btn btn-outline-dark' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalDelete'>Naikinti</button></td>' + <button class='btn btn-outline-dark' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#changeData'>Taisyti</button>"
+                //     "<td><button class='btn btn-outline-dark' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalTrinti'>Naikinti</button></td>' + <button class='btn btn-outline-dark' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#changeData'>Taisyti</button>"
                 //     '</tr>');
-                $('#a').append('<tr><td>' + d.data + '</td><td>' + d.numeris + '</td><td>' + d.atstumas + '</td><td>' + d.laikas + '</td><td>' + d.greitis + '</td>'
-                    + "<td><button class='btn btn-outline-dark' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalDelete'>Naikinti</button>"
+                $('#irasLent').append('<tr><td>' + d.data + '</td><td>' + d.numeris + '</td><td>' + d.atstumas + '</td><td>' + d.laikas + '</td><td>' + d.greitis + '</td>'
+                    + "<td><button class='btn btn-outline-dark' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalTrinti'>Naikinti</button>"
                     + "<button class='btn btn-outline-dark' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#changeData'>Taisyti</button></td>"
                     + '</tr>');
             });
