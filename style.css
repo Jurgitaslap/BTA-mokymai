@@ -62,13 +62,14 @@ article p {
     font-weight: 400;
    line-height: 1.5;
 }
- article:nth-of-type(6n + 2),
- article:nth-of-type(6n + 3) {
-    width: 49%;
+ article:nth-of-type(12n + 2),
+ article:nth-of-type(12n + 5),
+ article:nth-of-type(12n + 6) {
+    width: 88%;
 }
-article:nth-of-type(6n + 2),
-article:nth-of-type(6n + 4),
-article:nth-of-type(6n + 5){
+article:nth-of-type(12n + 2),
+article:nth-of-type(12n + 4),
+article:nth-of-type(12n + 5){
 
   margin-right: 2%;
 }
@@ -78,9 +79,9 @@ article:nth-of-type(6n + 5){
 .noFont * { 
     font-size: 16px;}
 
-article:nth-of-type(6n + 4),
-article:nth-of-type(6n + 5),
-article:nth-of-type(6n + 6) {
+article:nth-of-type(12n + 4),
+article:nth-of-type(12n + 5),
+article:nth-of-type(12n + 6) {
     width: 32%;
 }
 img { background-size: cover; width: 100%;}
@@ -89,8 +90,23 @@ padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; displ
 
 #top {margin-top: -100px; padding: 0;}
 .night {font-size: 30px;}
-#bottom {background-size: cover; 
+#bottom {
+    background-image: url(vidus.jpg);
+    background-size: cover; 
       background-repeat: no-repeat; 
      margin-top: -22px; width: 100%;
      padding: 0; 
-    }
+     background-attachment: fixed;   
+     /* background-color: transparent; */
+     /* filter:opacity(50%); */
+     visibility: visible;
+     animation-delay: 0.5s;
+     animation-name: fadeInRight;
+   }   
+#bottom p { font-weight: 500; font-size: 150%; width: 50%; margin: 0 auto; padding: 0; height: 80vmin; text-align: center;}
+#bottom h1 {text-align: center; font-size: 160%; padding-top: 18%; font-weight: 900;}
+.apie img {width: 5em; display: inline-block;}
+.apie article { width: 30%; text-align: center; vertical-align: text-top;}
+.apie h1 {text-align: center;}
+.apie {width: 100%; padding: 1em; margin: 1em 5em; text-align: center; }
+.tarpas {padding: 1em;}
