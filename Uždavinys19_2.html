@@ -11,27 +11,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Uždavinys19_2</title>
     <style>
-        body { background-image: url(cars.png);
-        background-size:cover;
-        background-position: center;}
+        body {
+            background-image: url(cars.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-size: 1.8em;
+        }
+
         h2,
-        h4, tr,
-        td {
+        h3,
+        tr,
+        th {
             text-align: center;
         }
-        #forma { width: 40vw; }
+
+        tr,
+        td {
+            background-color: #d0d3db;
+            border: solid #62646b;
+        }
+
+        .form-control {
+            width: 30vmin;
+            margin: auto;
+            text-align: center;
+        }
+
+        #pirmas {
+            width: 14em;
+            margin: auto;
+            background-color: #34363a;
+            color: #fff;
+            display: block;
+            outline-color: #ededed;
+            font-size: 0.9em;
+        }
+
         button {
-            width: 9em;
-            margin: 1em auto;
-            margin-left: 45%; background-color: grey;}
-                
-          </style>
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
- 
-        <h2>Įveskite duomenis</h2>
-      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Naujas</button><br>
+    <h2>Įveskite duomenis</h2>
+    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#ModalOne" id="pirmas">Naujas</button>
+    <br>
     <table class="table table-bordered">
         <thead>
             <tr style="background-color: black; color: white; filter:opacity(75%);">
@@ -45,36 +70,36 @@
         </thead>
         <tbody id="a"></tbody>
     </table>
-
     <!-- bootstrap modal-->
-    <div id="myModal" class="modal fade" role="dialog">
+    <div id="ModalOne" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Įveskite duomenis</h4>
+                    <h3 class="modal-title">
+                        <b>Įveskite duomenis</b>
+                    </h3>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body text-center">
                     <form id="forma">
-                 <div class="form-group">
-                    <label>Data</label>
-                    <input class= "form-control" type="date" id="data" value="">
-                 </div>
-                 <div class="form-group">
-                    <label>Valstybinis Nr.</label>
-                    <input class= "form-control" type="text" id="numeris" value="">
+                        <div class="form-group">
+                            <label>Data</label>
+                            <input class="form-control" type="date" id="data" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Valstybinis Nr.</label>
+                            <input class="form-control" type="text" id="numeris" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Atstumas (m)</label>
+                            <input class="form-control" type="number" id="atstumas" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Laikas (s)</label>
+                            <input class="form-control" type="number" id="laikas" value="">
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label>Atstumas (m)</label>
-                    <input class= "form-control" type="number" id="atstumas" value="">
-                </div>
-                <div class="form-group">
-                    <label>Laikas (s)</label>
-                    <input class= "form-control" type="number" id="laikas" value="">
-                </div>
-                </form>
-                </div>
-
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="save" onclick="ikelti()">Saugoti</button>
                     <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Atšaukti</button>
@@ -90,44 +115,42 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body text-center">
-                        <form id="formaT">
-                                <div class="form-group">
-                                   <label>Data</label>
-                                   <input class= "form-control" type="date" id="dataT" value="">
-                                </div>
-                                <div class="form-group">
-                                   <label>Valstybinis Nr.</label>
-                                   <input class= "form-control" type="text" id="numerisT" value="">
-                               </div>
-                               <div class="form-group">
-                                   <label>Atstumas (m)</label>
-                                   <input class= "form-control" type="number" id="atstumasT" value="">
-                               </div>
-                               <div class="form-group">
-                                   <label>Laikas (s)</label>
-                                   <input class= "form-control" type="number" id="laikasT" value="">
-                               </div>
-                               </form>
-                               </div>
-                               <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="keisti" onclick="atnaujinti(editRow)">Saugoti</button>
-                                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Atšaukti</button>
-                                </div>
-                            </div>
-               
+                    <form id="formaT">
+                        <div class="form-group">
+                            <label>Data</label>
+                            <input class="form-control" type="date" id="dataT" value="">
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label>Valstybinis Nr.</label>
+                            <input class="form-control" type="text" id="numerisT" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Atstumas (m)</label>
+                            <input class="form-control" type="number" id="atstumasT" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Laikas (s)</label>
+                            <input class="form-control" type="number" id="laikasT" value="">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal" id="keisti" onclick="atnaujinti(editRow)">Saugoti</button>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Atšaukti</button>
+                </div>
+            </div>
 
-                    <!-- delete form-->
-                    <div class="modal fade" role="dialog" id="modal_naikinti">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title">Keisti duomenis</h4>
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    </div>
-                                    <div class="modal-body text-center">
-
+        </div>
+    </div>
+    <!-- delete form-->
+    <div class="modal fade" role="dialog" id="modal_naikinti">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Keisti duomenis</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body text-center">
                     <p>Ar tikrai norite ištrinti?</p>
                 </div>
                 <div class="modal-footer">
@@ -137,176 +160,74 @@
             </div>
         </div>
     </div>
-
-   
- 
-
-
-
     <script>
-
         var deleteRow;
         var editRow;
         var auto = [];
-    function ikelti() {
-        auto.push ({
-            'data': document.getElementById("data").value,
-        'numeris': document.getElementById("numeris").value,
-        'atstumas': document.getElementById("atstumas").value,
-        'laikas': document.getElementById("laikas").value,    
-    });
-
-    lentele();
-    document.getElementById("forma").reset();
-}
-
-function lentele() {
-    var lentele = '';
-   auto.forEach((a, i) => {
-        lentele += 
-            '<tr >' +
-                // '<th scope="row">' + i + '</th>' +
-                '<td>' + a.data + '</td>' +
-                '<td>' + a.numeris + '</td>' +
-                '<td>' + a.atstumas + '</td>' +
-                '<td>' + a.laikas + '</td>' +
-                '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(2) + '</td>' +
-                '<td>' + '<button class="btn btn-default" data-toggle="modal" data-target="#modal_naikinti" onclick="trinti(' + i + ')">Trinti</button>' + '<button class="btn btn-default" onclick="taisyti('+i+')"  data-toggle="modal" data-target="#modal_koreguoti" >Taisyti</button>' + '</td>' +
-                '</tr>'
-    });
-    document.getElementById('a').innerHTML = lentele;
-}
-
-function taisyti(index) {
-    editRow = index;
-    var a = auto[index];
-    document.getElementById("dataT").value = a.data,
-    document.getElementById("numerisT").value = a.numeris,
-    document.getElementById("atstumasT").value = a.atstumas,
-    document.getElementById("laikasT").value = a.laikas;
+        function ikelti() {
+            auto.push({
+                'data': document.getElementById("data").value,
+                'numeris': document.getElementById("numeris").value,
+                'atstumas': document.getElementById("atstumas").value,
+                'laikas': document.getElementById("laikas").value,
+            });
+            lentele();
+            document.getElementById("forma").reset();
         }
-function atnaujinti(index) {
-    var a = auto[index]
-    a.data = document.getElementById("dataT").value;
-    a.numeris = document.getElementById("numerisT").value;
-    a.atstumas = document.getElementById("atstumasT").value;
-    a.laikas = document.getElementById("laikasT").value;
-    lentele();
-}
-$(document).ready(function(){
-         $("#keisti").click(function(){
+        function lentele() {
+            var lentele = '';
+            auto.forEach((a, i) => {
+                lentele +=
+                    '<tr >' +
+                    '<td>' + a.data + '</td>' +
+                    '<td>' + a.numeris + '</td>' +
+                    '<td>' + a.atstumas + '</td>' +
+                    '<td>' + a.laikas + '</td>' +
+                    '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(2) + '</td>' +
+                    '<td>' + '<button class="btn btn-default" data-toggle="modal" data-target="#modal_naikinti" onclick="trinti(' + i + ')">Trinti</button>' + '<button class="btn btn-default" onclick="taisyti(' + i + ')"  data-toggle="modal" data-target="#modal_koreguoti" >Taisyti</button>' + '</td>' +
+                    '</tr>'
+            });
+            document.getElementById('a').innerHTML = lentele;
+        }
+        function taisyti(index) {
+            editRow = index;
             var a = auto[index];
+            document.getElementById("dataT").value = a.data,
+                document.getElementById("numerisT").value = a.numeris,
+                document.getElementById("atstumasT").value = a.atstumas,
+                document.getElementById("laikasT").value = a.laikas;
+        }
+        function atnaujinti(index) {
+            var a = auto[index]
             a.data = document.getElementById("dataT").value;
             a.numeris = document.getElementById("numerisT").value;
             a.atstumas = document.getElementById("atstumasT").value;
             a.laikas = document.getElementById("laikasT").value;
             lentele();
-    });
-});
-
-$(document).ready(function(){
-    $("#save").click(function(){
-        $("table").show();
-    });
-});
-
-    function trinti(eilute) {
-    deleteRow = eilute;
-};
-    function trintiLaukus(eilute) {
+        }
+        $(document).ready(function () {
+            $("#keisti").click(function () {
+                var a = auto[index];
+                a.data = document.getElementById("dataT").value;
+                a.numeris = document.getElementById("numerisT").value;
+                a.atstumas = document.getElementById("atstumasT").value;
+                a.laikas = document.getElementById("laikasT").value;
+                lentele();
+            });
+        });
+        $(document).ready(function () {
+            $("#save").click(function () {
+                $("table").show();
+            });
+        });
+        function trinti(eilute) {
+            deleteRow = eilute;
+        };
+        function trintiLaukus(eilute) {
             auto.splice(eilute, 1);
             lentele();
-        }
-
-
-        // function getVar(duomen) {
-        //     return document.getElementById(duomen).value;
-        // }
-        // function salinti(duomen) {
-        //     document.getElementById(duomen).value = "";
-        // }
-
-        //  function automobilis(date, number, distance, time) {
-        //     this.data = date;
-        //     this.numeris = number;
-        //     this.atstumas = distance;
-        //     this.laikas = time;
-        //     this.greitis = this.atstumas / this.laikas * 3.6;
-        // }
-        // var objektas = [];
-        // $('#save').click(function () {
-        //     var data = getVar("data");
-        //     var numeris = getVar("numeris");
-        //     var atstumas = parseInt(getVar("atstumas"));
-        //     var laikas = parseInt(getVar("laikas"));
-
-        //     var naujasAutomobilis = new automobilis(data, numeris, atstumas, laikas);
-        //     objektas.push(naujsAutomobilis);
-        //     printTable();
-        //     salinti("data");
-        //     salinti("numeris");
-        //     salinti("atstumas");
-        //     salinti("laikas");
-        // });
-
-        
-
-       
-        // function printTable() {
-        //     $('#duomenIras').html("");
-        //    objektas.forEach((a, i) => {
-        //     $('#duomenIras').append(
-        //             '<tr>' +
-        //             '<td>' + a.data + '</td>' +
-        //             '<td>' + a.numeris + '</td>' +
-        //             '<td>' + a.atstumas + '</td>' +
-        //             '<td>' + a.laikas + '</td>' +
-        //             '<td>' + (a.atstumas / a.laikas * 3.6).toFixed(0) + '</td>' +
-        //             "<td><button class='btn btn-outline-dark' onclick ='trinti(" + i + ")' data-toggle='modal' data-target='#modalDelete'>Naikinti</button></td>' + '<button class='btn btn-outline-dark' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#changeData'>Taisyti</button></td>" +
-        //             '</tr>');
-        //         // $('#duomenIras').append('<tr><td>' + d.data + '</td><td>' + d.numeris + '</td><td>' + d.atstumas + '</td><td>' + d.laikas + '</td><td>' + d.greitis + '</td>'
-        //         // + "<td><button class='btn btn-outline-dark' mr-3' onclick = 'trinti(" + i + ")' data-toggle='modal' data-target='#modalDelete'>Naikinti</button>"
-        //         // + "<button class='btn btn-outline-dark' onclick = 'taisyti(" + i + ")' data-toggle='modal' data-target='#changeData'>Taisyti</button></td>"
-        //         // + '</tr>');
-        //         });
-        // }
-
-        // var deleteRow;
-        // function trinti(index) {
-        //     deleteRow = index;
-        // }
-
-        // $('#trinti').click(function () {
-        //     objektas.splice(deleteRow, 1);
-        //     printTable();
-        // });
-        // var editing;
-        // function taisyti(index) {
-        //     editing = index;
-        // }
-        // $('#keisti').click(function () {
-        //     var newData = getVar("naujaData");
-        //     var newNumeris = getVar("naujasNumeris");
-        //     var newAtstumas = getVar("naujasAtstumas");
-        //     var newLaikas = getVar("naujasLaikas");
-
-
-        //     if (newData != '') objektas[editing].data = newData;
-        //     if (newNumeris != '') objektas[editing].numeris = newNumeris;
-        //     if (newAtstumas != '') objektas[editing].atstumas = newAtstumas;
-        //     if (newLaikas != '') objektas[editing].laikas = newLaikas;
-
-        //     printTable();
-        //     salinti('naujaData');
-        //     salinti('naujasNumeris');
-        //     salinti('naujasAtstumas');
-        //     salinti('naujasLaikas');
-
-        // });
-
-
+        };
     </script>
-
 </body>
 
 </html>
