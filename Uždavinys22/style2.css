@@ -1,0 +1,59 @@
+* {margin: 0em; padding: 0em;}
+body {
+    font-size: 120%;
+    background-image: url(https://i.pinimg.com/originals/8f/31/98/8f3198a0531807a5d7e81bf6dd8e0ec1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.header {
+    width: 30%;
+    margin: 3em auto 0em;
+    color: #fff;
+    background-color: #60a3bc;
+    text-align: center;
+    border: 0.04em solid #485460;
+    border-bottom: none;
+    border-radius: 0.625em 0.625em 0 0;
+    padding: 1.25em;
+    opacity: 1;
+    }
+    form {
+        width: 30%;
+        margin: 0em auto;
+        padding: 1.25em;
+        border: 0.04em solid #485460;
+        background-color: #fff;
+        border-radius: 0em 0em 0.625em 0.625em;
+        opacity: 0.6;
+            }
+    .input-group {
+        margin: 0.625em 0em 0.625em 0em;
+    
+    }
+    .input-group label {
+        display: block;
+        text-align: left;
+        margin: 0.15em;
+    }
+    .input-group input {
+        height: 1.875em;
+        width: 93%;
+        padding: 0.3125em 0.6250em;
+        font-size: 1em;
+        border-radius: 0.3125em;
+        border: 0.02em solid gray;
+    }
+.btn {
+    padding: 0.625em;
+    font-size: 0.9375em;
+    color: #000;
+    background-color: #60a3bc;
+    border: none;
+    border-radius: 0.3125em;
+        
+}
+
+
+
+
+
