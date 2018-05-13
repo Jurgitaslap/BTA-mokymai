@@ -1,5 +1,5 @@
 <?php
-header("Content-type: application/json; charset=utf-8");
+header("Content-Type: application/json; charset=UTF-8");
 sleep(1.5);
 if ($_REQUEST['password1'] != '' && $_REQUEST['password2'] != ''){
     if ($_REQUEST['password1'] == $_REQUEST['password2']){

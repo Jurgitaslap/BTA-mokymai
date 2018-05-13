@@ -6,12 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/6603c9fd94.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style2.css">
 </head>
@@ -19,18 +14,19 @@
 <body>
     <script>
         function change() {
-            $('p').html('<span> Keičiama... </span>');
+            $('p').html('<i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i><span> Keičiama... </span>');
             $.post('login.php', {
                 password1: $('input[name="password1"]').val(),
                 password2: $('input[name="password2"]').val()
-            }).done(function (response) {
-                if (response.success) {
-                    $('p').html(response.token);
+            }).done(function (resp) {
+                if (resp.success) {
+                    $('p').html(resp.token);
                 } else {
-                    $('p').html(response.error);
+                    $('p').html(resp.error);
                 }
             });
         }
+
     </script>
 
     <div class="header">
