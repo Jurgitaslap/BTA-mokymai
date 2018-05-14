@@ -18,7 +18,7 @@ eiliskumas, pirma eina po kodo JS*/
         }
     </style>
     <script>
-        var app = angular.module('manoApp', []);
+        var app = angular.module('myApp', []);
         app.component('lentele', {
             template: `<h3>lentele</h3>
             <table>
@@ -29,27 +29,48 @@ eiliskumas, pirma eina po kodo JS*/
             <td>Data</td><td>Numeris</td>
             </tr>
             </table>
+            <button ng-click="ctrl.add()">Prideti</button>
             `,
             bind: {
-                name:'@'
+                name: '@'
             },
-            controller: function($timeout) {
-                this.items = [];
-                $timeout(() => {
-                    this.items = [
-                        {date: '2018-01-01', number: 'AAA001'},
-                        {date: '2018-01-02', number: 'BBB001'},
-                        {date: '2018-01-03', number: 'CCC001'},
-                    ];
-                }, 2000);
-            }
+            controller: lenteleController
+        })
+        function lenteleController($timeout) {
+            this.items = [];
+            $timeout(() => {
+                this.items = [
+                    { date: '2018-01-01', number: 'AAA001' },
+                    { date: '2018-01-02', number: 'BBB001' },
+                    { date: '2018-01-03', number: 'CCC001' },
+                ];
+            }, 2000);
+
+            this.add = () => {
+                this.items.push({ date: '2018-01-01', number: 'AAA001' });
+            };
+        }
+        app.component('eilute', {
+            template: `
+            <input type="number" ng-model="$ctrl.kiekis">
+            <input type="number" ng-model="$ctrl.kaina">
+            <p>Suma: {{ $ctrl.kiekis * $ctrl.kaina }}</p>
+            `,
+            controller: eiluteController
         });
+        function eiluteController() {
+
+        }
+
     </script>
 </head>
 
-<body ng-app="manoApp">
-    <lentele name="Kazkas"></lentele>
-    <lentele name="kitas"></lentele>
+<body ng-app="myApp">
+    <h1>Lentele</h1>
+    <lentele></lentele>
+    <br><br>
+    <eilute></eilute>
 
 </body>
+
 </html>
