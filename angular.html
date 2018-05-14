@@ -20,12 +20,28 @@ eiliskumas, pirma eina po kodo JS*/
     <script>
         var app = angular.module('manoApp', []);
         app.component('lentele', {
-            template: '<h3>Hi {{$ctrl.name}}</h3>',
+            template: `<h3>lentele</h3>
+            <table>
+            <tr>
+            <th>Data</th><th>Numeris</th>
+            </tr>
+            <tr ng-repeat="e in $ctrl.items">
+            <td>Data</td><td>Numeris</td>
+            </tr>
+            </table>
+            `,
             bind: {
                 name:'@'
             },
-            controller: function() {
-                this.name = 'Belekas';
+            controller: function($timeout) {
+                this.items = [];
+                $timeout(() => {
+                    this.items = [
+                        {date: '2018-01-01', number: 'AAA001'},
+                        {date: '2018-01-02', number: 'BBB001'},
+                        {date: '2018-01-03', number: 'CCC001'},
+                    ];
+                }, 2000);
             }
         });
     </script>
