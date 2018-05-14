@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Angular</title>
+    <style>
+        /*veikia tik divo viduje angular
+jeigu atsisiunciam kitu sukurtas aplikacijas, reikia deti ['aaa'] prie module i skliaustus
+eiliskumas, pirma eina po kodo JS*/
+
+        lentele {
+            color: red;
+        }
+    </style>
+    <script>
+        var app = angular.module('manoApp', []);
+        app.component('lentele', {
+            template: '<h3>Hi {{$ctrl.name}}</h3>',
+            bind: {
+                name:'@'
+            },
+            controller: function() {
+                this.name = 'Belekas';
+            }
+        });
+    </script>
+</head>
+
+<body ng-app="manoApp">
+    <lentele name="Kazkas"></lentele>
+    <lentele name="kitas"></lentele>
+
+</body>
+</html>
