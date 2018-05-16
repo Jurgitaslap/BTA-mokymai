@@ -1,9 +1,9 @@
 
-body {font-family: 'Open Sans', sans-serif;
+body {font-family: 'Lora', serif;
     background-color: #f4ece6;
     }
 
-.lineRight {float: right; border: none;}
+.lineRight {float: right; border: none; }
 .lineRight:hover {border-bottom: none;}
 .logo {border: none; }
 nav {
@@ -93,22 +93,26 @@ padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; displ
 #top {margin-top: -100px; padding: 0;}
 .night {font-size: 30px;}
 #bottom {
+   
     background-image: url(vidus.JPG);
     background-size: cover; 
       background-repeat: no-repeat; 
-     margin-top: -22px; width: 100%;
+      height: 60vmin;
+     margin-top: -20px; width: 100%;
      padding: 0; 
-     background-attachment: fixed;   
+     background-attachment: fixed;  
+     /* -webkit-filter: opacity(30%);filter: opacity(30%);  */
      /* background-color: transparent; */
      /* filter:opacity(50%); */
      visibility: visible;
      animation-delay: 0.5s;
      animation-name: fadeInRight;
    }   
-#bottom p { font-weight: 500; font-size: 150%; width: 50%; margin: 0 auto; padding: 0; height: 80vmin; text-align: center;}
-#bottom h1 {text-align: center; font-size: 160%; padding-top: 18%; font-weight: 900;}
+#bottom p { font-style: italic; font-weight: 500; font-size: 150%; width: 50%; margin: 0 auto; padding: 0; height: 80vmin; text-align: center;}
+#bottom h1 {text-align: center; font-size: 200%; padding-top: 18%; font-weight: 900; font-style: italic;}
 .apie img {width: 5em; display: inline-block;}
 .apie article { width: 30%; text-align: center; vertical-align: text-top;}
-.apie h1 {text-align: center;}
-.apie {width: 100%; padding: 1em; margin: 1em 5em; text-align: center; }
+.apie h1 {text-align: center; margin-top: 1em;}
+.apie {width: 100%; padding: 1em 0; margin: 1em 5em; text-align: center; }
 .tarpas {padding: 1em;}
+.apie h3 { font-weight: bold;}
