@@ -1,6 +1,6 @@
 
 body {font-family: 'Lora', serif;
-    background-color: #f4ece6;
+    background-color: #fff;
     }
 
 .lineRight {float: right; border: none; }
@@ -12,7 +12,7 @@ nav {
     position: fixed;
     top: 0;
     opacity: 0.9;
-} 
+   } 
 
     /*stengtis nedeti elemento aukscio, kad automatiskai formuotu aukscius langu*/
 
@@ -28,7 +28,7 @@ nav ul {
     /* jei nenurodome block elementui plocio, jis automatiskai uzima 100% lango*/
     /*teviniam elementui parasius text-align,  issidelioja visi inline block.*/
 nav ul li {
-        padding: 15px 20px; /*su margin geriau nedaryti centravimo, nes sunkiau valdyti*/
+        padding: 20px 20px; /*su margin geriau nedaryti centravimo, nes sunkiau valdyti*/
         display: inline-block;
         /*inline negalima nurodyti apatinio,virsutinio margin*/
         border-right: 1px solid #c1a185;
@@ -37,7 +37,7 @@ nav ul li {
     }
 nav li:hover {
        border-bottom: 4px solid #fff;
-       padding-bottom: 11px;
+       padding-bottom: 16px;
       
        }
    /*responsive dizaina galima su px ir % gauti nenaudojant flex*/
@@ -90,7 +90,7 @@ img { background-size: cover; width: 100%;}
 /* #a { color: white;
 padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; display: inline-block; cursor: pointer; line-height: 0;} */
 
-#top {margin-top: -100px; padding: 0;}
+#top {margin-top: -99px; padding: 0;}
 .night {font-size: 30px;}
 #bottom {
    
@@ -111,8 +111,8 @@ padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; displ
 #bottom p { font-style: italic; font-weight: 500; font-size: 150%; width: 50%; margin: 0 auto; padding: 0; height: 80vmin; text-align: center;}
 #bottom h1 {text-align: center; font-size: 200%; padding-top: 18%; font-weight: 900; font-style: italic;}
 .apie img {width: 5em; display: inline-block;}
-.apie article { width: 30%; text-align: center; vertical-align: text-top;}
-.apie h1 {text-align: center; margin-top: 1em;}
-.apie {width: 100%; padding: 1em 0; margin: 1em 5em; text-align: center; }
+.apie article { width: 30%; text-align: center; vertical-align: text-top; }
+.apie h1 {text-align: center; margin-top: 0.1em; font-size: 180%;}
+.apie {width: 100%; padding: 0.5em 0; margin: 1em 4em; text-align: center; color: #302e2c;}
 .tarpas {padding: 1em;}
 .apie h3 { font-weight: bold;}
