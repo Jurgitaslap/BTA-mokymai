@@ -12,6 +12,8 @@ nav {
     position: fixed;
     top: 0;
     opacity: 0.9;
+    position: fixed;
+    z-index: 1;
    } 
 
     /*stengtis nedeti elemento aukscio, kad automatiskai formuotu aukscius langu*/
@@ -48,7 +50,7 @@ article {
        width: 100%;
        margin-bottom:  20px;
        padding: 20px;
-       box-sizing: border-box;
+        box-sizing: border-box;
        /*savybe kuri iskaiciuoja i article ploti paddingus.borderius, kad papildomai neuzimtu vietos ir ji galima isidet i reset'a*/
        display: inline-block;
        vertical-align: middle; /*kai tekstas trumpesnis,kad graziai bloka sulygiuoti dedasi si f-ja ir nedeti height,nes tekstas eis uz ribu*/
@@ -90,7 +92,7 @@ img { background-size: cover; width: 100%;}
 /* #a { color: white;
 padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; display: inline-block; cursor: pointer; line-height: 0;} */
 
-#top {margin-top: -99px; padding: 0;}
+#top {margin-top: -99px; padding: 0; position: relative;}
 .night {font-size: 30px;}
 #bottom {
    
@@ -113,7 +115,18 @@ padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; displ
 #bottom h1 {text-align: center; font-size: 200%; padding-top: 10%; font-weight: 900; font-style: italic;}
 .apie img {width: 5em; display: inline-block;}
 .apie article { width: 30%; text-align: center; vertical-align: text-top; }
-.apie h1 {text-align: center; margin-top: 0.1em; font-size: 180%;}
+.apie h1 {text-align: center; margin-top: 1em; font-size: 180%;}
 .apie {width: 100%; padding: 0.2em 0 0 0; margin: 1em 4em; text-align: center; color: #302e2c;}
 .tarpas {padding: 1em;}
 .apie h3 { font-weight: bold;}
+#top button { width: 8em; height: 3em; border-radius: 50px; border: solid black 0.1em; background-color: rgba(0, 0, 0, 0);}
+#top button:hover {background-color: whitesmoke;}
+.aa {position: absolute; left: 18%; z-index: 1; top: 73%; text-align: center;}
+.aa {left: 37%;}
+.ta {left: 55%;}
+.ka {left: 76%;}
+.av {position: absolute; left: 18%; z-index: 1; top: 50%; text-align: center;}
+.av {left: 37%;}
+.tv {left: 55%;}
+.kv {left: 76%;}
+
