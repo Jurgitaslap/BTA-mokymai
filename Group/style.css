@@ -119,14 +119,9 @@ padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; displ
 .apie {width: 100%; padding: 0.2em 0 0 0; margin: 1em 4em; text-align: center; color: #302e2c;}
 .tarpas {padding: 1em;}
 .apie h3 { font-weight: bold;}
-#top button { width: 8em; height: 3em; border-radius: 50px; border: solid black 0.1em; background-color: rgba(0, 0, 0, 0);}
-#top button:hover {background-color: whitesmoke;}
-.aa {position: absolute; left: 18%; z-index: 1; top: 73%; text-align: center;}
-.aa {left: 37%;}
-.ta {left: 55%;}
-.ka {left: 76%;}
-.av {position: absolute; left: 18%; z-index: 1; top: 50%; text-align: center;}
-.av {left: 37%;}
-.tv {left: 55%;}
-.kv {left: 76%;}
+#top button { width: 8em; height: 3em; border-radius: 50px; border: solid #fff 0.1em; background-color: rgba(0, 0, 0, 0); font-weight: bold; color: #fff;}
+#top button:hover {background-color: whitesmoke; color: #000; opacity: 0.5;}
+.aa {position: absolute; left: 47%; z-index: 1; top: 77%; text-align: center;}
+.av {position: absolute; left: 47%; z-index: 1; top: 44%; text-align: center;}
+
 
