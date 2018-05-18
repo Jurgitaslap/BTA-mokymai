@@ -124,12 +124,17 @@ padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; displ
 .av {position: absolute; left: 47%; z-index: 1; top: 44%; text-align: center;}
 .juosta {margin: 0; padding: 1.65em 0; background-color: #685249; text-align: center; border-spacing: 0; opacity: 0;}
  .projektas {padding-top: 170px; 
-    height: 86vmin; 
+    height: 84vmin; 
     background: linear-gradient(to right, #fff, transparent), url("virt.JPG") no-repeat center; 
     background-size: cover; 
     box-shadow: 0 0 20px 0 rgba(249, 249, 249, 0.6); 
     border-radius: 0 0 100%;
   }
+  .projektas h1 {font-family: 'Dancing Script', cursive;
+    font-family: 'Great Vibes', cursive; font-size: 400%; color: #685249; text-align: right; margin: 2% 3%;  background-size: cover; 
+    background-repeat: no-repeat; }
+    .projektas p {font-family: 'Dancing Script', cursive;
+        font-family: 'Great Vibes', cursive; font-size: 190%; width: 50%; margin: -2% 3%;}
  
 
 
