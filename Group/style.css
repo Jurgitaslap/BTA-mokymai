@@ -92,14 +92,14 @@ img { background-size: cover; width: 100%;}
 /* #a { color: white;
 padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; display: inline-block; cursor: pointer; line-height: 0;} */
 
-#top {margin-top: -99px; padding: 0; position: relative;}
+#top {margin: 0; padding: 0; position: relative; border-spacing: 0;}
 .night {font-size: 30px;}
 #bottom {
    
     background-image: url(vidus.JPG);
     background-size: cover; 
       background-repeat: no-repeat; 
-      height: 60vmin;
+      height: 70vmin;
      margin-top: -20px; 
      width: 100%;
      padding: 0; 
@@ -111,17 +111,18 @@ padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; displ
      animation-delay: 0.5s;
      animation-name: fadeInRight;
    }   
-#bottom p { font-style: italic; font-weight: 500; font-size: 150%; width: 70%; margin: 0 auto; padding: 0; }
-#bottom h1 {text-align: center; font-size: 200%; padding-top: 10%; font-weight: 900; font-style: italic;}
+#bottom p { font-style: italic; font-weight: 500; font-size: 150%; width: 70%; margin: 0; padding: 0; position: absolute; top: 170%; margin-left: 15%;}
+#bottom h1 {text-align: center; font-size: 200%; padding-top: 10%; font-weight: 900; font-style: italic; position: absolute; top: 140%; margin-left: 35%;}
 .apie img {width: 5em; display: inline-block;}
 .apie article { width: 30%; text-align: center; vertical-align: text-top; }
 .apie h1 {text-align: center; margin-top: 1em; font-size: 180%;}
-.apie {width: 100%; padding: 0.2em 0 0 0; margin: 1em 4em; text-align: center; color: #302e2c;}
+.apie {width: 100%; padding: 0.2em 0 0 0; margin: auto; text-align: center; color: #302e2c; background-color: #302e2c;}
 .tarpas {padding: 1em;}
 .apie h3 { font-weight: bold;}
 #top button { width: 8em; height: 3em; border-radius: 50px; border: solid #fff 0.1em; background-color: rgba(0, 0, 0, 0); font-weight: bold; color: #fff;}
 #top button:hover {background-color: whitesmoke; color: #000; opacity: 0.5;}
 .aa {position: absolute; left: 47%; z-index: 1; top: 77%; text-align: center;}
 .av {position: absolute; left: 47%; z-index: 1; top: 44%; text-align: center;}
-
+.juosta {margin: 0; padding: 0.55em 0; background-color: #685249; height: 10%; text-align: center; color: #fff; border-spacing: 0;}
+.phone img {}
 
