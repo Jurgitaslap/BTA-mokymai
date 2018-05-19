@@ -131,7 +131,7 @@
         width: 20vmin; height: 20vmin; border-radius: 100px; border-color: #000; background-color: #685249; color: #fff; font-size: 1em; margin: 1.5em auto; left: 40%; position: relative; display: block; 
         justify-content:space-between;
     }
-        #bottom a {
+    #bottom a {
             text-decoration: none !important;
     }
 
@@ -201,11 +201,11 @@
         border-radius: 0 0 100%;
     }
     .projektas h1 {
-        font-family: 'Italianno', cursive; font-size: 400%; color: #685249; text-align: right; margin: 3%;  background-size: cover; 
+        font-family: 'Playfair Display', serif; width: 100%; padding: 0;font-size: 250%; color: #685249; text-align: right; margin: 2.5em 1em auto auto;  background-size: cover; 
         background-repeat: no-repeat; 
     }
-        .projektas p {
-            font-family: 'Italianno', cursive; font-size: 210%; width: 50%; margin: -4% 3%;
+    .projektas p {
+        font-family: 'Playfair Display', serif; font-size: 140%; width: 50%; margin: -1em auto auto 1em; padding: 0;
     }
  
 
