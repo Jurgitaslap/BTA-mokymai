@@ -1,143 +1,212 @@
 
-body {font-family: 'Lora', serif;
-    background-color: #fff;
+    body {
+        font-family: 'Lora', serif;
+        background-color: #fff;
     }
 
-.lineRight {float: right; border: none; font-size: 18px; margin: auto; }
-.lineRight:hover {border-bottom: none;}
-/* .logo {border: none; font-size: 18px; margin-left: -5em; padding-right: 4em; }
-.logo:hover {border-bottom: none;} */
-nav {
-    width: 100%;
-    background-color: #685249;
-    position: fixed;
-    top: 0;
-    opacity: 0.9;
-    position: fixed;
-    z-index: 1;
-   } 
-
-nav ul {
-        color: #fff;
-        width: 90%;
-        max-width: 1100px; /*apribojam ploti*/
-        margin: auto; /* tai yra block elementas */
-        font-size: 0;  /*tarpa galima uzkomentuoti arba istrinti,kad nebutu tarpu inline elementu (li) sarase,panaikinus font-size,reikia ivesti jo dydi i (li),nes dingsta tekstas*/                                                  
+    .lineRight {
+        float: right; border: none; font-size: 18px; margin: auto; 
     }
-      /*ji pakeiti display tipa,tada margin negalioja*/
-   
-    /*teviniam elementui parasius text-align,  issidelioja visi inline block.*/
-nav ul li {
-        padding: 20px 20px; /*su margin geriau nedaryti centravimo, nes sunkiau valdyti*/
+    .lineRight:hover {
+        border-bottom: none;
+    }
+    /* .logo {border: none; font-size: 18px; margin-left: -5em; padding-right: 4em; }
+    .logo:hover {border-bottom: none;} */
+
+    nav {
+        width: 100%;
+        background-color: #685249;
+        position: fixed;
+        top: 0;
+        opacity: 0.9;
+        position: fixed;
+        z-index: 1;
+    } 
+
+    nav ul {
+            color: #fff;
+            width: 90%;
+            max-width: 1100px; /*apribojam ploti*/
+            margin: auto; /* tai yra block elementas */
+            font-size: 0;  /*tarpa galima uzkomentuoti arba istrinti,kad nebutu tarpu inline elementu (li) sarase,panaikinus font-size,reikia ivesti jo dydi i (li),nes dingsta tekstas*/                                                  
+    }
+        /*ji pakeiti display tipa,tada margin negalioja*/
+        /*teviniam elementui parasius text-align,  issidelioja visi inline block.*/
+    nav ul li {
+            padding: 20px 20px; /*su margin geriau nedaryti centravimo, nes sunkiau valdyti*/
+            display: inline-block;
+            /*inline negalima nurodyti apatinio,virsutinio margin*/
+            border-right: 1px solid #c1a185;
+            cursor: pointer;
+            font-size: 20px;
+    }
+    nav li:hover {
+        border-bottom: 4px solid #fff;
+        padding-bottom: 16px;
+    }
+    /*responsive dizaina galima su px ir % gauti nenaudojant flex*/
+    
+    main {
+        width: 90%; max-width: 1200px; margin: 80px auto 0 auto;
+    }
+    article { 
+        background-color: #fff;
+        width: 100%;
+        margin-bottom:  20px;
+        padding: 20px;
+            box-sizing: border-box;
+        /*savybe kuri iskaiciuoja i article ploti paddingus.borderius, kad papildomai neuzimtu vietos ir ji galima isidet i reset'a*/
         display: inline-block;
-        /*inline negalima nurodyti apatinio,virsutinio margin*/
-        border-right: 1px solid #c1a185;
-        cursor: pointer;
-        font-size: 20px;
+        vertical-align: middle; /*kai tekstas trumpesnis,kad graziai bloka sulygiuoti dedasi si f-ja ir nedeti height,nes tekstas eis uz ribu*/
     }
-nav li:hover {
-       border-bottom: 4px solid #fff;
-       padding-bottom: 16px;
-      
-       }
-   /*responsive dizaina galima su px ir % gauti nenaudojant flex*/
-   
-   main {width: 90%; max-width: 1200px; margin: 80px auto 0 auto;}
-article { 
-       background-color: #fff;
-       width: 100%;
-       margin-bottom:  20px;
-       padding: 20px;
-        box-sizing: border-box;
-       /*savybe kuri iskaiciuoja i article ploti paddingus.borderius, kad papildomai neuzimtu vietos ir ji galima isidet i reset'a*/
-       display: inline-block;
-       vertical-align: middle; /*kai tekstas trumpesnis,kad graziai bloka sulygiuoti dedasi si f-ja ir nedeti height,nes tekstas eis uz ribu*/
+    article h1 { 
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
 
-}
-article h1 { 
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-article p { 
-    font-size: 16px;
-    font-weight: 400;
-   line-height: 1.5;
-}
- article:nth-of-type(12n + 2),
- article:nth-of-type(12n + 5),
- article:nth-of-type(12n + 6) {
-    width: 100%;
-}
-article:nth-of-type(12n + 2),
-article:nth-of-type(12n + 4),
-article:nth-of-type(12n + 5){
+    article p { 
+        font-size: 16px;
+        font-weight: 400;
+    line-height: 1.5;
+    }
 
-  margin-right: 2%;
-}
-.noFont {
-    font-size: 0px;
-}
-.noFont * { 
-    font-size: 16px;}
+    article:nth-of-type(12n + 2),
+    article:nth-of-type(12n + 5),
+    article:nth-of-type(12n + 6) {
+        width: 100%;
+    }
 
-article:nth-of-type(12n + 4),
-article:nth-of-type(12n + 5),
-article:nth-of-type(12n + 6) {
-    width: 32%;
-}
-img { background-size: cover; width: 100%;}
-/* #a { color: white;
-padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; display: inline-block; cursor: pointer; line-height: 0;} */
+    article:nth-of-type(12n + 2),
+    article:nth-of-type(12n + 4),
+    article:nth-of-type(12n + 5){
+    margin-right: 2%;
+    }
 
-#top {margin: 0; padding: 0; position: relative; border-spacing: 0;}
-.night {font-size: 30px;}
-#bottom {
-   
-    background-image: url(vidus.JPG);
-    background-size: cover; 
-      background-repeat: no-repeat; 
-      height: 75vmin;
-     margin-top: 16px; 
-     width: 100%;
-     padding: 0; 
-     background-attachment: fixed;  
-     /* -webkit-filter: opacity(30%);filter: opacity(30%);  */
-     /* background-color: transparent; */
-     /* filter:opacity(50%); */
-     visibility: visible;
-     animation-delay: 0.5s;
-     animation-name: fadeInRight;
-   }   
-   #bottom button {width: 20vmin; height: 20vmin; border-radius: 100px; border-color: #000; background-color: #685249; color: #fff; font-size: 1em; margin: 1.5em auto; left: 40%; position: relative; display: block; 
-    justify-content:space-between;}
-       #bottom a {text-decoration: none !important;}
-/* #apie section { font-style: italic; font-weight: 500; font-size: 150%; width: 70%; margin: 0; padding: 1em;; position: absolute; top: 185%; margin-left: 15%;}
-#apie h1 {text-align: center; font-size: 200%; padding-top: 10%; font-weight: 900; font-style: italic; position: absolute; top: 155%; margin-left: 35%;} */
-.apie img {width: 4em;}
-.apie article { width: 32%; text-align: center;  vertical-align: text-top; margin: 0; box-sizing: border-box;}
-.apie {text-align: center; color: #4b4b4b; background-color: #fff; display: inline-block; display: inline; padding: 0;}
-.apie h3 {font-weight: bold;}
-.apie button {width: 50vmin; height: 7vmin; border-radius: 50px; background-color: #685249; color: #fff; font-size: 1.5em; margin: 1em auto; left: 37%; position: relative;}
-.infor {margin: 0 2.5em;}
-.tarpas h1 {color: #fff; font-size: 200%; text-align: center;}
-.tarpasv {padding: 1em; background-color: #c1a185; box-shadow: 0 -1em 3em #795548;}
-.tarpas {padding: 2em; background-color: #c1a185; }
-#top button { width: 8em; height: 3em; border-radius: 50px; border: solid #fff 0.1em; background-color: rgba(0, 0, 0, 0); font-weight: bold; color: #fff; z-index: 1; }
-#top button:hover {background-color: whitesmoke; color: #000; opacity: 0.5;}
-.aa {position: absolute; left: 47%; z-index: 1; top: 77%; text-align: center;}
-.av {position: absolute; left: 47%; z-index: 1; top: 44%; text-align: center;}
-.juosta {margin: 0; padding: 1.65em 0; background-color: #685249; text-align: center; border-spacing: 0; opacity: 0;}
- .projektas {padding-top: 170px; 
-    height: 88vmin; 
-    background: linear-gradient(to right, #fff, transparent), url("virt.JPG") no-repeat center; 
-    background-size: cover; 
-    box-shadow: 0 0 10em 0 rgba(249, 249, 249, 0.6); 
-    border-radius: 0 0 100%;
-  }
-  .projektas h1 {font-family: 'Italianno', cursive; font-size: 400%; color: #685249; text-align: right; margin: 3%;  background-size: cover; 
-    background-repeat: no-repeat; }
-    .projektas p {font-family: 'Italianno', cursive; font-size: 210%; width: 50%; margin: -4% 3%;}
+    .noFont {
+        font-size: 0px;
+    }
+
+    .noFont * { 
+        font-size: 16px;
+    }
+
+    article:nth-of-type(12n + 4),
+    article:nth-of-type(12n + 5),
+    article:nth-of-type(12n + 6) {
+        width: 32%;
+    }
+
+    img { 
+        background-size: cover; width: 100%;
+    }
+    /* #a { color: white;
+    padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; display: inline-block; cursor: pointer; line-height: 0;} */
+
+    #top {
+        margin: 0; padding: 0; position: relative; border-spacing: 0;
+    }
+
+    .night {
+        font-size: 30px;
+    }
+    #bottom {
+        background-image: url(vidus.JPG);
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        height: 75vmin;
+        margin-top: 16px; 
+        width: 100%;
+        padding: 0; 
+        background-attachment: fixed;  
+        /* -webkit-filter: opacity(30%);filter: opacity(30%);  */
+        /* background-color: transparent; */
+        /* filter:opacity(50%); */
+        visibility: visible;
+        animation-delay: 0.5s;
+        animation-name: fadeInRight;
+    }   
+
+    #bottom button {
+        width: 20vmin; height: 20vmin; border-radius: 100px; border-color: #000; background-color: #685249; color: #fff; font-size: 1em; margin: 1.5em auto; left: 40%; position: relative; display: block; 
+        justify-content:space-between;
+    }
+        #bottom a {
+            text-decoration: none !important;
+    }
+
+    /* #apie section { font-style: italic; font-weight: 500; font-size: 150%; width: 70%; margin: 0; padding: 1em;; position: absolute; top: 185%; margin-left: 15%;}
+    #apie h1 {text-align: center; font-size: 200%; padding-top: 10%; font-weight: 900; font-style: italic; position: absolute; top: 155%; margin-left: 35%;} */
+    .apie img {
+        width: 4em;
+    }
+    .apie article { 
+        width: 32%; text-align: center;  vertical-align: text-top; margin: 0; box-sizing: border-box;
+    }
+
+    .apie {
+        text-align: center; color: #4b4b4b; background-color: #fff; display: inline-block; display: inline; padding: 0;
+    }
+
+    .apie h3 {
+        font-weight: bold;
+    }
+
+    .apie button {
+        width: 50vmin; height: 7vmin; border-radius: 50px; background-color: #685249; color: #fff; font-size: 1.5em; margin: 1em auto; left: 37%; position: relative;
+    }
+
+    .infor {
+        margin: 0 2.5em;
+    }
+
+    .tarpas h1 {
+        color: #fff; font-size: 200%; text-align: center;
+    }
+
+    .tarpasv {
+        padding: 1em; background-color: #c1a185; box-shadow: 0 -1em 3em #795548;
+    }
+
+    .tarpas {
+        padding: 2em; background-color: #c1a185; 
+    }
+
+    #top button {
+        width: 8em; height: 3em; border-radius: 50px; border: solid #fff 0.1em; background-color: rgba(0, 0, 0, 0); font-weight: bold; color: #fff; z-index: 1; 
+        }
+
+    #top button:hover {
+        background-color: whitesmoke; color: #000; opacity: 0.5;
+    }
+
+    .aa {
+        position: absolute; left: 47%; z-index: 1; top: 77%; text-align: center;
+    }
+
+    .av {
+        position: absolute; left: 47%; z-index: 1; top: 44%; text-align: center;
+    }
+
+    .juosta {
+        margin: 0; padding: 1.65em 0; background-color: #685249; text-align: center; border-spacing: 0; opacity: 0;
+    }
+
+    .projektas {
+        padding-top: 170px; 
+        height: 88vmin; 
+        background: linear-gradient(to right, #fff, transparent), url("virt.JPG") no-repeat center; 
+        background-size: cover; 
+        box-shadow: 0 0 10em 0 rgba(249, 249, 249, 0.6); 
+        border-radius: 0 0 100%;
+    }
+    .projektas h1 {
+        font-family: 'Italianno', cursive; font-size: 400%; color: #685249; text-align: right; margin: 3%;  background-size: cover; 
+        background-repeat: no-repeat; 
+    }
+        .projektas p {
+            font-family: 'Italianno', cursive; font-size: 210%; width: 50%; margin: -4% 3%;
+    }
  
 
 
