@@ -1,4 +1,4 @@
-
+ /* pagrindinis home */
     body {
         font-family: 'Lora', serif;
         background-color: #fff;
@@ -22,7 +22,7 @@
         position: fixed;
         z-index: 1;
     } 
-
+    nav a {text-decoration: none !important; color: #fff;}
     nav ul {
             color: #fff;
             width: 90%;
@@ -128,7 +128,7 @@
     }   
 
     #bottom button {
-        width: 20vmin; height: 20vmin; border-radius: 100px; border-color: #000; background-color: #685249; color: #fff; font-size: 1em; margin: 1.5em auto; left: 40%; position: relative; display: block; 
+        width: 20vmin; height: 20vmin; border-radius: 100px; border-color: #000; background-color: #685249; color: #fff; font-size: 1em; margin: 1em auto; left: 40%; position: relative; display: block; 
         justify-content:space-between;
     }
     #bottom a {
@@ -208,5 +208,8 @@
         font-family: 'Playfair Display', serif; font-size: 140%; width: 50%; margin: -1em auto auto 1em; padding: 0;
     }
  
+  /* butai puslapis */
+
+
 
 
