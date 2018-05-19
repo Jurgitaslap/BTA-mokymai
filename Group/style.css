@@ -109,6 +109,9 @@ padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; displ
      animation-delay: 0.5s;
      animation-name: fadeInRight;
    }   
+   #bottom button {width: 20vmin; height: 20vmin; border-radius: 100px; border-color: #000; background-color: #685249; color: #fff; font-size: 1em; margin: 1.5em auto; left: 40%; position: relative; display: block; 
+    justify-content:space-between;}
+       #bottom a {text-decoration: none !important;}
 /* #apie section { font-style: italic; font-weight: 500; font-size: 150%; width: 70%; margin: 0; padding: 1em;; position: absolute; top: 185%; margin-left: 15%;}
 #apie h1 {text-align: center; font-size: 200%; padding-top: 10%; font-weight: 900; font-style: italic; position: absolute; top: 155%; margin-left: 35%;} */
 .apie img {width: 4em;}
