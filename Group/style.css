@@ -173,9 +173,9 @@
     }
 
     #top button {
-        width: 8em; height: 3em; border-radius: 50px; border: solid #fff 0.1em; background-color: rgba(0, 0, 0, 0); font-weight: bold; color: #fff; z-index: 1; 
+        width: 3em; height: 3em; border-radius: 50px; border: solid #fff 0.1em; background-color: rgba(0, 0, 0, 0); font-weight: bold; color: #fff; z-index: 1; 
         }
-
+    #top i {opacity: 0.5;}
     #top button:hover {
         background-color: whitesmoke; color: #000; opacity: 0.5;
     }
@@ -210,6 +210,9 @@
  
   /* butai puslapis */
 
-
+    .img-responsive {    display: block;
+        max-width: 100%;
+        height: auto;
+    }}
 
 
