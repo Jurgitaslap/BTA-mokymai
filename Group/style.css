@@ -208,15 +208,16 @@
         font-family: 'Playfair Display', serif; font-size: 140%; width: 50%; margin: -1em auto auto 1em; padding: 0;
     }
  
-  /* galerija puslapis */
+  /*------ galerija puslapis -------*/
 
     .img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
-        display: block;
-        max-width: 25%;
-        height: auto
+        display: inline-block;
+        max-width: 30%;
+        height: auto;
+        margin: 1em;
     }
 
-    .img-rounded {
+    /* .img-rounded {
         border-radius: 6px
     }
 
@@ -232,10 +233,18 @@
         max-width: 100%;
         height: auto
     }
+    .img-thumbnail {
+        width: auto;
+        max-width: 300px;
+        height: 100%;
+        max-height: 300px;
+        border: none;
+        padding-bottom: 50px;
+    }
 
     .img-circle {
         border-radius: 50%
-    }
+    } */
     .row h1 
         {
             box-sizing: border-box;
@@ -259,8 +268,17 @@
     .row *{
         box-sizing: border-box;
     }
-    images a {
+    /* images a {
         color: #505050;
         text-decoration: none;
-    }
+    } */
+
+    /* ------ BANKU PASIULYMAI------ */
+   .pasiulymai h1 { text-align: center; margin-top: 12vmin;}
+   .pasiulymai button {width: 30vmin; height: 10vmin; border-radius: 20px; background-color: #44382e; margin: 4em 4em 4em 4em; color: #f9eade; font-size: 100%;}
+    .luminor {position: absolute; left: 25%; top: 50%;}
+    .seb {position: absolute; right: 25%; top: 50%;}
+    .pasiulymai img {width: 20vmin; margin: 4em 4em 4em 4em; }
+   .pasiulymai .se {position: absolute; right: 27.5%; top: 35%;}
+   .pasiulymai .lu {position: absolute; left: 26%; top: 38%; width: 25vmin;}
 
