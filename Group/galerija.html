@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
         crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="reset.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Layout</title>
@@ -45,234 +47,54 @@
     </nav>
 
     <!--foto su planais-->
-    <!-- Images used to open the lightbox -->
-    <div class="galerija">
-        <h1> Galerija</h1>
-    </div>
+     <!-- The Modal -->
+     <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+      </div>
+  
+      <section class="gallery">
+        <h1>Galerija</h1>
+        
+        <div class="wrapper">
+          <img src="1.JPG" class="myImg">
+          <img src="2.jpg" class="myImg">
+          <img src="3.jpg" class="myImg">
+          <img src="4.jpg" class="myImg">
+          <img src="5.jpg" class="myImg">
+          <img src="6.jpg" class="myImg">
+          <img src="7.jpg" class="myImg">
+          <img src="v1.jpg" class="myImg">
+          <img src="v2.jpg" class="myImg">
+          <img src="v3.jpg" class="myImg">
+          <img src="v5.jpg" class="myImg">
+          <img src="v6.jpg" class="myImg">
+          <img src="v7.jpg" class="myImg">
 
-    <div class="row">
-        <div class="column">
-            <img src="1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
         </div>
-        <div class="column">
-            <img src="2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="5.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="6.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="7.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="v1.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="v2.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="v3.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="v4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="v5.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="v6.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-        <div class="column">
-            <img src="v7.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-        </div>
-    </div>
-
-    <!-- The Modal/Lightbox -->
-    <div id="myModal" class="modal">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-
-            <div class="mySlides">
-                <div class="numbertext">1 / 14</div>
-                <img src="1.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">2 / 14</div>
-                <img src="2.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">3 / 14</div>
-                <img src="3.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">4 / 14</div>
-                <img src="4.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">5 / 14</div>
-                <img src="5.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">6 / 14</div>
-                <img src="6.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">7 / 14</div>
-                <img src="7.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">8 / 14</div>
-                <img src="v1.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">9 / 14</div>
-                <img src="v2.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">10 / 14</div>
-                <img src="v3.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">11 / 14</div>
-                <img src="v4.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">12 / 14</div>
-                <img src="v5.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">13 / 14</div>
-                <img src="v6.jpg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <div class="numbertext">14 / 14</div>
-                <img src="v7.jpg" style="width:100%">
-            </div>
-
-            <!-- Next/previous controls -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <!-- Caption text -->
-            <div class="caption-container">
-                <p id="caption"></p>
-            </div>
-
-            <!-- Thumbnail image controls -->
-            <div class="column">
-                <img class="demo" src="1.jpg" onclick="currentSlide(1)" alt="Šakenio alėja kvartalas">
-            </div>
-
-            <div class="column">
-                <img class="demo" src="2.jpg" onclick="currentSlide(2)" alt="Šakenio alėja kvartalas">
-            </div>
-
-            <div class="column">
-                <img class="demo" src="3.jpg" onclick="currentSlide(3)" alt="">
-            </div>
-
-            <div class="column">
-                <img class="demo" src="4.jpg" onclick="currentSlide(4)" alt="">
-            </div>
-
-            <div class="column">
-                    <img class="demo" src="5.jpg" onclick="currentSlide(5)" alt="">
-                </div>
-
-                <div class="column">
-                        <img class="demo" src="6.jpg" onclick="currentSlide(6)" alt="">
-                    </div>
-
-                    <div class="column">
-                            <img class="demo" src="7.jpg" onclick="currentSlide(7)" alt="">
-                        </div>
-
-
-                        <div class="column">
-                                <img class="demo" src="v1.jpg" onclick="currentSlide(8)" alt="">
-                            </div>
-
-                            <div class="column">
-                                    <img class="demo" src="v2.jpg" onclick="currentSlide(9)" alt="">
-                                </div>
-
-                                <div class="column">
-                                        <img class="demo" src="v3.jpg" onclick="currentSlide(10)" alt="">
-                                    </div>
-
-                                    <div class="column">
-                                            <img class="demo" src="v4.jpg" onclick="currentSlide(11)" alt="">
-                                        </div>
-
-                                        <div class="column">
-                                                <img class="demo" src="v5.jpg" onclick="currentSlide(12)" alt="">
-                                            </div>
-
-                                            <div class="column">
-                                                    <img class="demo" src="v6.jpg" onclick="currentSlide(13)" alt="">
-                                                </div>
-
-                                                <div class="column">
-                                                        <img class="demo" src="v7.jpg" onclick="currentSlide(14)" alt="">
-                                                    </div>
-                                                    <div class="column">
-                </div>                                         
-        </div>
-    </div>
+      </section>
 
     <script>
 
-        // Open the Modal
-        function openModal() {
-            document.getElementById('myModal').style.display = "block";
-        }
-
-        // Close the Modal
-        function closeModal() {
-            document.getElementById('myModal').style.display = "none";
-        }
-
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
-        }
+        /*
+// Get the modal to show pictures from gallery
+*/
+var modal = document.getElementById('myModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = $('.myImg');
+var modalImg = $("#img01");
+// var captionText = document.getElementById("caption");
+$('.myImg').click(function(){
+  modal.style.display = "block";
+  var newSrc = this.src;
+  modalImg.attr('src', newSrc);
+});
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
     </script>
 
 
