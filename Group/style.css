@@ -348,5 +348,5 @@
 
    /* ---------------------KONTAKTAI--------------------*/
    
-   .kontaktai div {margin: 2em;}
+   .kontaktai section {margin: 2em; display: inline-block;}
 
