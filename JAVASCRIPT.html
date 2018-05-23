@@ -1,73 +1,108 @@
 <!DOCTYPE html>
 <html>
-    <head>
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                crossorigin="anonymous"></script>
-                
-        <title>Uždavinys</title>
-            <style>
-                
-            </style>
-    </head>
-    <body>
-        <div id="lenta"></div>
 
-        <script>
-        const game =  {
-        boardParams: {
-            width: 8,
-            height: 8
-        },
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
 
-        figures: [
-            {type: "Q", pos: "A1"},
-            {type: "Q", pos: "A2"},
-            {type: "Q", pos: "A3"},
-            {type: "Q", pos: "E2"},
-        ],
+    <title>Uždavinys</title>
+    <style>
+        #lenta * {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+        }
 
-        collisions: [
-            [ "A1", "A2", "A3"],
-            [ "A2", "E2"],
-        ]
-    };
+        .langelis {
+            background-color: lightgray;
+            display: inline-block;
+            width: 10vmin;
+            height: 10vmin;
+                   }
+
+        .eilute.odd .langelis.odd,
+        .eilute.even .langelis.even {
+            background-color: black;
+                }
+    </style>
+</head>
+
+<body>
+    <div id="lenta"></div>
+
+    <script>
+        const game = {
+            boardParams: {
+                width: 8,
+                height: 8
+            },
+
+            figures: [
+                { type: "Q", pos: "A1" },
+                { type: "Q", pos: "A2" },
+                { type: "Q", pos: "A3" },
+                { type: "Q", pos: "E2" },
+            ],
+
+            collisions: [
+                ["A1", "A2", "A3"],
+                ["A2", "E2"],
+            ]
+        };
         function elm(name) {
             return document.getElementById(name);
-                }
-                function newElm(name) {
+        }
+        function newElm(name) {
             return document.createElement(name);
-                }
+        }
 
         const lenta = elm("lenta");
-        for(let x=1; x <= game.boardParams.height; x++ ) {
-        // piesiama eilute nr.x
+
+             for (let x = 1; x <= game.boardParams.height; x++) {
+            // piesiama eilute nr.x
             let eilute = newElm("div");
             lenta.appendChild(eilute);
             // if (x % 2 ) {
             //     eilute.classList.add("odd")
             // } arba aprasoma kitaip
-            eilute.classList.add (
+            eilute.classList.add(
                 x % 2 ? "odd" : "even"
             );
-            for(let y=1; y <= game.boardParams.height; y++ ) {
-        // piesiama langelis nr.y
-            let langelis = newElm("div");
-            lenta.appendChild(langelis);
-            // if (x % 2 ) {
-            //     langelis.classList.add("odd")
-            // } arba aprasoma kitaip
-            langelis.classList.add (
-                x % 2 ? "odd" : "even"
-            );
-    }};
-   
-        </script>
-    </body>
+            eilute.classList.add("eilute");
+            for (let y = 1; y <= game.boardParams.height; y++) {
+                // piesiama langelis nr.y
+                let langelis = newElm("div");
+                eilute.appendChild(langelis);
+                // if (x % 2 ) {
+                //     langelis.classList.add("odd")
+                // } arba aprasoma kitaip
+                langelis.classList.add(
+                    y % 2 ? "odd" : "even"
+                );
+                langelis.classList.add("langelis");
+            }
+        };
+
+        // for (let i = 0; i < game.figures.length; i++) {
+        //     let figure = game.figures[i];
+        //     for() {
+        //         for() {
+        //             langelis.classList.add("langelis" + 
+        //             String.fromCharcode ( x + "A".charCodeAt(0)
+        //             + y);
+        //         };
+        //     };
+        // };
+
+    </script>
+</body>
+
 </html>
