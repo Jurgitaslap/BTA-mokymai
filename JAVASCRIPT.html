@@ -21,7 +21,7 @@
             </style>
     </head>
     <body>
-
+        <div id="lenta"></div>
 
         <script>
         const game = 
@@ -33,10 +33,45 @@
                 }
 
         const lenta = elm("lenta");
-        for(let x=1; x <= height; x++ ) {
+        for(let x=1; x <= game.boardParams.height; x++ ) {
         // piesiama eilute nr.x
             let eilute = newElm("div");
-    }
+            lenta.appendChild(eilute);
+            // if (x % 2 ) {
+            //     eilute.classList.add("odd")
+            // } arba aprasoma kitaip
+            eilute.classList.add (
+                x % 2 ? "odd" : "even"
+            );
+            for(let y=1; y <= game.boardParams.height; y++ ) {
+        // piesiama langelis nr.y
+            let langelis = newElm("div");
+            lenta.appendChild(langelis);
+            // if (x % 2 ) {
+            //     langelis.classList.add("odd")
+            // } arba aprasoma kitaip
+            langelis.classList.add (
+                x % 2 ? "odd" : "even"
+            );
+    }};
+    {
+        boardParams: {
+            width: 8,
+            height: 8
+        };
+
+        figures: [
+            {type: "Q", pos: "A1"},
+            {type: "Q", pos: "A2"},
+            {type: "Q", pos: "A3"},
+            {type: "Q", pos: "E2"},
+        ],
+
+        collisions: [
+            [ "A1", "A2", "A3"],
+            [ "A2", "E2"],
+        ]
+    };
         </script>
     </body>
 </html>
