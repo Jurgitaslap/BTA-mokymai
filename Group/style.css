@@ -349,7 +349,8 @@
    /* ---------------------KONTAKTAI--------------------*/
    
    .kontaktai section {margin: 2em; display: inline-block; }
-   .kontaktai { position: relative; background-color: #e8e3e1; height: auto;}
-   .desine { position: absolute; left: 50%;}
-   .kaire {margin-left: 14em;}
+   .kontaktai { position: relative; background-color: #e8e3e1; height: auto; width: 100%;}
+   .desine { position: absolute; left: 50%; width: 30%;}
+   .kaire { width: 50%; position: absolute; left: 4%;}
+   .kontaktai li { list-style: none; margin-left: 4em;}
 
