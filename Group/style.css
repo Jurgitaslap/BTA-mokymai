@@ -104,7 +104,7 @@
     padding: 5px 20px; margin: auto; margin-top: -30px; list-style-type: none; display: inline-block; cursor: pointer; line-height: 0;} */
 
     #top {
-        margin: 0; padding: 0; position: relative; border-spacing: 0;
+        margin: 0; padding: 0; position: relative; border-spacing: 0; height: auto;
     }
 
     .night {
@@ -232,15 +232,15 @@
         padding-top: 170px; 
         height: 88vmin; 
         /* background-image: url(virt.JPG); */
-        background: linear-gradient(to right, #fff, transparent), url("virtuv.JPG") no-repeat center; 
+        background: linear-gradient(to right, #fff, transparent), url("virt.jpg") no-repeat center; 
         background-size: cover; 
         box-shadow: 0 0 10em 0 rgba(249, 249, 249, 0.6); 
-        /* border-radius: 0 0 100%; */
+        border-radius: 0 0 100%;
             }
     .projektas img { position: absolute; margin-left: -1.1em; bottom: 1em; z-index: 1;}
     .projektas h1 {
-        font-family: 'Playfair Display', serif; width: 100%; padding: 0;font-size: 250%; color: #685249; text-align: right; margin: 2.5em 1em auto auto;  background-size: cover; 
-        background-repeat: no-repeat; 
+        font-family: 'Playfair Display', serif; width: 95%; padding: 0; font-size: 230%; color: #685249; text-align: right;  top: 75%; height: auto; background-size: cover; 
+        background-repeat: no-repeat; position: absolute;
     }
     .projektas p {
         font-family: 'Playfair Display', serif; font-size: 140%; width: 50%; margin: -1em auto auto 1em; padding: 0;
