@@ -258,7 +258,7 @@
       }
       section.gallery h1 {
         margin: 1em 20%;
-        color: #777;
+        color: #352e2b;
         text-align: center;
         font-size: 150%;
       }
@@ -350,9 +350,10 @@
 
    /* ---------------------KONTAKTAI--------------------*/
    
-   .kontaktai section {margin: 2em; display: inline-block; }
+   .kontaktai section {margin: 2em auto; display: inline-block; }
    .kontaktai { position: relative; background-color: #e8e3e1; height: auto; width: 100%;}
-   .desine { position: absolute; left: 50%; width: 30%;}
-   .kaire { width: 50%; position: absolute; left: 4%;}
-   .kontaktai li { list-style: none; margin-left: 4em;}
-
+   .desine { position: absolute; left: 56%; width: 30%; margin: auto;}
+   .kaire { width: 50%; position: absolute; left: 7%;}
+   .kontaktai li { list-style: none; margin-left: auto;}
+    .wpcf7-submit {position:relative; left: -40%; background-color: #44382e; color: white; width: 6em; height: 2em; border-radius: 50px;}
+   
