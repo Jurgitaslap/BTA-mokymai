@@ -383,32 +383,4 @@
    .kontaktai li { list-style: none; margin-left: auto;}
     .wpcf7-submit {position:relative; left: -40%; background-color: #44382e; color: white; width: 6em; height: 2em; border-radius: 50px;}
    
-/* ----- MENIU mazas ----- */
-@media (max-width: 900px) {
-    nav ul.phoneNumber {
-      top: 101px;
-      left: 70px;
-    }
-    nav .rightSide li {
-      display: none;
-    }
-    nav .rightSide .sandwich {
-      display: inline-block;
-      margin-right: 56px;
-    }
-    nav .rightSide.responsive {
-      position: relative;
-    }
-    nav .rightSide.responsive li{
-      position: relative;
-      top:33px;
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    nav .rightSide.responsive .sandwich {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  }
+ 
