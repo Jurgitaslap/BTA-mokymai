@@ -10,7 +10,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="reset.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Layout</title>
+    <title>Šakenio alėja-projektas</title>
 </head>
 
 <body>
@@ -18,17 +18,33 @@
     <div class="juosta"></div>
 
     <!--meniu-->
+
     <nav>
+        <div class="leftSide">
+            <!-- <span></span> -->
+                    </div>
+        <ul class="rightSide" id="myTopnav">
+            <a href="apieprojekta.html"><li class="selected">Apie projektą</li></a>
+            <a href="butai.html"><li id="features">Būstai</li></a>
+            <a href="galerija.html"><li id="ourTeam">Galerija</li></a>
+            <a href="bankupasiulymai.html"><li id="gallery">Bankų pasiūlymai</li></a>
+            <a href="kontaktai.html"><li id="pricing">Kontaktai</li></a>
+            <a href><li class="lineRight"><i class="fas fa-mobile-alt"></i> +370 698 33970, +370 612 37164</li></a>
+            <div class="sandwich" onclick="showNavBar()"><i class="fas fa-bars"></i></div>
+        </ul>
+        <div class="clearfix"></div>
+    </nav>
+    <!--<nav>
         <ul>
-            <!-- <li class="logo"></li> -->
+            <li class="logo"></li>
             <a href="apieprojekta.html"><li>Apie projektą</li></a>
             <a href="butai.html"><li>Būstai</li></a>
             <a href="galerija.html"><li>Galerija</li></a>
             <a href="bankupasiulymai.html"><li>Bankų pasiūlymai</li></a>
             <a href="kontaktai.html"><li>Kontaktai</li></a>
-            <a href><li class="lineRight"><i class="fas fa-mobile-alt"></i> +370 610 14999</li></a>
+            <a href><li class="lineRight"><i class="fas fa-mobile-alt"></i> +370 698 33970, +370 612 37164</li></a>
         </ul>
-    </nav>
+    </nav> -->
 
     <!--foto su planais-->
     <!-- <article id="top">
@@ -79,7 +95,7 @@
             <img src="aplinka2.png">
             <br>
             <br>
-            <p>Apželdintas kiemas. Parkingo aikštelės. Vaikų žaidimo zona.</p>
+            <p>Apželdintas kiemas, parkingo aikštelės, vaikų žaidimo zona.</p>
             <br>
         </article>
         <section class="partners">
