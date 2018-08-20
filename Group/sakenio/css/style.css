@@ -25,6 +25,8 @@ p {
   line-height: 2;
   font-family: 'PT Serif', serif;
 }
+/* ------ meniu ------- */
+
 nav {
   background-color: #685249;
     color: #fefefe;
@@ -37,7 +39,7 @@ nav .leftSide {
     line-height: 33px;
 }
 nav .leftSide span {
-    font-size: 17px;
+    font-size: 25px;
     font-family: 'PT Serif', serif;
     font-weight: bold;
 }
@@ -51,7 +53,7 @@ nav .rightSide li {
     vertical-align: middle;
 }
 nav .rightSide li {
-    font-size: 10px;
+    font-size: 14px;
     cursor: pointer;
     padding: 0 14px;
     box-sizing: border-box;
@@ -102,6 +104,9 @@ nav .phoneNumber .number {
     padding: 0 27px;
     box-sizing: border-box;
 }
+
+/* ------- skaidres ------ */
+
 section.slider {
     position: relative;
 }
@@ -121,7 +126,8 @@ section.slider .slider-image1 {
 section.slider .slider-image2 {
     background: url(../img/sliderImages/slide2.jpg) top no-repeat ;
 }
-/* Fading animation */
+/* blinkanti animacija */
+
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -137,6 +143,9 @@ section.slider .slider-image2 {
     from {opacity: .4}
     to {opacity: 1}
   }
+
+
+
 section.slider h6 {
     text-align: center;
     line-height: 33px;
@@ -195,6 +204,8 @@ section.slider .slider-left img,
 section.slider .slider-right img {
     width:40px;
 }
+
+
 section.features {
     position: relative;
     background-color: #ffffff;
@@ -218,7 +229,8 @@ section.features button {
 section.features h1 span {
     color: #e25050;
 }
-section.features h5 {
+
+section.featuresh5 {
     text-align: center;
     color: #a2a2a2;
     font-size: 12px;
@@ -247,10 +259,11 @@ section.features p {
     font-size: 9px;
     color: #a2a2a2;
     text-align: justify;
-    margin-top: 17
-    px;
+    margin-top: 17px;
     line-height: 2;
 }
+/* ------ apie projekta ---- */
+
 section.ourTeam {
     position: relative;
     background-color: #383532;
@@ -300,6 +313,9 @@ section.ourTeam .aboutTrainer p {
   margin-top: 23px;
   font-size: 2vmin;
 }
+
+/* ------ GALERIJA ----- */
+
 section.gallery {
   background-color: #fff;
   padding: 60px 10px 30px 10px;
@@ -326,7 +342,7 @@ section.gallery .wrapper img:hover,
 section.ourTeam .box img:hover {
  opacity: 0.7;
 }
-/* The Modal (background) */
+/* MODALAS (background) */
 .modal {
     display: none;
     position: fixed;
@@ -518,6 +534,9 @@ footer .icons i {
   color: #fff;
   cursor: pointer;
 }
+
+/* KONTAKTAI */
+
 footer .contact {
   display: flex;
   justify-content: space-between;
