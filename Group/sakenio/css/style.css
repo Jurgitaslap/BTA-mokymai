@@ -1,7 +1,10 @@
 body {
     font-size: 0;
     font-family: 'PT Serif', serif;
-}
+    /* margin: 0;
+    padding: 0; */
+    }
+
 h2 {
   text-align: center;
   text-transform: uppercase;
@@ -21,14 +24,14 @@ h6 {
   font-weight: bold;
 }
 p {
-  font-size: 9px;
+  font-size: 11px;
   line-height: 2;
   font-family: 'PT Serif', serif;
 }
 /* ------ meniu ------- */
 
 nav {
-  background-color: #685249;
+  background-color: #563e39;
     color: #fefefe;
     padding: 34px 0px 34px 70px;
     box-sizing: border-box;
@@ -53,7 +56,7 @@ nav .rightSide li {
     vertical-align: middle;
 }
 nav .rightSide li {
-    font-size: 14px;
+    font-size: 15px;
     cursor: pointer;
     padding: 0 14px;
     box-sizing: border-box;
@@ -72,18 +75,21 @@ nav .rightSide li.selected {
   background-color: #8c7669;
 }
 nav  .rightSide .sandwich {
-    font-size: 15px;
+    font-size: 25px;
     vertical-align: middle;
     cursor: pointer;
     color: #fff;
     display: none;
 }
 nav  .rightSide .sandwich:hover {
-  font-size: 20px;
+  font-size: 25px;
 }
+
+/*  telefonas */
+
 nav ul.phoneNumber {
     position: absolute;
-    top: 90px;
+    top: 100px;
     left: 30px;
     line-height: 37px;
     z-index: 2;
@@ -94,12 +100,12 @@ nav ul.phoneNumber img{
     vertical-align: middle;
 }
 nav .phoneNumber .icon {
-    background-color: #43484f;
+    background-color: #423936;
     padding: 0 12px 0 11px;
     box-sizing: border-box;
 }
 nav .phoneNumber .number {
-    background-color: #50555b;
+    background-color: #5b514e;
     font-size: 17px;
     padding: 0 27px;
     box-sizing: border-box;
@@ -153,9 +159,9 @@ section.slider h6 {
     top: 216px;
     left: 70px;
     z-index: 1;
-    font-size: 11px;
+    font-size: 12px;
     color: #fefefe;
-    background-color: #d34f4f;
+    background-color: #84706a;
     box-sizing: border-box;
     padding: 0 12px;
     text-transform: uppercase;
@@ -169,12 +175,12 @@ section.slider h1 {
     z-index: 1;
     font-size: 28px;
     color: #fefefe;
-    background-color: #232322;
+    background-color: #aa837b;
     padding: 0 22px;
     text-transform: uppercase;
     font-weight: bold;
 }
-section.slider h4 {
+/* section.slider h4 {
     text-align: center;
     line-height: 45px;
     position: absolute;
@@ -183,11 +189,11 @@ section.slider h4 {
     z-index: 1;
     font-size: 16px;
     color: #fefefe;
-    background-color: #232322;
+    background-color: #aa837b;
     box-sizing: border-box;
     padding: 0 24px;
     text-transform: uppercase;
-}
+} */
 section.slider .slider-left,
 section.slider .slider-right {
     position: absolute;
@@ -230,7 +236,7 @@ section.features h1 span {
     color: #e25050;
 }
 
-section.featuresh5 {
+section.features h5 {
     text-align: center;
     color: #a2a2a2;
     font-size: 12px;
@@ -262,6 +268,8 @@ section.features p {
     margin-top: 17px;
     line-height: 2;
 }
+
+
 /* ------ apie projekta ---- */
 
 section.ourTeam {
@@ -311,7 +319,7 @@ section.ourTeam .aboutTrainer {
 section.ourTeam .aboutTrainer p {
   color: #777;
   margin-top: 23px;
-  font-size: 2vmin;
+  font-size: 12px;
 }
 
 /* ------ GALERIJA ----- */
@@ -441,12 +449,13 @@ section.pricing .price {
 }
 section.pricing ul {
    list-style-image: url('tick.png');
-   padding-left: 47px;
+   padding-left: 4px;
 }
 section.pricing li {
-  font-size: 9px;
+  font-size: 11px;
   color: #fff;
   line-height: 2;
+  list-style: none;
   font-family: 'PT Serif', serif;
 }
 section.pricing .priceItem:nth-of-type(2) {
@@ -454,7 +463,7 @@ section.pricing .priceItem:nth-of-type(2) {
   border: 2px solid #fff;
 }
 section.pricing .priceItem:nth-of-type(2) .price {
-  border-right: 1px solid #fff;
+border-right: 1px solid #fff;
 }
 section.partners {
   background-color: #fff;
@@ -522,7 +531,7 @@ footer .tweets i {
 }
 footer .tweets p {
   color: #fff;
-  display: inline;
+  /* display: inline; */
   width: 526px;
 }
 footer .tweets p span {
@@ -547,7 +556,7 @@ footer .contact h6 {
   margin-bottom: 30px;
 }
 footer .contact p {
-  font-size: 10px;
+  font-size: 13px;
   color: #9a9a9a;
   width: 347px;
   font-family: 'PT Serif', serif;
@@ -560,7 +569,7 @@ footer .contactInfo {
 }
 footer .contactInfo .phoneNumber,
 footer .contactInfo .email {
-  font-size: 18px;
+  font-size: 16px;
   color: #9a9a9a;
   font-family: 'PT Serif', serif;
 }
@@ -623,8 +632,8 @@ footer .contactForm .button {
 footer .contactForm .button::after {
   content: "Patikrinkite ar teisingai įvedėte el. pašto adresą.";
   display: block;
-  font-size: 9px;
-  color: black;
+  font-size: 10px;
+  color: #77190d;
   font-family: 'PT Serif', serif;
   margin-top: 30px;
   margin-left: -21px;
@@ -655,10 +664,10 @@ footer .copyright .back:hover {
   font-size: 12px;
   color: #b12424;
 }
-@media (max-width: 900px) {
+@media (max-width: 1240px) {
   nav ul.phoneNumber {
-    top: 101px;
-    left:70px;
+    top: 100px;
+    left: 30px;
   }
   nav .rightSide li {
     display: none;
@@ -687,14 +696,43 @@ footer .copyright .back:hover {
   section.slider h1 {
     font-size: 16px;
   }
-  section.slider h1,
-  section.slider h4,
-  section.slider h6 {
+  
+  section.slider h4 {
     padding: 0 10px;
     left: 60px;
   }
+  section.slider h6 {
+    text-align: center;
+    line-height: 33px;
+    position: absolute;
+    top: 216px;
+    left: 40px;
+    z-index: 1;
+    font-size: 10px;
+    color: #fefefe;
+    background-color: #84706a;
+    box-sizing: border-box;
+    padding: 0 12px;
+    text-transform: uppercase;
+  }
+
+  section.slider h1 {
+    text-align: center;
+    line-height: 66px;
+    position: absolute;
+    top: 252px;
+    left: 40px;
+    z-index: 1;
+    font-size: 18px;
+    color: #fefefe;
+    background-color: #aa837b;
+    padding: 0 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
   nav ul.phoneNumber {
-    left: 60px;
+    left: 50px;
   }
   section.pricing .priceItem {
     padding: 27px 10px 27px 10px;
