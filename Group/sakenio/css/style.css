@@ -271,6 +271,10 @@ section.features p {
 
 
 /* ------ apie projekta ---- */
+.ourTeam h4 {
+  color: white;
+
+}
 
 section.ourTeam {
     position: relative;
@@ -283,6 +287,9 @@ section h2{
 }
 section.ourTeam h2::after {
     border-bottom: 1px solid #fefefe;
+}
+section.ourTeam h4::after {
+  border-bottom: 1px solid #fefefe;
 }
 section.ourTeam .box {
   flex: 0 0 270px;
@@ -451,7 +458,7 @@ section.pricing .price {
 }
 section.pricing ul {
    list-style-image: url('tick.png');
-   padding-left: 4px;
+   padding-left: 8px;
 }
 section.pricing li {
   font-size: 11px;
@@ -557,8 +564,8 @@ footer .contact h6 {
   margin-bottom: 30px;
 }
 footer .contact p {
-  font-size: 13px;
-  color: #9a9a9a;
+  font-size: 14px;
+  color: white;
   width: 347px;
   font-family: 'PT Serif', serif;
   line-height: 2;
@@ -591,7 +598,7 @@ footer .contactForm textarea,
 footer .contactForm .button {
   display: inline-block;
   color: white;
-  background-color: inherit;
+  background-color: white;
   border: 1px solid #382824;
   box-sizing: border-box;
   font-family: 'PT Serif', serif;
