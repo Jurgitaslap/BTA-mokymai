@@ -112,14 +112,14 @@ nav .phoneNumber .number {
 }
 
 /* ------- skaidres ------ */
-.ap { font-size: 2.6vmin; color: #1e1e1d; margin: 1vmin auto 1vmin auto; text-align: center; font-weight: 600;
+.ap { font-size: 2.6vmin; font-style: italic;  color: #1e1e1d; margin: 1vmin auto 1vmin auto; text-align: center; font-weight: 600;
   text-align: center;
     line-height: 33px;
     position: absolute;
     top: 216px;
     left: 70px;
     z-index: 1;
-    background-color: #84706a;
+   
     box-sizing: border-box;
     padding: 0 12px;}
 section.slider {
@@ -182,9 +182,9 @@ section.slider h1 {
     top: 252px;
     left: 70px;
     z-index: 1;
-    font-size: 28px;
+    font-size: 30px;
     color: #fefefe;
-    background-color: #aa837b;
+    background-color:#aaa8a7;
     padding: 0 22px;
     text-transform: uppercase;
     font-weight: bold;
