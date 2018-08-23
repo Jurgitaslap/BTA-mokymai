@@ -112,7 +112,16 @@ nav .phoneNumber .number {
 }
 
 /* ------- skaidres ------ */
-
+.ap { font-size: 2.6vmin; color: #1e1e1d; margin: 1vmin auto 1vmin auto; text-align: center; font-weight: 600;
+  text-align: center;
+    line-height: 33px;
+    position: absolute;
+    top: 216px;
+    left: 70px;
+    z-index: 1;
+    background-color: #84706a;
+    box-sizing: border-box;
+    padding: 0 12px;}
 section.slider {
     position: relative;
 }
