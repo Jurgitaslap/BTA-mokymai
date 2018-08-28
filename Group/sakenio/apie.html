@@ -20,13 +20,43 @@
     th {color:white;}
     tr:nth-child(even) {background: #D6D0AC;}
     tr:nth-child(odd) {background: #C8B4A2;}
+    table {min-width: 790px;}
     </style>
     </head>
     <body>
+        <nav>
+            <div class="leftSide">
+                <span>ŠAKENIO ALĖJA</span>
+            </div>
+            <ul class="rightSide" id="myTopnav">
+                <li class="selected">Apie projektą</li>
+                <li id="features">Bankų pasiūlymai</li>
+                <li id="ourTeam">Būstai</li>
+                <li id="gallery">Galerija</li>
+                <li id="pricing">Privalumai</li>
+                <!-- <li id="partners">Vieta mieste</li> -->
+                <li id="contact">Kontaktai</li>
+                <div class="sandwich" onclick="showNavBar()"><i class="fas fa-bars"></i></div>
+            </ul>
+            <div class="clearfix"></div>
+            <ul class="phoneNumber">
+                <li style="background-color: #423c3b;" class="icon">
+                    <img src="img/phone.png">
+                </li>
+                <li style="background-color: #d3cbcb; color:black;"class="number">+370 698 33970</li>
+            </ul>
+        </nav>
+    
+        <section class="slider">
+            <div class="image-holder">
+                <div class="mySlides slider-image1 fade"></div>
+                <div class="mySlides slider-image2 fade"></div>
+            </div>
+            </section>
 <section>
         <img style="width: 100%; padding: 0; margin: 0;" src="img/ourTeam/PLA.jpg">
 
-<table align="center" style="width:80%; align-items: center;">
+<table align="center" style="width:100%; align-items: center;">
       <tr style="background-color: #695446;">
       <th>Būsto Nr.</th>
       <th>Adresas</th> 
@@ -45,7 +75,7 @@
       <td>V, R</td>
       <td>85,27</td>
       <td>109145,60</td>
-      <td><a href="Geri/A.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+      <td><a href="Geri/\A.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
     </tr>
     <tr>
         <td>B kotedžas</td>
@@ -55,7 +85,7 @@
         <td>V, R</td>
         <td>85,21</td>
         <td>109068,80</td>
-        <td><a href="Geri/B.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\B.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
     </tr>
     <tr>
         <td>C1 butas</td>
@@ -95,7 +125,7 @@
         <td>V, R</td>
         <td>39,84</td>
         <td>50995,20</td>
-        <td><a href="Geri/D2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\D2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>E1 butas</td>
@@ -115,7 +145,7 @@
         <td>V, R</td>
         <td>44,94</td>
         <td>57548,80</td>
-        <td><a href="Geri/E2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\E2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>F kotedžas</td>
@@ -205,7 +235,7 @@
         <td>P, Š</td>
         <td>51,02</td>
         <td>66326</td>
-        <td><a href="Geri/K1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\K1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>K2 butas</td>
@@ -215,7 +245,7 @@
         <td>P, Š</td>
         <td>52,27</td>
         <td>65337,50</td>
-        <td><a href="Geri/K2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\K2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>L1 butas</td>
@@ -225,7 +255,7 @@
         <td>P, Š</td>
         <td>51,93</td>
         <td>67509</td>
-        <td><a href="Geri/L1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\L1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>L2 butas</td>
@@ -235,7 +265,7 @@
         <td>P, Š</td>
         <td>53,17</td>
         <td>66462,50</td>
-        <td><a href="Geri/L2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\L2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>M1 butas</td>
@@ -255,7 +285,7 @@
         <td>P, Š</td>
         <td>56,54</td>
         <td>70675</td>
-        <td><a href="Geri/M2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\M2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>N1 butas</td>
@@ -265,7 +295,7 @@
         <td>P, Š</td>
         <td>55,20</td>
         <td>71760</td>
-        <td><a href="Geri/N1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\N1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>N2 butas</td>
@@ -275,7 +305,7 @@
         <td>P, Š</td>
         <td>56,54</td>
         <td>70675</td>
-        <td><a href="Geri/N2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\N2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>O1 butas</td>
@@ -285,7 +315,7 @@
         <td>P, Š</td>
         <td>51,93</td>
         <td>67509</td>
-        <td><a href="Geri/O1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\O1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>O2 butas</td>
@@ -295,7 +325,7 @@
         <td>P, Š</td>
         <td>53,17</td>
         <td>66462,50</td>
-        <td><a href="Geri/O2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\O2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>P1 butas</td>
@@ -305,7 +335,7 @@
         <td>R, V</td>
         <td>51,02</td>
         <td>66326</td>
-        <td><a href="Geri/P1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\P1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>P2 butas</td>
@@ -315,7 +345,7 @@
         <td>P, Š</td>
         <td>52,27</td>
         <td>65337,5</td>
-        <td><a href="Geri/P2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\P2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>Q kotedžas</td>
@@ -325,7 +355,7 @@
         <td>P, Š</td>
         <td>85,33</td>
         <td>109222,40</td>
-        <td><a href="Geri/Q.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\Q.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
            <tr>
         <td>R1 butas</td>
@@ -345,7 +375,7 @@
         <td>P, Š</td>
         <td>52,28</td>
         <td>66918,40</td>
-        <td><a href="Geri/R2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\R2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>S1 butas</td>
@@ -355,7 +385,7 @@
         <td>P, Š</td>
         <td>51,92</td>
         <td>67496</td>
-        <td><a href="Geri/S1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\S1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>S2 butas</td>
@@ -365,7 +395,7 @@
         <td>P, Š</td>
         <td>53,18</td>
         <td>68070,40</td>
-        <td><a href="Geri/S2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\S2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>T1 butas</td>
@@ -375,7 +405,7 @@
         <td>P, Š</td>
         <td>55,20</td>
         <td>71760</td>
-        <td><a href="Geri/T1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\T1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>T2 butas</td>
@@ -385,7 +415,7 @@
         <td>P, Š</td>
         <td>56,54</td>
         <td>72371,20</td>
-        <td><a href="Geri/T2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\T2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>U1 butas</td>
@@ -395,7 +425,7 @@
         <td>P, Š</td>
         <td>55,20</td>
         <td>71760</td>
-        <td><a href="Geri/U1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\U1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>U2 butas</td>
@@ -405,7 +435,7 @@
         <td>P, Š</td>
         <td>56,54</td>
         <td>72371,40</td>
-        <td><a href="Geri/U2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\U2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>V1 butas</td>
@@ -415,7 +445,7 @@
         <td>P, Š</td>
         <td>51,01</td>
         <td>66313</td>
-        <td><a href="Geri/V1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\V1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>V2 butas</td>
@@ -425,7 +455,7 @@
         <td>P, Š</td>
         <td>52,28</td>
         <td>66918,40</td>
-        <td><a href="Geri/V2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\V2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>W1 butas</td>
@@ -435,7 +465,7 @@
         <td>R, V</td>
         <td>53,00</td>
         <td>68900</td>
-        <td><a href="Geri/W1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\W1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>W2 butas</td>
@@ -445,7 +475,7 @@
         <td>R, V</td>
         <td>54,28</td>
         <td>69478,40</td>
-        <td><a href="Geri/W2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\W2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>X kotedžas</td>
@@ -465,7 +495,7 @@
         <td>R, V</td>
         <td>53,00</td>
         <td>68900</td>
-        <td><a href="Geri/Y1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\Y1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>Y2 butas</td>
@@ -475,7 +505,7 @@
         <td>R, V</td>
         <td>54,28</td>
         <td>69478,40</td>
-        <td></td>
+        <td><a href="Geri/\Y2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>Z1 butas</td>
@@ -485,7 +515,7 @@
         <td>P, Š</td>
         <td>51,92</td>
         <td>67496</td>
-        <td><a href="Geri/Y2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\Z1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>Z2 butas</td>
@@ -495,7 +525,7 @@
         <td>P, Š</td>
         <td>53,18</td>
         <td>68070,40</td>
-        <td><a href="Geri/Z2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\Z2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>Ė1 butas</td>
@@ -505,7 +535,7 @@
         <td>R, V</td>
         <td>46,17</td>
         <td>64638</td>
-        <td><a href="Geri/Ė1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\Ė1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>Ė2 butas</td>
@@ -515,7 +545,7 @@
         <td>R, V</td>
         <td>47,47</td>
         <td>60761,60</td>
-        <td><a href="Geri/Ė2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\Ė2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>Š1 butas</td>
@@ -525,7 +555,7 @@
         <td>R, V</td>
         <td>46,17</td>
         <td>60944,40</td>
-        <td><a href="Geri/Š1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\Š1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>Š2 butas</td>
@@ -535,7 +565,7 @@
         <td>R, V</td>
         <td>47,47</td>
         <td>60761,60</td>
-        <td><a href="Geri/Š2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\Š2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>Ū1 butas</td>
@@ -545,7 +575,7 @@
         <td>R, V</td>
         <td>46,17</td>
         <td>60944,40</td>
-        <td><a href="Geri/Ū1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\Ū1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>Ū2 butas</td>
@@ -555,7 +585,7 @@
         <td>R, V</td>
         <td>47,47</td>
         <td>60761,60</td>
-        <td><a href="Geri/Ū2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\Ū2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>Ž1 butas</td>
@@ -565,7 +595,7 @@
         <td>R, V</td>
         <td>46,17</td>
         <td>64638</td>
-        <td><a href="Geri/Ž1.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\Ž1.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
       <tr>
         <td>Ž2 butas</td>
@@ -575,13 +605,13 @@
         <td>R, V</td>
         <td>47,47</td>
         <td>60761,60</td>
-        <td><a href="Geri/Ž2.pdf"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
+        <td><a href="Geri/\Ž2.jpg"><img style="max-width: 3vmin;" src="img/kiti/plan.png"></a></td>
       </tr>
 
   </table>
-<footer>
+<footer style="background-color: #b7b7b7;" >
         <div class="copyright">
-                <div class="rights">© 2018. Visos teisės saugomos. Šakenio alėja.</div>
+                <div  style="margin-left: 1vmin;" class="rights">© 2018. Visos teisės saugomos. Šakenio alėja.</div>
                 <div class="back" id="scroll"><img style="max-width: 40px;" src="img/kiti/up-arrow.png"></div>
               </div>
 </footer>
