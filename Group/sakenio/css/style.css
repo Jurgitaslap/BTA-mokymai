@@ -606,7 +606,7 @@ footer .contactForm input,
 footer .contactForm textarea,
 footer .contactForm .button {
   display: inline-block;
-  color: white;
+  color: black;
   background-color: white;
   border: 1px solid #382824;
   box-sizing: border-box;
