@@ -33,7 +33,7 @@ p {
 nav {
   background-color: #563e39;
     color: #fefefe;
-    padding: 34px 0px 34px 70px;
+    padding: 34px 0px 34px 50px;
     box-sizing: border-box;
     position: relative;
 }
@@ -90,7 +90,7 @@ nav  .rightSide .sandwich:hover {
 nav ul.phoneNumber {
     position: absolute;
     top: 100px;
-    left: 30px;
+    left: 10px;
     line-height: 40px;
     z-index: 2;
 }
@@ -180,7 +180,7 @@ section.slider h1 {
     line-height: 66px;
     position: absolute;
     top: 252px;
-    left: 70px;
+    left: 50px;
     z-index: 1;
     font-size: 30px;
     color: #fefefe;
@@ -682,9 +682,11 @@ footer .copyright .back:hover {
   color: #b12424;
 }
 @media (max-width: 1240px) {
+
+  .mediaNav {display: none;}
   nav ul.phoneNumber {
     top: 100px;
-    left: 30px;
+    left: 10px;
   }
   nav .rightSide li {
     display: none;
@@ -738,7 +740,7 @@ footer .copyright .back:hover {
     line-height: 66px;
     position: absolute;
     top: 252px;
-    left: 40px;
+    left: 20px;
     z-index: 1;
     font-size: 18px;
     color: #fefefe;
@@ -747,9 +749,12 @@ footer .copyright .back:hover {
     text-transform: uppercase;
     font-weight: bold;
   }
-
+  nav .leftSide span {
+    font-size: 18px;
+    
+  }
   nav ul.phoneNumber {
-    left: 30px;
+    left: 0px;
   }
   section.pricing .priceItem {
     padding: 27px 10px 27px 10px;
