@@ -42,7 +42,7 @@ nav .leftSide {
     line-height: 33px;
 }
 nav .leftSide span {
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'PT Serif', serif;
     font-weight: bold;
 }
@@ -91,7 +91,7 @@ nav ul.phoneNumber {
     position: absolute;
     top: 100px;
     left: 30px;
-    line-height: 37px;
+    line-height: 40px;
     z-index: 2;
 }
 nav ul.phoneNumber li,
@@ -106,7 +106,7 @@ nav .phoneNumber .icon {
 }
 nav .phoneNumber .number {
     background-color: #5b514e;
-    font-size: 17px;
+    font-size: 25px;
     padding: 0 27px;
     box-sizing: border-box;
 }
@@ -334,7 +334,7 @@ section.ourTeam .aboutTrainer {
   height: 275px;
 }
 section.ourTeam .aboutTrainer p {
-  color: #777;
+  color: #494a4c;
   margin-top: 23px;
   font-size: 12px;
 }
@@ -749,7 +749,7 @@ footer .copyright .back:hover {
   }
 
   nav ul.phoneNumber {
-    left: 50px;
+    left: 30px;
   }
   section.pricing .priceItem {
     padding: 27px 10px 27px 10px;
