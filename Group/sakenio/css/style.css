@@ -30,6 +30,7 @@ p {
 }
 /* ------ meniu ------- */
 
+
 nav {
   background-color: #563e39;
     color: #fefefe;
@@ -81,7 +82,7 @@ nav  .rightSide .sandwich {
     color: #fff;
     display: none;
 }
-nav  .rightSide .sandwich:hover {
+nav .rightSide .sandwich:hover {
   font-size: 25px;
 }
 
@@ -219,7 +220,6 @@ section.slider .slider-left img,
 section.slider .slider-right img {
     width:40px;
 }
-
 
 section.features {
     position: relative;
@@ -793,5 +793,11 @@ footer .copyright .back:hover {
   footer .contactForm input {
     margin-top: 16px;
   }
+  
+}
+
+/* MOBILUS MENIU*/
+header nav {
+  float: right;  
 }
 
