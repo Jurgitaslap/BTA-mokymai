@@ -31,7 +31,7 @@ p {
 /* ------ meniu ------- */
 
 
-nav {
+/* nav {
   background-color: #563e39;
     color: #fefefe;
     padding: 34px 0px 34px 50px;
@@ -84,7 +84,7 @@ nav  .rightSide .sandwich {
 }
 nav .rightSide .sandwich:hover {
   font-size: 25px;
-}
+} */
 
 /*  telefonas */
 
@@ -190,7 +190,7 @@ section.slider h1 {
     text-transform: uppercase;
     font-weight: bold;
 }
-/* section.slider h4 {
+section.slider h4 {
     text-align: center;
     line-height: 45px;
     position: absolute;
@@ -203,7 +203,7 @@ section.slider h1 {
     box-sizing: border-box;
     padding: 0 24px;
     text-transform: uppercase;
-} */
+}
 section.slider .slider-left,
 section.slider .slider-right {
     position: absolute;
@@ -749,13 +749,13 @@ footer .copyright .back:hover {
     text-transform: uppercase;
     font-weight: bold;
   }
-  nav .leftSide span {
+  /* nav .leftSide span {
     font-size: 18px;
     
   }
   nav ul.phoneNumber {
     left: 0px;
-  }
+  } */
   section.pricing .priceItem {
     padding: 27px 10px 27px 10px;
   }
@@ -796,8 +796,5 @@ footer .copyright .back:hover {
   
 }
 
-/* MOBILUS MENIU*/
-header nav {
-  float: right;  
-}
+
 
