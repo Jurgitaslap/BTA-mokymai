@@ -1,20 +1,17 @@
 body, body * {
-    /* box-sizing: border-box; */
     font-size: 0;
     font-family: 'PT Serif', serif;
-    /* padding: 8px; */
+    
 }
 /*mini meniu eiluciu aukstis*/
 header {
     padding: 30px 40px 5px 50px;
     background-color: #563e39;
-    /* line-height: 33px; */
     text-transform: uppercase;
-    list-style: none;
-}
-/*ilgos juostos auk6tis*/
+    list-style: none;}
+
+/*ilgos juostos aukstis*/
 span {
-    /* float: left; */
     font-size: 20px;
     color: #fff;
     font-weight: bold;

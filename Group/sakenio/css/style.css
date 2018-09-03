@@ -113,7 +113,7 @@ nav .phoneNumber .number {
 }
 
 /* ------- skaidres ------ */
-.ap { font-size: 2.6vmin; font-style: italic;  color: #1e1e1d; margin: 1vmin auto; text-align: center; font-weight: 600;
+/* .ap { font-size: 2.6vmin; font-style: italic;  color: #1e1e1d; margin: 1vmin auto; text-align: center; font-weight: 600;
   text-align: center;
     line-height: 33px;
     position: absolute;
@@ -122,7 +122,7 @@ nav .phoneNumber .number {
     z-index: 1;
    
     box-sizing: border-box;
-    padding: 0 12px;}
+    padding: 0 12px;} */
 section.slider {
     position: relative;
 }
@@ -236,8 +236,6 @@ section.features h1 {
 section.features button {
   background-color: #706158;
   border: 1px solid white;
-  color: white;
-  height: 35px;
   cursor: pointer;
   border-radius: 50px;
 }
@@ -280,8 +278,9 @@ section.features p {
 
 
 /* ------ apie projekta ---- */
-.ourTeam h4 {
-  color: white;
+.ourTeam h6 {
+  color: #302d2c;
+  font-size: 18px;
 
 }
 
@@ -297,9 +296,7 @@ section h2{
 section.ourTeam h2::after {
     border-bottom: 1px solid #fefefe;
 }
-section.ourTeam h4::after {
-  border-bottom: 1px solid #fefefe;
-}
+
 section.ourTeam .box {
   flex: 0 0 270px;
   margin-top: 60px;
@@ -343,10 +340,11 @@ section.ourTeam .aboutTrainer p {
 
 section.gallery {
   background-color: #fff;
-  padding: 60px 10px 30px 10px;
+  padding: 40px 10px 30px 10px;
 }
 section.gallery h2 {
   color: #202020;
+  font-size: 26px;
 }
 section.gallery h2::after {
     border-bottom: 1px solid #202020;
@@ -449,10 +447,10 @@ section.pricing .priceItem h3 {
   font-weight: bold;
 }
 section.pricing .priceItem h4 {
-  font-size: 15px;
+  font-size: 13px;
 }
-section.pricing .priceItem h3 {
-  font-size: 34px;
+section.pricing h2 {
+  font-size: 26px;
 }
 section.pricing .price,
 section.pricing ul {
@@ -571,9 +569,10 @@ footer .contact {
 footer .contact h6 {
   color: #fff;
   margin-bottom: 30px;
+  font-size: 20px;
 }
 footer .contact p {
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   width: 347px;
   font-family: 'PT Serif', serif;
@@ -687,6 +686,9 @@ footer .copyright .back:hover {
   nav ul.phoneNumber {
     top: 100px;
     left: 10px;
+  }
+  nav .phoneNumber {
+    display:none;
   }
   nav .rightSide li {
     display: none;
