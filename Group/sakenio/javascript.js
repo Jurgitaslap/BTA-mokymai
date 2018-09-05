@@ -20,11 +20,11 @@ $(document).ready(function() {
 });
 
 function validateForm() {
-    let name = $("#firstName").val();
-    let surename = $("#lastName").val();
+    let name = $("#name").val();
+    let surename = $("#email").val();
     let text = $("#textarea").val();
     if (name == "" || surename == "" || text == "") {
-        $("#error").html("All fields must be filled!");
+        $("#error").html("Visi laukai turi būti užpildyti!");
         return false;
     }
 }
@@ -33,7 +33,7 @@ function validateModal() {
     var name = $("#your-name").val();
     var email = $("#e-mail").val();
     if (name == "" || email == "" ) {
-        $("#message").html("All fields must be filled!");
+        $("#message").html("Visi laukai turi būti užpildyti!");
         return false;
     }
 }

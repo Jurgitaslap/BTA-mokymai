@@ -30,8 +30,8 @@ p {
 }
 /* ------ meniu ------- */
 
-
-/* nav {
+/* 
+nav {
   background-color: #563e39;
     color: #fefefe;
     padding: 34px 0px 34px 50px;
@@ -84,7 +84,7 @@ nav  .rightSide .sandwich {
 }
 nav .rightSide .sandwich:hover {
   font-size: 25px;
-} */
+}  */
 
 /*  telefonas */
 
@@ -521,7 +521,7 @@ footer {
     padding: 0px 50px 40px 50px;
 }
 footer .socialNetworks {
-  padding-bottom: 31px;
+  padding-bottom: 21px;
   border-bottom: 1px solid #323232;
   display: flex;
   flex-wrap: wrap-reverse;
@@ -568,7 +568,7 @@ footer .contact {
 }
 footer .contact h6 {
   color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 20px;
 }
 footer .contact p {
@@ -624,9 +624,11 @@ footer .contactForm textarea {
   width: 441px;
   height: 111px;
   padding: 12px;
-}
+  font-size:12px;
+  }
 footer .contactForm input {
   padding: 12px;
+  font-size:12px;
 }
 footer .contactForm .button {
   vertical-align: top;
