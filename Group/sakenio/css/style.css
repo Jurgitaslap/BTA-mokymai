@@ -91,7 +91,7 @@ nav .rightSide .sandwich:hover {
 nav ul.phoneNumber {
     position: absolute;
     top: 100px;
-    left: 10px;
+    left: 20px;
     line-height: 40px;
     z-index: 2;
 }
@@ -104,12 +104,16 @@ nav .phoneNumber .icon {
     background-color: #423936;
     padding: 0 12px 0 11px;
     box-sizing: border-box;
+    
+    -moz-box-sizing: border-box;
 }
 nav .phoneNumber .number {
     background-color: #5b514e;
     font-size: 25px;
     padding: 0 27px;
     box-sizing: border-box;
+  
+    -moz-box-sizing: border-box;
 }
 
 /* ------- skaidres ------ */
@@ -173,6 +177,8 @@ section.slider h6 {
     color: #fefefe;
     background-color: #84706a;
     box-sizing: border-box;
+    
+    -moz-box-sizing: border-box;
     padding: 0 12px;
     text-transform: uppercase;
 }
@@ -181,7 +187,7 @@ section.slider h1 {
     line-height: 66px;
     position: absolute;
     top: 252px;
-    left: 50px;
+    left: 53px;
     z-index: 1;
     font-size: 30px;
     color: #fefefe;
@@ -312,8 +318,8 @@ section.ourTeam .box img {
 section.ourTeam .trainerInfo {
   background-color: #fff;
   padding: 24px 20px 22px;
-  box-sizing: border-box;;
-  width: 100%;
+  box-sizing: border-box;
+    width: 100%;
 }
 section.ourTeam .box .trainer {
   color: #c4c4c4;
@@ -464,7 +470,6 @@ section.pricing .price {
   border-right: 1px solid #fff;
 }
 section.pricing ul {
-   list-style-image: url('tick.png');
    padding-left: 8px;
 }
 section.pricing li {
@@ -625,6 +630,7 @@ footer .contactForm textarea {
   height: 111px;
   padding: 12px;
   font-size:12px;
+  resize: none;
   }
 footer .contactForm input {
   padding: 12px;
@@ -799,7 +805,22 @@ footer .copyright .back:hover {
   }
   
 }
+ /*FORMA*/
 
-
+ .centered {
+   text-align: center;
+   width: 100%;
+ }
+ .textarea {
+   width: 100%;
+   height: 200px;
+   resize: none;
+ }
+ .nice {
+  width: 100%;
+  height:30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
 
