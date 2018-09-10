@@ -1,8 +1,6 @@
 body {
     font-size: 0;
     font-family: 'PT Serif', serif;
-    /* margin: 0;
-    padding: 0; */
     }
 
 h2 {
@@ -63,16 +61,7 @@ nav .phoneNumber .number {
 }
 
 /* ------- skaidres ------ */
-/* .ap { font-size: 2.6vmin; font-style: italic;  color: #1e1e1d; margin: 1vmin auto; text-align: center; font-weight: 600;
-  text-align: center;
-    line-height: 33px;
-    position: absolute;
-    top: 216px;
-    left: 70px;
-    z-index: 1;
-   
-    box-sizing: border-box;
-    padding: 0 12px;} */
+
 section.slider {
     position: relative;
 }
@@ -207,7 +196,6 @@ section.features h5 {
     color: #a2a2a2;
     font-size: 12px;
     margin: 17px 0 50px;
-    /* font-style: italic; */
     font-family: 'PT Serif', serif;
 }
 section .wrapper {
@@ -246,7 +234,6 @@ section.features p {
 section.ourTeam {
     position: relative;
     background-image: linear-gradient(#42322c, #917267);
-    /* background-color: #202020; */
     padding: 60px 0;
 }
 section h2{
@@ -412,7 +399,7 @@ section.pricing .priceItem {
   width: 370px;
   background-color: #84695a;
   border: 2px solid #fff;
-  padding: 27px 17px 27px 31px;
+  padding: 27px 17px 37px 31px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -461,9 +448,10 @@ section.pricing .priceItem:nth-of-type(2) {
 section.pricing .priceItem:nth-of-type(2) .price {
 border-right: 1px solid #fff;
 }
+
 section.partners {
   background-color: #fff;
-  padding: 20px 10px 20px 10px;
+  padding: 25px 10px 30px 10px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -532,7 +520,6 @@ footer .tweets i {
 }
 footer .tweets p {
   color: #fff;
-  /* display: inline; */
   width: 526px;
 }
 footer .tweets p span {
@@ -558,7 +545,7 @@ footer .contact h6 {
   font-size: 20px;
 }
 footer .contact p {
-  font-size: 16px;
+  font-size: 17px;
   color: white;
   width: 347px;
   font-family: 'PT Serif', serif;
@@ -566,87 +553,28 @@ footer .contact p {
 }
 footer .contactInfo {
   flex: 0 0 348px;
-  margin-right: 40px;
-  margin-top: 63px;
+  margin-right: 50px;
+  margin-top: 10px;
 }
 footer .contactInfo .phoneNumber,
 footer .contactInfo .email {
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   font-family: 'PT Serif', serif;
 }
 footer .contactInfo .phoneNumber {
   margin-bottom: 12px;
-  margin-top: 31px;
+  margin-top: 20px;
 }
-footer .contactInfo i {
-  color: #fff;
-  margin-right: 10px;
-}
+
 footer .contactForm {
-  flex: 0 0 670px;
-  margin-top: 63px;
+  flex: 0 0 600px;
+  margin-top: 10px;
+   
 }
-footer .contactForm input,
-footer .contactForm textarea,
-footer .contactForm .button {
-  display: inline-block;
-  color: black;
-  background-color: white;
-  border: 1px solid #382824;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-  font-family: 'PT Serif', serif;
-}
-footer .contactForm input:first-of-type {
-  margin-left: 0px;
-}
-footer .contactForm input,
-footer .contactForm .button {
-  width: 212px;
-  height: 36px;
-  margin-left: 17px;
-}
-footer .contactForm textarea {
-  width: 441px;
-  height: 111px;
-  padding: 12px;
-  font-size:12px;
-  resize: none;
-  }
-footer .contactForm input {
-  padding: 12px;
-  font-size:12px;
-}
-footer .contactForm .button {
-  vertical-align: top;
-  font-size: 15px;
-  background-color: #91746d;
-  
-  color: #fff;
-  padding: 10px 21px 6px 22px;
-  border: none;
-  cursor: pointer;
-}
-footer .contactForm .button i {
-  float: right;
-}
-footer .contactForm textarea,
-footer .contactForm .button {
-  margin-top: 16px;
-}
-footer .contactForm .button::after {
-  /* content: "Patikrinkite ar teisingai įvedėte el. pašto adresą."; */
-  display: block;
-  font-size: 10px;
-  color: #77190d;
-  font-family: 'PT Serif', serif;
-  margin-top: 30px;
-  margin-left: -21px;
-}
+
 footer .copyright {
-  margin-top: 102px;
+  margin-top: 75px;
 }
 footer .copyright .rights {
   font-size: 12px;
@@ -706,6 +634,8 @@ footer .copyright .back:hover {
     right: 0;
     top: 0;
   }
+ .mapouter {text-align:right;height:313px;width:500px;}
+  .gmap_canvas {overflow:hidden;background:none!important;height:313px;width:500px;}
 }
 @media (max-width: 769px) {
   section.slider h1 {
@@ -747,13 +677,7 @@ footer .copyright .back:hover {
     text-transform: uppercase;
     font-weight: bold;
   }
-  /* nav .leftSide span {
-    font-size: 18px;
-    
-  }
-  nav ul.phoneNumber {
-    left: 0px;
-  } */
+  
   section.pricing .priceItem {
     padding: 27px 10px 27px 10px;
   }
@@ -767,48 +691,22 @@ footer .copyright .back:hover {
   section.slider .slider-image2 {
     background-position: center;
   }
-  footer .socialNetworks .icons {
-    margin-left: 0;
-  }
-  footer .socialNetworks,
+  
   footer .contact,
   footer .contactInfo,
-  footer .contactForm,
-  footer .contactForm input,
-  footer .contactForm textarea,
-  footer .contactForm .button {
+  footer .contactForm {
     display: block;
     width: 100%;
+    padding-top: 20px;
   }
+  
   footer .contactInfo p {
     display: inline;
   }
-  footer .contactForm input,
-  footer .contactForm textarea,
-  footer .contactForm .button {
-    margin-left: 0;
-  }
-  footer .contactForm input {
-    margin-top: 16px;
-  }
-  
+   
 }
  /*FORMA*/
 
- .centered {
-   text-align: center;
-   width: 100%;
- }
- .textarea {
-   width: 100%;
-   height: 200px;
-   resize: none;
- }
- .nice {
-  width: 100%;
-  height:30px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
+
 
 
