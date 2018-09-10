@@ -3,11 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-       <!--[if ie]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Šakenio alėja | Naujos statybos butai Kaune, Dainavoje</title>
-    <link rel="canonical" href="http://sakenio-aleja.lt" />
+    <title>Šakenio alėja</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,800" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/reset.css">

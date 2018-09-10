@@ -28,63 +28,8 @@ p {
   line-height: 2;
   font-family: 'PT Serif', serif;
 }
-/* ------ meniu ------- */
 
-/* 
-nav {
-  background-color: #563e39;
-    color: #fefefe;
-    padding: 34px 0px 34px 50px;
-    box-sizing: border-box;
-    position: relative;
-}
-nav .leftSide {
-    float: left;
-    line-height: 33px;
-}
-nav .leftSide span {
-    font-size: 20px;
-    font-family: 'PT Serif', serif;
-    font-weight: bold;
-}
-nav .rightSide {
-    float: right;
-    line-height: 33px;
-}
-nav .leftSide span,
-nav .rightSide li {
-    display: inline-block;
-    vertical-align: middle;
-}
-nav .rightSide li {
-    font-size: 15px;
-    cursor: pointer;
-    padding: 0 14px;
-    box-sizing: border-box;
-    text-transform: uppercase;
-}
-nav .rightSide li:not(:last-of-type){
-    margin-right: 24px;
-}
-nav .rightSide li:last-of-type {
-    margin-right: 56px;
-}
-nav .rightSide li:not(.selected):hover {
-    background-color: #8c7669;
-}
-nav .rightSide li.selected {
-  background-color: #8c7669;
-}
-nav  .rightSide .sandwich {
-    font-size: 25px;
-    vertical-align: middle;
-    cursor: pointer;
-    color: #fff;
-    display: none;
-}
-nav .rightSide .sandwich:hover {
-  font-size: 25px;
-}  */
+/* ------ meniu ------- */
 
 /*  telefonas */
 
@@ -238,6 +183,7 @@ section.features h1 {
     color: #202020;
     text-transform: uppercase;
     font-weight: bold;
+    margin-top: 40px;
 }
 section.features button {
   background-color: #706158;
@@ -351,6 +297,7 @@ section.gallery {
 section.gallery h2 {
   color: #202020;
   font-size: 26px;
+  margin-bottom: 40px;
 }
 section.gallery h2::after {
     border-bottom: 1px solid #202020;
@@ -689,6 +636,9 @@ footer .copyright .back:hover {
   color: #b12424;
 }
 @media (max-width: 1240px) {
+  header span {
+    text-decoration: none; color: white; 
+  }
 
   .mediaNav {display: none;}
   nav ul.phoneNumber {
