@@ -49,16 +49,17 @@ nav .phoneNumber .icon {
     background-color: #423936;
     padding: 0 12px 0 11px;
     box-sizing: border-box;
-    
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+   
 }
 nav .phoneNumber .number {
     background-color: #5b514e;
     font-size: 25px;
     padding: 0 27px;
     box-sizing: border-box;
-  
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 /* ------- skaidres ------ */
@@ -103,6 +104,10 @@ section.slider .slider-image2 {
     from {opacity: .4}
     to {opacity: 1}
   }
+  @-o-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
 
   @keyframes fade {
     from {opacity: .4}
@@ -122,8 +127,8 @@ section.slider h6 {
     color: #fefefe;
     background-color: #84706a;
     box-sizing: border-box;
-    
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     padding: 0 12px;
     text-transform: uppercase;
 }
@@ -152,6 +157,8 @@ section.slider h4 {
     color: #fefefe;
     background-color: #aa837b;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     padding: 0 24px;
     text-transform: uppercase;
 }
@@ -259,12 +266,17 @@ section.ourTeam .box {
 section.ourTeam .box img {
   height: auto;
   width: 100%;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 section.ourTeam .trainerInfo {
   background-color: #fff;
   padding: 24px 20px 22px;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     width: 100%;
 }
 section.ourTeam .box .trainer {
@@ -280,6 +292,8 @@ section.ourTeam .aboutTrainer {
   background-color: #fff;
   padding: 35px 50px 35px 20px;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
   height: 275px;
 }
 section.ourTeam .aboutTrainer p {
@@ -312,6 +326,9 @@ section.gallery .wrapper img {
   width: 270px;
   margin-bottom: 30px;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 section.gallery .wrapper img:hover,
@@ -348,6 +365,10 @@ section.ourTeam .box img:hover {
   from {transform:scale(0)}
   to {transform:scale(1)}
 }
+@-o-keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
 @keyframes zoom {
     from {transform:scale(0)}
     to {transform:scale(1)}
@@ -359,6 +380,9 @@ section.ourTeam .box img:hover {
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 .close:hover,
@@ -390,6 +414,8 @@ section.pricing .priceItem {
   border: 2px solid #fff;
   padding: 27px 17px 27px 31px;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
   margin-top: 50px;
 }
 section.pricing .priceItem h4,
@@ -409,6 +435,8 @@ section.pricing .price,
 section.pricing ul {
   display: inline-block;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
   vertical-align: middle;
 }
 section.pricing .price {
@@ -436,7 +464,9 @@ border-right: 1px solid #fff;
 section.partners {
   background-color: #fff;
   padding: 20px 10px 20px 10px;
-  box-sizing: border-box;;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 section.partners h2 {
   color: #202020;
@@ -482,6 +512,8 @@ footer .tweets {
   flex: 1;
   padding-top: 35px;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 footer .icons {
   flex: 0 0 180px;
@@ -490,6 +522,8 @@ footer .icons {
   margin-left: 40px;
   padding-top: 35px;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 footer .tweets i {
   color: #fff;
@@ -561,6 +595,8 @@ footer .contactForm .button {
   background-color: white;
   border: 1px solid #382824;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
   font-family: 'PT Serif', serif;
 }
 footer .contactForm input:first-of-type {
@@ -691,6 +727,8 @@ footer .copyright .back:hover {
     color: #fefefe;
     background-color: #84706a;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     padding: 0 12px;
     text-transform: uppercase;
   }
