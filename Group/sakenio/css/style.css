@@ -451,7 +451,7 @@ border-right: 1px solid #fff;
 
 section.partners {
   background-color: #fff;
-  padding: 25px 10px 30px 10px;
+  padding: 25px 8px 30px 8px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -544,33 +544,51 @@ footer .contact h6 {
   margin-bottom: 20px;
   font-size: 20px;
 }
-footer .contact p {
+footer .contactInfo p {
   font-size: 17px;
   color: white;
-  width: 347px;
+  width: 338px;
+  font-family: 'PT Serif', serif;
+  line-height: 2;
+}
+footer .contactText .text {
+  font-size: 11px;
+  color: white;
+  width: 305px;
   font-family: 'PT Serif', serif;
   line-height: 2;
 }
 footer .contactInfo {
-  flex: 0 0 348px;
-  margin-right: 50px;
+  flex: 0 0 340px;
+  margin-right: 40px;
   margin-top: 10px;
 }
-footer .contactInfo .phoneNumber,
+
 footer .contactInfo .email {
   font-size: 18px;
   color: white;
   font-family: 'PT Serif', serif;
+  margin-top: 15px;
 }
+footer .contactInfo .phoneNumber {
+  font-size: 20px;
+  color: white;
+  font-family: 'PT Serif', serif;
+}
+
 footer .contactInfo .phoneNumber {
   margin-bottom: 12px;
   margin-top: 20px;
 }
 
 footer .contactForm {
-  flex: 0 0 600px;
+  flex: 0 0 340px;
   margin-top: 10px;
    
+}
+footer .contactText {
+  flex: 0 0 340px;
+  margin-top: 10px;
 }
 
 footer .copyright {
@@ -634,8 +652,7 @@ footer .copyright .back:hover {
     right: 0;
     top: 0;
   }
- .mapouter {text-align:right;height:313px;width:500px;}
-  .gmap_canvas {overflow:hidden;background:none!important;height:313px;width:500px;}
+ 
 }
 @media (max-width: 769px) {
   section.slider h1 {
@@ -693,6 +710,7 @@ footer .copyright .back:hover {
   }
   
   footer .contact,
+  footer .contactText,
   footer .contactInfo,
   footer .contactForm {
     display: block;
@@ -705,7 +723,13 @@ footer .copyright .back:hover {
   }
    
 }
- /*FORMA*/
+
+@media (max-width: 320px) {
+  footer .contactForm, footer .contactText {
+    display:none;
+  } 
+}
+ 
 
 
 

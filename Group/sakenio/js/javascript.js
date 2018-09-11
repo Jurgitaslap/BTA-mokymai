@@ -1,8 +1,8 @@
 /*
 //Pictures slider
 */
-var slideIndex = 1;
-showSlides(slideIndex);
+var slideIndex = 1;  
+showSlides(slideIndex); 
 // Next/previous controls
 function plusSlides(n) {
     showSlides(slideIndex += n);
@@ -68,7 +68,7 @@ $('.myImg').click(function(){
 var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
+  modal.style.display = "none"; 
 }
 /*
 //When user clicks menu - scroll to the section
