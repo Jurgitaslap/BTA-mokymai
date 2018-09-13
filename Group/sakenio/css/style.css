@@ -64,23 +64,25 @@ nav .phoneNumber .number {
 
 section.slider {
     position: relative;
-}
+  }
 section.slider .mySlides {
     display: none
 }
 section.slider .slider-image1,
 section.slider .slider-image2 {
     width: 100%;
-    height: 580px;
+    height: 95vh;
     position: relative;
     background-size: cover;
 }
 section.slider .slider-image1 {
     background: url(../img/sliderImages/slide1.jpg) top no-repeat ;
-}
-section.slider .slider-image2 {
+    background-size: cover;
+       /* background-color: black; */
+    }
+/* section.slider .slider-image2 {
     background: url(../img/sliderImages/slide2.jpg) top no-repeat ;
-}
+} */
 /* blinkanti animacija */
 
 .fade {
@@ -151,27 +153,28 @@ section.slider h4 {
     padding: 0 24px;
     text-transform: uppercase;
 }
-section.slider .slider-left,
+/* section.slider .slider-left,
 section.slider .slider-right {
     position: absolute;
     top: 271px;
     cursor: pointer;
-}
-section.slider .slider-left {
+} */
+/* section.slider .slider-left {
     left: 10px;
 }
 section.slider .slider-right {
     right: 10px;
-}
-section.slider .slider-left img,
+} */
+/* section.slider .slider-left img,
 section.slider .slider-right img {
     width:40px;
-}
+}  */
 
 section.features {
     position: relative;
     background-color: #ffffff;
     padding: 60px 10px 70px;
+    height: 72vh;
 }
 section.features h1 {
     text-align: center;
@@ -235,6 +238,7 @@ section.ourTeam {
     position: relative;
     background-image: linear-gradient(#42322c, #917267);
     padding: 60px 0;
+    height: 80vh;
 }
 section h2{
     color: #fefefe;
@@ -388,6 +392,7 @@ section.ourTeam .box img:hover {
 section.pricing {
   background-color: #84695a;
   padding: 60px 10px;
+  height: 50vh;
 }
 section.pricing h2 {
     color: #fff;
@@ -538,21 +543,22 @@ footer .contact {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  height: 80vh;
 }
 footer .contact h6 {
   color: #fff;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 24px;
 }
 footer .contactInfo p {
-  font-size: 17px;
+  font-size: 18px;
   color: white;
   width: 338px;
   font-family: 'PT Serif', serif;
   line-height: 2;
 }
 footer .contactText .text {
-  font-size: 11px;
+  font-size: 12px;
   color: white;
   width: 305px;
   font-family: 'PT Serif', serif;
@@ -595,7 +601,7 @@ footer .copyright {
   margin-top: 75px;
 }
 footer .copyright .rights {
-  font-size: 12px;
+  font-size: 14px;
   color: black;
   font-family: 'PT Serif', serif;
   display: inline-block;
