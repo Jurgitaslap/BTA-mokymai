@@ -21,7 +21,7 @@
         <span>+370 698 33970</span>
         <nav>
               <div id="navButton" class="show-menu">
-                <i style="margin-top: 20px;" class="fas fa-bars"></i>
+                <div class="sandwich" onclick="showNavBar()"><i style="margin-top: 20px;" class="fas fa-bars"></i></div>
             </div>
             <ul id="bottomNav" class="bottom-nav">
                 <a href="index.html"><li class="selected">Pradžia</li></a>
@@ -95,6 +95,38 @@
    <!-- java scriptas -->
        <script src="js/javascript.js"></script>
        <script src="javascript.js"></script>
+       <script>function showNavBar() {
+        var x = document.getElementById("myTopnav");
+        var y = document.querySelector(".phoneNumber");
+        if (x.className === "rightSide") {
+          x.className += " responsive";
+          y.style.display = "none";
+        } else {
+          x.className = "rightSide";
+          y.style.display = "block";
+        }
+      }
+      $(document).ready(function() {
+      
+        setTimeout(function() {
+            $('#dialog').show();
+        }, 5000);
+      
+        $("#close").click(function() {
+            $('#dialog').hide();
+        });
+      
+        $(window).click(function(event) {
+            if (event.target.id ==  'dialog') {
+                $('#dialog').hide();
+            }
+        });
+        $( "#navButton" ).click(function() {
+        $( "#mobNav" ).toggle( "slide" );
+      }); 
+      
+      });
+        </script>
        </footer>
 </body>
 </html>

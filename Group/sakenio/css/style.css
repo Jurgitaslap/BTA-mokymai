@@ -154,22 +154,6 @@ section.slider h4 {
     padding: 0 24px;
     text-transform: uppercase;
 }
-/* section.slider .slider-left,
-section.slider .slider-right {
-    position: absolute;
-    top: 271px;
-    cursor: pointer;
-} */
-/* section.slider .slider-left {
-    left: 10px;
-}
-section.slider .slider-right {
-    right: 10px;
-} */
-/* section.slider .slider-left img,
-section.slider .slider-right img {
-    width:40px;
-}  */
 
 section.features {
     position: relative;
@@ -393,7 +377,7 @@ section.ourTeam .box img:hover {
 section.pricing {
   background-color: #84695a;
   padding: 60px 10px;
-  /* height: 50vh; */
+  height: 50vh;
 }
 section.pricing h2 {
     color: #fff;
@@ -409,7 +393,7 @@ section.pricing .priceItem {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 section.pricing .priceItem h4,
 section.pricing .priceItem h3 {
@@ -469,7 +453,7 @@ section.partners h2::after {
   border-bottom: 1px solid #202020;
 }
 section.partners .slider {
-  margin-top: 30px;
+  margin-top: 10px;
   width: 100%;
   height: 130px;
   background-image: url('../img/partners.png');
@@ -498,8 +482,7 @@ footer {
 }
 footer .socialNetworks {
   padding-bottom: 21px;
-  /* border-bottom: 1px solid #323232; */
-  display: flex;
+display: flex;
   flex-wrap: wrap-reverse;
 }
 footer .tweets {
@@ -581,9 +564,6 @@ footer .contactInfo .phoneNumber {
   font-size: 20px;
   color: white;
   font-family: 'PT Serif', serif;
-}
-
-footer .contactInfo .phoneNumber {
   margin-bottom: 12px;
   margin-top: 20px;
 }
@@ -647,9 +627,7 @@ footer .copyright .back:hover {
     top: 100px;
     left: 10px;
   }
-  nav .phoneNumber {
-    display:none;
-  }
+ 
   nav .rightSide li {
     display: none;
   }
