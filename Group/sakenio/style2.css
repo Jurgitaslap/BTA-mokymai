@@ -49,15 +49,7 @@ nav .show-menu i{
     font-size: 26px;
     color: #fff;
   }
-/* nav .top-nav li{
-    font-size: 14px;
-    color: #000;
-    display: inline-block;
-    margin-bottom: 38px;
-} */
-/* nav .top-nav li:not(:last-of-type) {
-    margin-right: 14px;
-} */
+
 nav .bottom-nav li:not(:last-of-type) {
     margin-right: 28px;
    }
