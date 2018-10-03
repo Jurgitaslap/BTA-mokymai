@@ -67,8 +67,8 @@ ul, ol {
 }
 ul, ol {
 	padding: 0;
-	webkit-padding: 0;
-	moz-padding: 0;
+	-webkit-padding: 0;
+	-moz-padding: 0;
 }
 hr {
 	height: 4px;
@@ -242,7 +242,7 @@ header .intro-text {
 /* Portfolio Section */
 #portfolio {
 	padding: 120px 0;
-	background: #f6f6f6;
+	background: #fcf2ea;
 }
 .categories {
 	padding-bottom: 40px;
@@ -353,7 +353,7 @@ ol.type li a:hover {
 }
 #team .overlay {
 	padding: 120px 0;
-	background: rgba(186, 144, 102, 0.9);
+	background: rgba(181, 163, 148, 0.9);
 }
 #team h2, #team p {
 	color: #fff;
@@ -371,7 +371,7 @@ ol.type li a:hover {
 	width: 200px;
 	height: 200px;
 	border-radius: 50px 0 50px 0;
-	box-shadow: 15px 0 #c9a27a;
+	box-shadow: 15px 0 #877c71;
 }
 #team .thumbnail {
 	background: transparent;
@@ -427,8 +427,8 @@ label {
 #contact .form-control:focus {
 	border-color: #999;
 	outline: 0;
-	-webkit-box-shadow: transparent;
-	box-shadow: transparent;
+	/* -webkit-box-shadow: transparent;
+	box-shadow: transparent; */
 }
 .form-control::-webkit-input-placeholder {
 color: #777;
