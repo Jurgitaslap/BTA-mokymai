@@ -485,3 +485,13 @@ color: #777;
 #footer a:hover {
 	color: #877c71;
 }
+/* #gmap_canvas {width: auto;} */
+
+@media (max-width: 710px) {
+	.mapouter {
+		display: none;}
+}
+@media (max-width: 620px) {
+	.active{
+		display: none;}
+}
