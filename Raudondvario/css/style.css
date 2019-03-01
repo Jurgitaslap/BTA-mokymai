@@ -491,7 +491,3 @@ color: #777;
 	.mapouter {
 		display: none;}
 }
-@media (max-width: 620px) {
-	.active{
-		display: none;}
-}
