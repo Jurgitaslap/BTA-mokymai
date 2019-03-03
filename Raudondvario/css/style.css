@@ -489,5 +489,13 @@ color: #777;
 
 @media (max-width: 710px) {
 	.mapouter {
-		display: none;}
+		display: none;
+	}
 }
+
+@media all and (max-width: 1400px) and (min-width: 711px) {
+	.zemelapis {
+		display: none;
+	}
+}
+
