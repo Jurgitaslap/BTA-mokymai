@@ -493,7 +493,7 @@ color: #777;
 	}
 }
 
-@media all and (max-width: 1400px) and (min-width: 711px) {
+@media all and (max-width: 1600px) and (min-width: 711px) {
 	.zemelapis {
 		display: none;
 	}
