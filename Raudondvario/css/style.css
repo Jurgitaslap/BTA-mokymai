@@ -503,8 +503,8 @@ color: #777;
 	ol.type li a {
 		color: #877c71;
 		font-weight: 400;
-		font-size: 10px;
-		padding: 5px 10px;
+		font-size: 7px;
+		padding: 5px 8px;
 		border: 2px solid #877c71;
 		border-radius: 10px 0 10px 0;
 		text-transform: uppercase;
@@ -536,4 +536,26 @@ color: #777;
 	list-style-type:circle;
 	color: #2d2929;
 }
-
+.mapouter {
+	text-align:right;
+	height:310px;
+	width:600px;
+}
+	.gmap_canvas {
+		overflow:hidden;
+		background:none!important;
+		height:310px;
+		width:600px;
+	}
+	.zemelapis {
+		text-align:right;
+		height:280px;
+		width:280px;
+		margin-left: 5px;
+	}
+	.lap_canvas {
+		overflow:hidden;
+		background:none!important;
+		height:280px;
+		width:280px;
+	}
