@@ -167,7 +167,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	display: table;
 	width: 100%;
 	padding: 0;
-	background: url(../img/intro-bg.jpg) no-repeat center bottom;
+	background: url(../img/intro-bg,ALT.jpg) no-repeat center bottom;
 	background-color: #e5e5e5;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -470,7 +470,7 @@ color: #777;
 #footer .social i.fa {
 	font-size: 26px;
 	padding: 4px;
-	color: #877c71;
+	color: #e2d3c3;
 	transition: all 0.3s;
 }
 #footer .social i.fa:hover {
