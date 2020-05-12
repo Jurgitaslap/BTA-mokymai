@@ -87,7 +87,7 @@ ul, li {
 }
 .block-heading {
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 .block-heading p:last-child {
 	margin: 0;
@@ -674,5 +674,83 @@ section .partners .slider {
 	background-image: url('../images/partners.png');
 	animation: carousel 30s infinite linear;
 	-webkit-animation: carousel 30s infinite linear;
+	}
+	
+	.mapouter{
+		/* position:relative; */
+		text-align:right;
+		height:310px;
+		width:600px;
+	}
+
+	.gmap_canvas {
+		overflow:hidden;
+		background:none!important;
+		height:310px;
+		width:600px;
+	}
+
+	.zemelapis{
+		/* position:relative; */
+		text-align:right;
+		height:280px;
+		width:280px;
+		margin-left: 5px;
+	}
+	
+	.lap_canvas {
+		overflow:hidden;
+		background:none!important;
+		height:280px;
+		width:280px;
+	}
+
+	@media (max-width:770px) {
+		.mapouter {
+			display:none;
+		}
+	}
+
+	@media all and (max-width:1600px) and (min-width:771px) {
+		.zemelapis {
+			display:none;
+		}
+	}
+
+
+
+
+
+
+	.form-row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-5px;margin-left:-5px}.form-row>.col,.form-row>[class*=col-]{padding-right:5px;padding-left:5px}
+	.title-box{
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.title-box h2{
+		font-size: 42px;
+		font-family: 'Catamaran', sans-serif;
+		color: #222222;
+		font-weight: 500;
+		position: relative;
+		padding-bottom: 30px;
+		margin-bottom: 15px;
+	}
+	
+	.title-box h2::after{
+		content: "";
+		position: absolute;
+		background: url(../images/tag-line.png)no-repeat center;
+		width: 120px;
+		height: 20px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+	
+	.title-box h2 span{
+		color: #00cb86;
+		text-decoration: underline;
 	}
 	
